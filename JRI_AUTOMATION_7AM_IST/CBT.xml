@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CBT_Suite">
+
+	<test thread-count="2" name="ChromeTestResults">
+		<parameter name="browserName" value="Chrome"></parameter>
+		<classes>
+			<class name="com.testscenarios.CrossBrowserTesting" />
+			<class
+				name="JRI_TestScenarios.TS_001_VerifyTheNewAccountCreation" />
+
+
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="2" name="EdgeTestResults">
+		<parameter name="browserName" value="Edge"></parameter>
+		<classes>
+			<class name="com.testscenarios.CrossBrowserTesting" />
+			<class
+				name="JRI_TestScenarios.TS_001_VerifyTheNewAccountCreation" />
+				
+		</classes>
+	</test> <!-- Test -->
+
+	<test thread-count="2" name="FirefoxTestResults">
+		<parameter name="browserName" value="Firefox"></parameter>
+		<classes>
+			<class name="com.testscenarios.CrossBrowserTesting" />
+			<class
+				name="JRI_TestScenarios.TS_001_VerifyTheNewAccountCreation" />
+				
+		</classes>
+	</test> <!-- Test -->
+
+
+
+</suite> <!-- Suite -->
