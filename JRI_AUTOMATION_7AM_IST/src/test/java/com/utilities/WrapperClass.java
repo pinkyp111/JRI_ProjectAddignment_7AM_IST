@@ -835,31 +835,6 @@ public class WrapperClass extends BaseClass {
 
 	public void readFileAndReplaceData(String filePath, String toReplace, String replacementString) {
 
-//		File file = new File(path);
-//		FileInputStream fileInput = null;
-//		try {
-//			fileInput = new FileInputStream(file);
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		}
-//
-//		// load properties file
-//		try {
-//			prop.load(fileInput);
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		
-//		try {
-//		     String content = FileUtils.readFileToString(new File(path), "UTF-8");
-//		     content = content.replaceAll(toReplace, replacementString);
-//		     File tempFile = new File("OutputFile");
-//		     FileUtils.writeStringToFile(tempFile, content, "UTF-8");
-//		  } catch (IOException e) {
-//		     //Simple exception handling, replace with what's necessary for your use case!
-//		     throw new RuntimeException("Generating file failed", e);
-//		  }
-
 		Path path = Paths.get(filePath);
 		Charset charset = StandardCharsets.UTF_8;
 

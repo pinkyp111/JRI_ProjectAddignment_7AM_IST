@@ -44,14 +44,15 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 	@Test
 	public void tc_001_Invoke_the_JRI_Home_page() throws Exception {
+		System.out.println("%%% Executing TC1");
 		driver.get(JRI_Homepage);
 		// Develop the code from here
 
 	}
 
-	@Test
+	@Test(dependsOnMethods = "tc_001_Invoke_the_JRI_Home_page")
 	public void tc_002_Verify_the_Create_Newaccount_page_will_display() throws Exception {
-
+		System.out.println("%%% Executing TC2");
 		// TODO:
 //		waitForElementToBeClickable(loc.JRI_HomePage_CreateAnAccount_Link, time_in_seconds);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAnAccount_Link);
@@ -63,6 +64,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 //	@Test
 	public void tc_003_Verify_the_Username_error_message_display() throws Exception {
+		System.out.println("%%% Executing TC3");
 		// TODO
 //		waitForElementToBeClickable(loc.JRI_HomePage_CreateAccount_Button, time_in_seconds);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
@@ -73,7 +75,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 //	@Test
 	public void tc_004_Verify_Mobile_No_error_message_display() throws Exception {
-		loaddata("./src/test/resources/testdata/inputdata.properties");
+		System.out.println("%%% Executing TC4");
 		String name = getdata("Name");
 		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
@@ -84,7 +86,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 //	@Test
 	public void tc_005_Verify_Email_error_message_display() throws Exception {
-		loaddata("./src/test/resources/testdata/inputdata.properties");
+		System.out.println("%%% Executing TC5");
 		String name = getdata("Name");
 		String mobileno = getdata("Mobile");
 		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
@@ -98,7 +100,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 //	@Test
 	public void tc_006_Verify_Password_error_message_display() throws Exception {
-		loaddata("./src/test/resources/testdata/inputdata.properties");
+		System.out.println("%%% Executing TC6");
 		String name = getdata("Name");
 		String mobileno = getdata("Mobile");
 		String email = getdata("Email");
@@ -112,10 +114,9 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		System.out.println("***Error message is***" + password_error);
 	}
 
-	@Test
+	// @Test
 	public void tc_007_Verify_Terms_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC7");
-		loaddata("./src/test/resources/testdata/inputdata.properties");
 		String name = getdata("Name");
 		String mobileno = getdata("Mobile");
 		String email = getdata("Email");
@@ -135,6 +136,62 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 	}
 
+	// @Test
+	public void tc_008_Check_the_refresh_button() throws Exception {
+		System.out.println("%%% Executing TC8");
+		String name = getdata("Name");
+		String mobileno = getdata("Mobile");
+		String email = getdata("Email");
+		String password = getdata("Password");
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Mobile_EditBox, mobileno);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Email_EditBox, email);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Password_EditBox, password);
+		driver.navigate().refresh();
+	}
+
+	// @Test
+	public void tc_009_Verify_the_invalid_data_validation_messages() throws Exception {
+		System.out.println("%%% Executing TC9");
+		String Invalidname = getdata("Invalidname");
+		String Invalidmobileno = getdata("Invalidmobile");
+		String Invalidemail = getdata("Invalidemail");
+		String Invalidpassword = getdata("Invalidpassword");
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, Invalidname);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Mobile_EditBox, Invalidmobileno);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Email_EditBox, Invalidemail);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Password_EditBox, Invalidpassword);
+		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
+	}
+
+	@Test(dependsOnMethods = "tc_002_Verify_the_Create_Newaccount_page_will_display")
+	public void tc_0010_Check_user_willbe_able_to_createaccount_with_valid_data() throws Exception {
+		System.out.println("%%% Executing TC10");
+		String name = getdata("Name");
+		String mobileno = getdata("Mobile");
+		String email = getdata("Email");
+		String password = getdata("Password");
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Mobile_EditBox, mobileno);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Email_EditBox, email);
+		Thread.sleep(1000);
+		sendkeysByAnyLocator(loc.JRI_HomePage_Password_EditBox, password);
+		clickByAnyLocator(loc.JRI_HomePage_Terms_CheckBox);
+
+		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
+	}
+
 	@AfterMethod
 	public void afterMethod(ITestResult res) throws Exception {
 		takeScreenshot(res);
@@ -146,7 +203,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 			readFileAndReplaceData(jriOfflinePage1Path.replace("file:///", ""), jriOfflinePage2Path,
 					"https://www.justrechargeit.com/SignUp.aspx");
 		}
-		driver.quit();
+		// driver.quit();
 	}
 
 }
