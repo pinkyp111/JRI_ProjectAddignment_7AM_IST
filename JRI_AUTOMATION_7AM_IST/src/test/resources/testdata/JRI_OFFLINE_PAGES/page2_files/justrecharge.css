@@ -1,0 +1,2942 @@
+﻿@charset "utf-8";
+/*---------------------------------------------------- General Starts -----------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'MyriadProRegular';
+    src: url('../fonts/myriadpro-regular-webfont.eot');
+    src: url('../fonts/myriadpro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+/*         url('../fonts/myriadpro-regular-webfont.woff') format('woff'),*/
+         url('../fonts/myriadpro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/myriadpro-regular-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyriadProSemibold';
+    src: url('../fonts/myriadpro-semibold-webfont.eot');
+    src: url('../fonts/myriadpro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+/*         url('../fonts/myriadpro-semibold-webfont.woff') format('woff'),*/
+         url('../fonts/myriadpro-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/myriadpro-semibold-webfont.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'rupee_foradianregular';
+    src: url('../fonts/rupee_foradian-webfont.eot');
+    src: url('../fonts/rupee_foradian-webfont.eot?#iefix') format('embedded-opentype'),
+/*         url('../fonts/rupee_foradian-webfont.woff') format('woff'),*/
+         url('../fonts/rupee_foradian-webfont.ttf') format('truetype'),
+         url('../fonts/rupee_foradian-webfont.svg#rupee_foradianregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'opensans-light';
+    src: url('../fonts/opensans-light.eot');
+    src: url('../fonts/opensans-light.eot?#iefix') format('embedded-opentype'),
+/*         url('../fonts/rupee_foradian-webfont.woff') format('woff'),*/
+         url('../fonts/opensans-light.ttf') format('truetype'),
+         url('../fonts/opensans-light.svg#opensans-light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'opensans-regular';
+    src: url('../fonts/opensans-regular.eot');
+    src: url('../fonts/opensans-regular.eot?#iefix') format('embedded-opentype'),
+/*         url('../fonts/rupee_foradian-webfont.woff') format('woff'),*/
+         url('../fonts/opensans-regular.ttf') format('truetype'),
+         url('../fonts/opensans-regular.svg#opensans-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.rupeesign {
+	font-family:'rupee_foradianregular', Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#070707;
+	padding:0 5px;
+/*	border:1px solid #900;*/
+	line-height:1px;
+}
+.opensance-regular{ font-family:'opensans-regular', Arial, Helvetica, sans-serif !important;}
+.opensance-light{ font-family:'opensans-light', Arial, Helvetica, sans-serif !important;}
+.radius {
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+
+.topradius {
+	border-radius:4px;
+	border-bottom-left-radius:0px;
+	border-bottom-right-radius:0px;
+	-moz-border-radius:4px;
+	-moz-border-radius-bottomleft:0px;
+	-moz-outline-radius-bottomright:0px;
+	-webkit-border-radius:4px;
+	-webkit-border-bottom-left-radius:0px;
+	-webkit-border-bottom-right-radius:0px;	
+}
+
+.bottomradius {
+	border-radius:4px;
+	border-top-left-radius:0px;
+	border-top-right-radius:0px;
+	-webkit-border-radius:4px;
+	-webkit-border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius:4px;
+	-moz-border-radius-topleft:0px;
+	-moz-border-radius-topright:0px;	
+}
+
+body {
+	background-image: url(../images/jri_body_bg.gif);
+	background-repeat: repeat;
+	background-position: left top;
+	margin:25px 0px;
+	min-height:100%;
+}
+
+TD.nopadding {
+	padding:0;
+}
+
+#maincontainer {
+	box-shadow:1px 1px 8px 1px #e0dfdf;
+	background-color:#fff;
+	width:940px;
+	padding:12px 18px;
+}
+
+#midcontainer {
+	background-image:url('../images/midcontainer_bg.png');
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-color:#f0efe8;
+}
+
+#midcontainer #contentpanel {
+	padding:0 !important;
+/*	border:none !important;*/
+}
+
+#insidemidcontainer {
+	background-color: #f0efe8;
+	padding: 15px;
+}
+
+#contentpanel {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	background-color:#fff;
+	padding:15px;
+/*	border:15px solid #ffffff;*/
+}
+#contentpanel-download {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	background-color:#fff;
+	
+/*	border:15px solid #ffffff;*/
+}
+ul#download-content
+{
+list-style-type: none;
+padding: 0px;
+margin:40px 0 0 1px;
+}
+ul#download-content li
+{
+background-image: url(../images/bullet_arrow.gif);
+background-repeat: no-repeat;
+background-position: 0px 0px;
+padding-left: 30px;
+margin:0px 0 24px 5px;
+}
+.title{
+	font-family:'MyriadProRegular';
+	font-size:16px;
+	line-height:20px;
+	color:#d61e79;
+	display:inline-block;
+	margin-top:-5px;
+}
+h1.title, h2.title, h3.title, h4.title, span.title{
+	margin:18px 0 10px 0;
+}
+.title1{
+	font-family:'MyriadProRegular';
+	font-size:18px;
+	line-height:28px;
+	color:#d61e79;
+	display:inline-block;
+	margin-top:-5px;
+}
+
+.list-copy{
+	font-family:'MyriadProRegular';
+	font-size:14px;
+	line-height:17px;
+	color:#444;
+	display:block;
+	margin:0;
+}
+.copy{
+	font-family:'MyriadProRegular';
+	font-size:15px;
+	line-height:18px;
+	color:#444;
+}
+.hr_line{ background-color:#d8d8d8;}
+
+#contentpanel .defaulttext2{
+	font-size:18px;
+}
+
+#contentpanel span.defaulttext2{
+	font-size:14px;
+}
+
+TD {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#373737;
+}
+
+.defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+    line-height:20px;
+	font-weight:normal;
+	color:#373737;	
+}
+
+.defaulttext2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#c50763;
+}
+
+.defaulttext3 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#070707;
+}
+.defaulttext4 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#888888;
+}
+
+.errormsg {
+	background-image:url(../images/icon_error.png);
+	background-repeat:no-repeat;
+	background-position:left 8px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px !important;
+	color:#ab0202 !important;
+	padding:8px 12px 8px 20px;
+}
+
+.comment {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#555555;
+}
+
+.horizontaldivider {
+	background-color:#d8d8d8;
+}
+
+.hdivider1 {
+	background-color:#bababa;
+}
+
+.hdivider2 {
+	background-color:#e2e2e1;
+}
+
+.hdivider3 {
+	background-color:#a9a9a9;
+}
+
+.astrick {
+	font-family:'MyriadProSemibold', Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 1px;	
+}
+
+.message_panel {
+	background-color:#f3f2ed;
+/*	background-image:url(../images/arrow_down_white.png);
+	background-repeat:no-repeat;
+	background-position:711px top;*/
+	padding:20px;
+/*	border-bottom: 1px solid #d8d8d8;*/
+}
+
+div.formnotification {
+	position:relative;
+	width:85%;
+/*	border:1px solid red;*/
+}
+
+div.formnotification div {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#	font;
+	background-color:#fcfbf2;
+	border:1px solid #f1ebce;
+	padding:7px 10px;
+	position:absolute;
+	left:10px;
+	top:5px;
+	width:80%;
+}
+
+div.formnotification img {
+	position:absolute;
+	left:-10px;
+	top:7px;
+}
+
+
+/********************* My Account Tabs Menu Starts ************************/
+
+#corporatedefaultpage td.myaccounttabsbg {
+	background-color:#f0efe8;
+	padding-bottom:0px;
+}
+
+TD.myaccounttabsbg {
+	background-image:url(../images/myaccount_tabs_bg.gif);
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	padding-top:11px;
+}
+
+#menu_coupons_landingpage TD.myaccounttabsbg {
+	background-color: #f0efe8;
+}
+
+TD.myaccounttabsbg table td a {
+	display:block;
+	height:29px;
+}
+
+TD.myaccounttabsbg table td a div {
+	padding-top:8px;
+	}
+
+/*JRI Alerts Css Start*/
+ #jrialerts #jriMyAccountMenuAlert_alerts_tab a.selected {
+	background-image:url(../images/alerts-bg.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:92px;
+	height:29px;
+}
+/*JRI Alerts Css end*/
+
+#myprofile #myprofile_tab a.selected {
+	background-image:url(../images/myprofile_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:92px;
+	height:29px;
+}
+
+#directory #directory_tab a.selected {
+	background-image:url(../images/directory_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:89px;
+	height:29px;
+}
+
+/*#jricard #jriMyAccountMenu_jricard_tab a.selected {
+	background-image:url(../images/jricard_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:82px;
+	height:29px;
+}*/
+
+#jriMyAccountMenu_jricard_tab a.selected {
+	background-image:url(../images/jricard_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:82px;
+	height:29px;
+}
+
+#myprofile #myprofile_tab a.selected {
+	background-image:url(../images/jricard_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:82px;
+	height:29px;
+}
+
+#coupons #Menu1_coupons_tab a.selected {
+	background-image:url(../images/coupons_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:90px;
+	height:29px;
+
+}
+
+#transactionhistory #transactionhistory_tab a.selected {
+	background-image:url(../images/transactionhistory_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:160px;
+	height:29px;
+}
+
+#corporatecard #jriMyAccountMenu_corporatecard_tab a.selected {
+	background-image:url(../images/corporatecard_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:136px;
+	height:29px;
+}
+
+#bulkuploadhistory #jriMenuPanel_bulkuploadhistory_tab a.selected {
+	background-image:url(../images/bulkuploadhistory_tab.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	width:167px;
+	height:29px;
+}
+
+#myprofile #myprofile_tab a div, #directory #directory_tab a div, #jriMyAccountMenu_jricard_tab a div, #corporatecard #jriMyAccountMenu_corporatecard_tab a div, #transactionhistory #transactionhistory_tab a div, #contactus #contactus_tab a div, #faqs #faqs_tab a div, #terms_policies #terms_policies_tab a div, #jricardoverview #jricardoverview_tab a div, #coupons #Menu1_coupons_tab a div ,#jrialerts #jriMyAccountMenuAlert_alerts_tab a div,#bulkuploadhistory #jriMenuPanel_bulkuploadhistory_tab a div{
+	background-image:url(../images/myaccount_tab_arrow.png);
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	height:50px;
+}
+/*
+#myprofile #myprofile_tab a div, #directory #directory_tab a div, #jriMyAccountMenu_jricard_tab a div, #corporatecard #jriMyAccountMenu_corporatecard_tab a div, #transactionhistory #transactionhistory_tab a div, #contactus #contactus_tab a div, #faqs #faqs_tab a div, #terms_policies #terms_policies_tab a div, #jricardoverview #jricardoverview_tab a div, #coupons #Menu1_coupons_tab a div {
+	background-image:url(../images/myaccount_tab_arrow.png);
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	height:50px;
+}
+*/
+#addservicespanel td.defaulttext1 {
+	font-size:15px;
+}
+
+#addservicespanel span.defaulttext1 {
+	font-size:18px;
+}
+
+#addservicespanel table td.defaulttext2 {
+	font-size:14px;
+}
+
+#addservicespanel table td.defaulttext3, #addservicespanel table td.comment {
+	font-size:12px;
+}
+
+/********************* My Account Tabs Menu Ends ************************/
+
+
+/********************* Helpdesk Tabs Menu Starts ************************/
+
+TD.helpdesktabsbg {
+	background-image:url(../images/myaccount_tabs_bg.gif);
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	padding-top:11px;
+}
+
+TD.helpdesktabsbg table td a {
+	display:block;
+	height:29px;
+}
+
+TD.helpdesktabsbg table td a div {
+	padding-top:8px;
+	}
+
+#helpdesk #faqs_tab a.selected {
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+/*	width:92px;*/
+	height:29px;
+}
+
+#jricardoverview #jricardoverview_tab a.selected {
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+/*	width:89px;*/
+	height:29px;
+}
+
+#jritermsconditions #terms_policies_tab a.selected {
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+/*	width:82px;*/
+	height:29px;
+}
+
+#helpdesk_contactus #contactus_tab a.selected {
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+/*	width:82px;*/
+	height:29px;
+}
+
+
+#helpdesk #faqs_tab a div, #jricardoverview #jricardoverview_tab a div, #jritermsconditions #terms_policies_tab a div, #helpdesk_contactus #contactus_tab a div {
+	background-image:url(../images/myaccount_tab_arrow.png);
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	height:50px;
+}
+
+#addservicespanel td.defaulttext1 {
+	font-size:15px;
+}
+
+#addservicespanel span.defaulttext1 {
+	font-size:18px;
+}
+
+#addservicespanel table td.defaulttext2 {
+	font-size:14px;
+}
+
+#addservicespanel table td.defaulttext3, #addservicespanel table td.comment {
+	font-size:12px;
+}
+
+/********************* Helpdesk Tabs Menu Ends ************************/
+
+
+/********************* Payments Menu Section Starts ************************/
+#payment_status .defaulttext3, #payment_status .defaulttext2 {
+	font-size:18px;
+}
+
+#payment_jricard #paymentsmenu td a, #payment_creditcard #paymentsmenu td a, #payment_debitcard #paymentsmenu td a, #payment_netbanking #paymentsmenu td a, #payment_cashcard #paymentsmenu td a {
+	padding:6px 13px;
+	height:8px;
+/*	border:1px solid red;*/
+/*	padding-top:1px;*/
+	font-size:15px;
+	color:#070707;
+	text-decoration:none;
+	background-color:#FFFFFF;
+}
+
+#payment_jricard #paymentsmenu #jricardtab a.selected, #payment_creditcard #paymentsmenu #creditcardtab a.selected, #payment_debitcard #paymentsmenu #debitcardtab a.selected, #payment_netbanking #paymentsmenu #netbankingtab a.selected, #payment_cashcard #paymentsmenu #cashcardtab a.selected {
+	padding:6px 13px;
+	height:8px;
+/*	border:1px solid red;*/
+/*	padding-top:6px;*/
+	color:#ffffff;
+	background-color:#343432;
+	border-radius:19px;
+	-moz-border-radius:19px;
+	-webkit-border-radius:19px;
+}
+
+#cardinfo {
+	width:443px;
+	padding:7px 13px 12px 13px;
+	border: 1px solid #dedede;
+}
+
+#cardinfo td.defaulttext1 {
+	font-size:12px !important;
+	padding:3px 0;
+}
+
+/********************* Payments Menu Section Ends ************************/
+
+/******************* Form Starts ********************/
+
+.formtext {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#0f0f0f;	
+}
+
+/******************* Form Ends ********************/
+
+
+
+/******************* Listing Table Starts ********************/
+
+#listingtable .listheader{
+	background-color: #FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #070707;
+	border-top: 1px solid #a9a9a9;
+	border-bottom: 1px solid #a9a9a9;
+	padding: 7px 5px;
+}
+
+#listingtable .listcontent{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #373737;
+	border-bottom: 1px solid #d8d8d8;
+	padding: 0 5px;
+	height:38px;
+	vertical-align:middle
+}
+
+#listingtable TR.listrow{
+	background-color: #FFF;
+}
+
+#listingtable TR.listrow input.textfield-138x25, #listingtable TR.listrowhighlight input.textfield-138x25 {
+padding-left:23px;
+width:97px;
+}
+
+#listingtable TR.listrow:hover{
+	background-color: #f9f9f9;
+}
+
+#listingtable TR.listrowhighlight{
+	background-color: #f9f9f9;
+}
+
+#error td.listcontent {
+	border-bottom-width:0px !important;
+}
+
+#errorpanel .listcontent {
+	height:30px;
+}
+
+#listingtable .errormsg {
+	background-position:12px 8px;
+	padding-left: 35px;
+	padding-right:12px;
+}
+
+#listingtable input.textfield-98x28 {
+	font-size:12px;
+}
+
+#listingtable input.textfield-165x28 {
+	font-size:12px;
+}
+#emailsubmit_ input.textfield-165x28 {
+	font-size:12px;
+}
+#listingtable select.select-174x28 {
+	font-size:12px;
+}
+
+#listingtable #astrick {
+	font-family:'MyriadProSemibold', Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	line-height: 1px;
+}
+
+#listingtable span.defaulttext2 {
+	font-size:12px;
+}
+
+#listingtable select.select-154x28 {
+	font-size:12px;
+	width:154px;
+	height:26px;
+}
+
+
+
+/********************* Listing Table Ends ***********************/
+
+
+/* ------------------------------- ICONS STARTS ------------------------------- */
+
+A.icon:Link, A.icon:Visited, A.icon:Hover { display:inline-block; border:0px; text-decoration:none; }
+
+A.edit:Link, A.edit:Visited { width:13px; height:16px; background-image:url('../images/icon_edit.png'); background-position:left center; background-repeat:no-repeat; }
+A.edit:Hover { background-image:url('../images/icon_edit_hl.png'); }
+
+A.delete:Link, A.delete:Visited { width:11px; height:16px; background-image:url('../images/icon_delete.png'); background-position:left center; background-repeat:no-repeat; }
+A.delete:Hover { background-image:url('../images/icon_delete_hl.png'); }
+
+A.save:Link, A.save:Visited { width:14px; height:14px; background-image:url('../images/icon_save.png'); background-position:left center; background-repeat:no-repeat; }
+A.save:Hover { background-image:url('../images/icon_save_hl.png'); }
+
+A.cancel:Link, A.cancel:Visited { width:14px; height:14px; background-image:url('../images/icon_cancel.png'); background-position:left center; background-repeat:no-repeat; }
+A.cancel:Hover { background-image:url('../images/icon_cancel_hl.png'); }
+
+/* ------------------------------- ICONS ENDS ------------------------------- */
+
+
+/* ------------------------------- TOOL TIP STARTS ------------------------------- */
+
+#addservicemobile, #addservicedth, #addservicedatacard, #searchpanel, #bulkupload {
+	position:relative;
+}
+
+#addservicemobile .comment, #addservicedth .comment, #addservicedatacard .comment {
+	padding:2px 10px 8px 0;
+}
+
+#searchpanel .tooltip_mainbox {
+	left:0;
+	width:301px;
+}
+
+#searchpanel .tooltip_mainbox .innerbox img.tooltiparrow {
+	position:absolute;
+	top:-57px;
+	left:12px;
+}
+
+#searchpanel .textfield-174x28 {
+	padding-left:24px;
+}
+
+#searchpanel .defaulttext3 {
+	padding: 15px 0px 0px 12px;
+}
+
+.tooltip_mainbox {
+	position:absolute;
+	top:15px;
+	right:0;
+	width:311px;
+	padding:11px;    
+	border:1px solid #c2c2c2;
+	box-shadow:1px 1px 8px #919191;
+	background-color:#f3f3f3;
+}
+
+.tooltip_mainbox .innerbox {
+	border:1px solid #e2e2e1;
+	background-color:#ffffff;
+	position:relative;
+}
+
+.tooltip_mainbox .innerbox .errormsg {
+	background-position:12px top;
+	padding-left: 35px;
+	padding-top:0px;
+	padding-right:12px;
+}
+
+.tooltip_mainbox .innerbox img.tooltiparrow {
+	position:absolute;
+	top:-24px;
+	right:12px;
+}
+
+.tooltip_mainbox .innerbox .defaulttext3 {
+	font-size:13px;
+	/*padding:12px 0 12px 12px;*/
+	padding:21px 0 0 12px;}
+
+.tooltip_mainbox .innerbox .padding {
+	padding-right:12px;
+}
+
+.tooltip_mainbox .innerbox input.textfield-174x28 {
+	font-size:12px;
+	color:#070707;
+}
+
+.tooltip_mainbox .innerbox .select-163x28 {
+	font-size:12px;
+	color:#070707;
+	padding: 6px;
+}
+
+.tooltip_mainbox .innerbox .select-174x28 {
+	font-size:12px;
+	color:#070707;
+	padding: 6px;
+/*	padding-left:6px;*/
+/*	padding-top:6px;*/
+}
+
+#bulkupload .tooltip_mainbox {
+	top:-7px;
+}
+
+#myaccountdd .innerbox {
+	box-shadow:1px 0px 8px #919191;
+	width:150px;
+	height:148px;
+	position:relative;
+	left:285px;
+	background-color:#FFF;
+	padding-left:8px;
+	padding-top:10px;
+	margin-top:18px;
+	text-align:left;
+	border:1px solid #c2c2c2;
+}
+#myaccountdd .innerfont {
+	/*height:35px;
+	border-bottom:1px solid #e4e6eb;*/
+}
+#myaccountdd .innerfont2 {
+	height:35px;
+	border-bottom:none;
+}
+#myaccountdd .defaulttext1{
+	height:35px;
+	border-bottom:1px solid #e4e6eb;
+	font-size:15px;
+	font-weight:normal;
+	color:#373737;
+	padding-left:7px;
+	text-decoration:none;
+}
+#myaccountdd img.tooltiparrow {
+	position:absolute;
+	margin-top:-22px;
+	margin-left:17px;
+}  
+
+#myaccountdd A.hyLink2:Link, #myaccountdd A.hyLink2:Visited {
+	font-size:15px;
+	font-weight:normal;
+	color:#373737;
+	text-decoration:none;
+}
+
+
+
+/* ------------------------------- TOOL TIP  ENDS ------------------------------- */
+
+/******************* Links Starts ********************/
+
+A.hyperLink:Link, A.hyperLink:Visited, A.hyperLink:Hover {
+	font-family: 'MyriadProRegular', Verdana, Geneva, sans-serif;
+	font-size:15px;
+	font-weight:normal;	
+	color:#c60965;
+	text-decoration:none;
+}
+
+A.hyLink1:Link, A.hyLink1:Visited {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;	
+	color:#494949;
+	text-decoration:underline;
+}
+
+A.hyLink1:Hover {
+	text-decoration:none;
+}
+
+A.hyLink2:Link, A.hyLink2:Visited {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	color:#373737;
+	text-decoration:none;
+}
+
+A.hyLink2:Hover {
+	text-decoration:underline;
+}
+
+A.hyLink3:Link, A.hyLink3:Visited {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#c60965;
+	text-decoration:none;
+}
+
+A.hyLink3:Hover {
+	text-decoration:underline;
+}
+
+A.addservices:Link, A.addservices:Visited, A.noclass {
+	background-image:url(../images/icon_check_inactive.png);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding:12px 10px 12px 25px;
+	color: #373737;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+	text-decoration:none;
+}
+
+A.addservices:Hover, A.addservicesselected {
+	background-image:url(../images/icon_check_active.png);
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding:10px 10px 10px 25px;
+	color: #373737;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+	text-decoration:none;
+}
+
+
+A.chkicon_active:Link, A.chkicon_active:Visited, A.chkicon_active:Hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#373737;	
+	background-image:url(../images/icon_check_active.png);
+	background-position:8px center;
+	background-repeat:no-repeat;
+/*	padding-left:25px;*/
+	padding:12px 10px 12px 36px;
+	text-decoration:none;
+}
+
+A.chkicon_inactive:Link, A.chkicon_inactive:Visited, A.chkicon_inactive:Hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#373737;	
+	background-image:url(../images/icon_check_inactive.png);
+	background-position:8px center;
+	background-repeat:no-repeat;
+/*	padding-left:25px;*/
+	text-decoration:none;
+	padding:12px 10px 12px 36px;
+}
+
+#jbtnToggle.noclass {
+	background-image:url(../images/icon_check_inactive.png);
+	background-position:8px center;
+	background-repeat:no-repeat;
+	padding:12px 10px 12px 36px;
+	color: #373737;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+	text-decoration:none;
+}
+/********************* Links Ends ***********************/
+
+
+/********************* Main Navigation Menu Starts **********************/
+
+A.menu:Link, A.menu:Visited, A.menu:Hover {
+	font-family: 'MyriadProSemibold', Arial, Helvetica, sans-serif;
+	font-size:13px;
+	color:#fff;
+	text-decoration:none;
+	text-transform:uppercase;
+	display:block;
+	padding:17px 0px 15px 0px;
+	text-align:center;
+	background-color:#4f9503;
+}
+
+#home #menu_home A.active, #aboutus #menu_aboutus A.active, #contactus #menu_contactus A.active, #jrinews #menu_jrinews A.active, #helpdesk #menu_helpdesk A.active, #mobile_app #menu_mobile_app A.active {
+	background-image:url('../images/menu_active_bg.gif');
+	background-position: left bottom;
+	background-repeat:repeat-x;
+	padding:17px 0px 15px 0px;	
+}
+
+A.menu div, A.active div { background-position: center center; background-repeat:no-repeat; height:16px; display:block; }
+
+#menu_home A.menu div { background-image:url('../images/menu_home.png'); }
+#menu_aboutus A.menu div { background-image:url('../images/menu_aboutus.png'); }
+#menu_contactus A.menu div { background-image:url('../images/menu_contactus.png'); }
+#menu_jrinews A.menu div { background-image:url('../images/menu_jri_news.png'); }
+#menu_helpdesk A.menu div { background-image:url('../images/menu_help_desk.png'); }
+#menu_mobile_app A.menu div { background-image:url('../images/menu_mobile.png');}
+
+#home #menu_home A.active div { background-image:url('../images/menu_home_active.png'); }
+#aboutus #menu_aboutus A.active div { background-image:url('../images/menu_aboutus_active.png'); }
+#contactus #menu_contactus A.active div { background-image:url('../images/menu_contactus_active.png'); }
+#jrinews #menu_jrinews A.active div { background-image:url('../images/menu_jri_news_active.png'); }
+#helpdesk #menu_helpdesk A.active div { background-image:url('../images/menu_help_desk_active.png'); }
+#mobile_app #menu_mobile_app A.active div { background-image:url('../images/menu_mobile_active.png'); }
+
+
+/********************* Main Navigation Menu Ends ************************/
+
+
+
+/*--------------------------------------------- General Ends -----------------------------------------------------*/
+
+/********************* Inputs and Select Box Starts ***********************/
+
+input, select, textArea {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#373737;
+	background-color:#fff;
+	border:solid 1px #d8d8d8;
+	padding:4px 8px;	
+}
+
+input.checkbox, input.radio {
+	border:none !important;
+	padding:0px !important;
+}
+
+.inputsbg {
+	background-image:url('../images/input_bg.gif');
+	background-position:left bottom;
+	background-repeat:repeat-x;
+}
+
+.rupee {
+	background-image:url('../images/rupee_sign.png');
+	background-position:9px center;
+	background-repeat:no-repeat;
+}
+.rupee1 {
+	background-image:url('../images/rupee_sign.png');
+	background-position:0 5px;
+	background-repeat:no-repeat;
+	display:inline-block;
+	width:10px;
+	height:19px;
+}
+.rupee_gray {
+	background-image:url('../images/rupee_sign_gray.png');
+	background-position:9px center;
+	background-repeat:no-repeat;
+}
+
+.calendar_sign {
+	background-image:url('../images/calendar_sign.png');
+	background-position:9px center;
+	background-repeat:no-repeat;
+}
+
+/* Textfield 36  starts  */
+
+input.textfield-231x36 {
+	font-size:14px;
+	width:210px;
+	height:16px;
+	padding:9px 8px 9px 11px !important;
+}
+
+input.textfield-348x36 {
+	font-size:14px;
+	width:327px;
+	height:16px;
+	padding:9px 8px 9px 11px !important;
+}
+
+input.textfield-165x36 {
+	width:147px;
+	height:26px;
+}
+
+/* Textfield 36  ends  */
+
+/* Textfield 33  ends  */
+
+input.textfield-165x33 {
+	width:147px;
+	height:23px;
+}
+
+input.textfield-226x33 {
+	width:191px;
+	height:23px;
+	padding-left:25px
+}
+
+/* Textfield 36  ends  */
+
+
+/* Textfield 28 starts  */
+
+input.textfield-295x28 {
+	width:277px;
+	height:18px;
+}
+
+input.textfield-232x28 {
+	width:214px;
+	height:18px;
+}
+
+input.textfield-208x28 {
+	width:190px;
+	height:18px;
+}
+
+input.textfield-190x28 {
+	width:172px;
+	height:18px;
+}
+
+input.textfield-174x28 {
+	width:156px;
+	height:18px;
+}
+
+input.textfield-163x28 {
+	width:145px;
+	height:18px;
+}
+input.textfield-135x17 {
+	width:130px;
+	height:12px;
+}
+
+input.button-86x26 {
+	background-color:#dedede;
+	border:1px solid #bbbbbb;
+	padding:2px 8px;
+/*	height:23px;*/
+}
+
+input.textfield-140x28 {
+	width:122px;
+	height:18px;
+}
+
+input.textfield-98x28 {
+	width:80px;
+}
+
+input.textfield-80x28 {
+	width:64px;
+	height:18px;
+}
+
+/* Textfield 28 ends  */
+
+
+/* Textfield 25 starts  */
+
+input.textfield-174x25 {
+	width:156px;
+	height:15px;
+}
+
+input.textfield-138x25 {
+	width:120px;
+	height:15px;
+}
+
+input.textfield-72x25 {
+	width:56px;
+	height:15px;
+}
+/* Textfield 25 ends  */
+
+/* Textfield 22 starts  */
+
+input.textfield-42x22 {
+	width:24px;
+	height:12px;
+}
+
+/* Textfield 22 ends  */
+
+
+/* Select field 36 starts */
+
+select.select-348x36 {
+	width:348px;
+	height:36px;
+	padding:6px 8px 6px 8px !important;
+}
+
+select.select-231x36 {
+	width:230px;
+	height:36px;
+	padding:6px 8px 6px 8px !important;
+}
+
+select.select-235x37 {
+	font-size:18px;
+	width:235px;
+	height:37px;
+	padding:6px 8px 10px 8px !important;
+}
+
+/* Select field 36 ends */
+
+/* Select field 33 starts */
+
+select.select-295x33 {
+	width:295px;
+	height:33px;
+	padding:6px 8px 6px 8px !important;
+}
+/* Select field 33 ends */
+
+
+
+/* Select field 28 starts */
+
+select.select-295x28 {
+	width:295px;
+	height:28px;
+	padding:4px;
+}
+
+select.select-232x28 {
+	width:232px;
+	height:28px;
+	padding:4px;
+}
+
+
+select.select-208x28 {
+	width:208px;
+	height:28px;
+	padding:4px;
+}
+
+select.select-190x28 {
+	width:190px;
+	height:28px;
+	padding:4px;
+}
+
+select.select-174x28 {
+	width:174px;
+	height:28px;
+	padding:4px;
+}
+
+select.select-163x28 {
+	width:163px;
+	height:28px;
+	padding:4px;
+}
+
+select.select-150x28 {
+	width:150px;
+	height:28px;
+	padding:4px 8px 4px 8px !important;
+}
+
+select.select-130x28 {
+	font-size:12px;
+	width:130px;
+	height:28px;
+	padding:4px 8px 4px 8px !important;
+}
+
+/* Select field 28 ends */
+
+
+/* Select field 25 starts */
+
+select.select-174x25 {
+	width:174px;
+	height:25px;
+	font-size:13px;
+}
+
+/* Select field 25 ends */
+
+
+textarea.textarea-232x53 {
+	width:214px;
+	height:43px;
+}
+
+textarea.textarea-295x53 {
+	width:277px;
+	height:43px;
+}
+
+/********************* Inputs and Select Box Ends ***********************/
+
+
+/********************* Home Page Starts *******************/
+
+/* Language Panel Starts */
+#languagepanel select.select-150x28 {
+	font-size:12px;
+	padding-top:5px !important;
+}
+
+/* Language Panel Ends */
+
+/* Form Panel Starts */
+
+#mainpanelform .formtext {
+	font-size:14px;
+	padding-bottom:6px;
+}
+
+#mainpanelform select.select-348x36, #mainpanelform input.textfield-348x36 {
+	font-size:15px;	
+}
+
+#mainpanelform #amount input.textfield-348x36 {
+	width:303px !important;
+	padding:9px 8px 9px 35px !important;
+}
+
+#mainpanelform #amount input.textfield-231x36 {
+	width:185px !important;
+	padding:9px 8px 9px 35px !important;
+}
+
+#mainpanelform #amount {
+	position:relative;
+}
+
+#mainpanelform #amount img {
+	position:absolute;
+	top:12px;
+	left:13px;
+}
+
+#boxcontainer {
+	position:absolute;
+	z-index:9999;
+}
+
+#boxcontainer .mainbox {
+	width:100%;
+	position:relative;
+	top:-1px;
+	overflow:hidden;
+	z-index:9999;
+}
+
+#boxcontainer .overlay {
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:100;
+}
+		
+#boxcontainer .innerbox {
+	width:325px;
+	position:absolute;
+	background-color:#f9f9f9;
+	color:#7F7F7F;
+	z-index:99999;
+	padding:10px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;		
+}
+
+#boxcontainer .innerbox #amount_list {
+	height:150px;
+	overflow:auto;
+}
+
+#boxcontainer .innerbox #amount_list #popularrecharge_values td.defaulttext1 {
+	font-family:'Rupee_foradianregular', Arial, Helvetica, sans-serif;
+	font-size:13px;
+	padding:2px 0px;
+}
+
+#popularrecharge_values td.defaulttext1 A.hyLink1:Link, #popularrecharge_values td.defaulttext1 A.hyLink1:Visited {
+	text-decoration:none;
+}
+
+#popularrecharge_values td.defaulttext1 A.hyLink1:Hover {
+	text-decoration:underline;
+}
+
+/* Form Panel Ends */
+
+/* Testimonials Panels Starts */
+
+#testimonialspanel {
+	background-image:url('../images/testimonial_banner.gif');
+	background-position:left top;
+	background-repeat:no-repeat;
+	height:165px;
+	padding-bottom:15px;
+}
+
+#testimonialspanel table .fade div {
+	width:562px;
+	height:82px;
+	vertical-align:middle;
+	text-align:center;
+	color:#fff;
+	padding-top:32px;
+	margin-top:-20px;
+}
+
+/* Testimonials Panels Ends */
+
+/********************* Home Page Ends *******************/
+
+/********************* Enter Recharge Amount Starts *******************/
+
+#rechargeamount #contentpanel .defaulttext2 {
+	font-size:15px;
+}
+
+#rechargeamount #contentpanel span.defaulttext1 {
+	font-size:15px;
+	padding-left:10px;
+}
+
+#rechargeamount #contentpanel TD.defaulttext1 {
+	font-size:14px;
+}
+
+#rechargeamount #contentpanel input.textfield-165x33 {
+	padding-left:25px;
+	width:130px;
+	
+}
+
+#rechargeamount #rechargenote span.defaulttext1 {
+	font-size:12px;
+	padding-left:0;
+}
+
+#rechargeamount #rechargenote TD.defaulttext1 {
+	font-size:11px;
+	padding-bottom:12px;
+}
+
+#rechargeamount #contentpanel A.hyLink2:Link, #rechargeamount #contentpanel A.hyLink2:Visited, #rechargeamount #contentpanel A.hyLink2:Hover {
+	font-size:14px;
+	text-decoration: none;
+}
+
+
+/********************* Enter Recharge Amount Ends *******************/
+
+/********************* Payment Section Starts *******************/
+#payment span.defaulttext1, #payment span.defaulttext2 {
+	font-size:18px;
+}
+
+#payment span.rupeesign {
+	font-size:18px;
+}
+
+#payment #contentpanel {
+	padding:0px 3px 15px 9px;
+}
+
+#payment #paymentoptionspanel #paymentoption1, #payment #paymentoptionspanel #paymentoption2, #payment #paymentoptionspanel #paymentoption3, #payment #paymentoptionspanel #paymentoption4, #payment #paymentoptionspanel #paymentoption5 {
+	padding-left:12px;
+}
+
+#payment #contentpanel.defaulttext1 {
+	background-image:url(../images/payment_breakup_bg.png);
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-color:#ffffff;
+	padding:19px 0px 0px 0px;
+	border-top:3px solid #ffffff;
+	border-right:3px solid #ffffff;
+}
+
+#payment #paymentbreakup span.defaulttext3 {
+	font-size:15px;
+}
+
+#payment #paymentbreakup TD.defaulttext3 {
+	font-size:13px;
+}
+
+#payment #paymentbreakup span.defaulttext3 {
+	font-size:15px;
+}
+
+#payment #paymentbreakup TD.defaulttext1, #payment #paymentbreakup TD.defaulttext2 {
+	font-size:13px;
+	background-image:none;
+	padding:7px 0px;
+}
+
+/* --------------- */
+
+#contentpanel #amount input.textfield-165x36 {
+	width:129px;
+	padding-left:26px;
+}
+
+#contentpanel #paymentoption1 td.defaulttext3 span, #contentpanel #paymentoption1 td.defaulttext2 span {
+	font-size:18px;
+}
+
+#contentpanel #paymentoption1 span.rupeesign {
+	font-size:17px;
+}
+
+#contentpanel #paymentoption1 TD.defaulttext2, #contentpanel #paymentoption1 TD.defaulttext1, #contentpanel #paymentoption1 TD.defaulttext1 span.defaulttext2 {
+	font-size:15px;
+}
+/* --------------- */
+
+#contentpanel #paymentoption2 TD.defaulttext1, #contentpanel #paymentoption3 TD.defaulttext1 {
+	padding-top:11px;
+	font-size:12px;
+}
+
+#contentpanel #paymentoption2 span.defaulttext1, #contentpanel #paymentoption3 span.defaulttext1 {
+	font-size:11px;
+	padding-right:75px;
+}
+
+#contentpanel #paymentoption2 TD.defaulttext3, #contentpanel #paymentoption3 TD.defaulttext3 {
+padding-top:7px;
+padding-bottom:7px;
+}
+
+
+/********************* Payment Section Ends *******************/
+
+
+/********************* Calculation Panel Starts *******************/
+
+#contentpanel #amount input.textfield-165x36 {
+	width:129px;
+	padding-left:26px;
+}
+
+#contentpanel #calculation td.defaulttext3 span, #contentpanel #calculation td.defaulttext2 span {
+	font-size:18px;
+}
+
+#contentpanel #calculation TD.defaulttext2, #contentpanel #calculation TD.defaulttext1, #contentpanel #calculation TD.defaulttext1 span.defaulttext2 {
+	font-size:15px;
+}
+
+#contentpanel #discountcode.defaulttext1 {
+	padding-top:8px;
+	}
+	
+#contentpanel #discountcode.textfield-165x33 {
+	padding-left:0px !important;
+	}
+	
+
+/********************* Calculation Panel Ends *******************/
+
+
+/********************* Frozen Popup Starts *******************/
+
+#frozenpopup .frozeninner {
+	border: 1px solid #e3e3e2;
+	background-color:#ffffff;
+/*	padding:13px 19px;*/
+}
+
+#frozenpopup .frozeninner span.defaulttext2 {
+	font-size:13px;
+}
+
+#frozenpopup div.defaulttext3 {
+	font-size:13px;
+	padding:10px 19px;
+}
+
+#frozenpopup .frozeninner #schedulertable TD.defaulttext3 {
+	padding:13px 0 13px 25px;
+	font-size:13px
+}
+
+#frozenpopup .frozeninner #schedulertable input.textfield-174x25 {
+padding-left:26px;
+width:138px;
+}
+
+/********************* Signin Panel Starts *******************/
+#signinpanel {
+	background-color:#ffffff;
+	padding:13px 0 13px 25px;
+}
+
+#signinpanel TD.defaulttext1 {
+	font-size:12px;
+}
+
+#signinpanel span.defaulttext1{
+	font-size:12px;
+}
+
+/********************* Signin Panel Ends *******************/
+
+/********************* Signup Panel Starts *******************/
+
+/*#signup TD.defaulttext1 {
+	font-size:12px;
+	padding-right:15px;
+	padding-top:12px;
+}*/
+
+#signup {
+	background-color:#fff;
+}
+
+#signup TD.defaulttext1, #signup TD.defaulttext3 {
+	font-size:12px;
+	padding:4px 0;
+}
+
+#signup TD.defaulttext1 {
+	padding-right:15px;
+}
+
+#signup span.defaulttext1, #signup A.hyLink3:Link, #signup A.hyLink3:Visited, #signup A.hyLink3:Hover  {
+	font-size:11px;
+}
+
+#signup span.defaulttext1 {
+	display:block;
+	padding-top:3px;
+}
+
+#signup span.errormsg {
+	font-size:12px;
+/*	padding:5px 18px;*/
+}
+
+#signup .textfield-208x28 {
+	padding-left:25px;
+}
+
+#signup #dob.textfield-232x28 {
+	padding:4px 8px 4px 25px !important;
+	width:199px !important;
+}
+
+/********************* Signup Panel Ends *******************/
+
+/********************* Forgot Password Panel Starts *******************/
+#forgotpasswordpanel {
+	background-color:#ffffff;
+	padding:13px 0 13px 25px;
+}
+
+#forgotpasswordpanel TD.defaulttext1 {
+	font-size:12px;
+}
+
+#forgotpasswordpanel span.defaulttext1{
+	font-size:12px;
+}
+
+/********************* Forgot Password Panel Ends *******************/
+
+/********************* Session Time Out Panel Starts *******************/
+#sessiontimeoutpanel {
+	background-color:#ffffff;
+	padding:0px 0px 13px 25px;
+}
+
+#sessiontimeoutpanel TD.defaulttext1 {
+	font-size:12px;
+}
+
+#sessiontimeoutpanel span.defaulttext1{
+	font-size:12px;
+}
+
+#sessiontimeoutpanel A.hyLink2:Link, #sessiontimeoutpanel A.hyLink2:Visited {
+	font-size:12px;
+	text-decoration:underline;
+}
+
+#sessiontimeoutpanel A.hyLink2:Hover {
+	text-decoration:none;
+}
+
+/********************* Session Time Out Panel Ends *******************/
+
+/********************* Corporate Signin Panel Starts *******************/
+#corporatesigninpanel {
+	background-color:#ffffff;
+	padding:13px 0 13px 25px;
+}
+
+#corporatesigninpanel TD.defaulttext1 {
+	font-size:12px;
+}
+
+#corporatesigninpanel span.defaulttext1{
+	font-size:12px;
+}
+
+/********************* Corporate Panel Ends *******************/
+
+/********************* Frozen Popup Ends *******************/
+
+
+/********************* Message Panel Starts *******************/
+
+#msg_orderstatus, #msg_orderstatus1, #msg_orderstatus2 {
+	margin-top: -2px;
+	position:relative;
+}
+
+#msg_orderstatus img.arrow {
+	position:absolute;
+	right:130px;
+	top:-10px;
+}
+
+#msg_orderstatus1 img.arrow, #msg_orderstatus2 img.arrow {
+	position:absolute;
+	right:80px;
+	top:-10px;
+}
+
+#msg_orderstatus2 .message_panel {
+	padding:10px;
+	}
+
+/********************* Message Panel Ends *******************/
+
+/********************* Bottom Oprator Panel Starts *******************/
+
+#operatorpanel td.defaulttext2 {
+	padding:15px 0px 3px 0px;
+	font-weight:bold;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 11px;
+}
+
+#operatorpanel td.defaulttext1 {
+	font-size:11px;
+	padding:3px 0px;
+}
+
+#bottompanel td.defaulttext3 {
+	font-size:11px;
+}
+
+/********************* Bottom Oprator Panel Ends *******************/
+
+/********************* Add Services Panel Starts *******************/
+#addservices A.hyLink2:Link, #addservices A.hyLink2:Visited, #addservices A.hyLink2:Hover {
+	text-decoration:none;
+	font-size:15px;
+}
+
+/********************* Add Services Panel Ends *******************/
+/********************* My Profile Panel Starts *******************/
+
+#myprofiledetails TD.defaulttext1 {
+	font-size:17px;
+}
+
+#myprofileform {
+	background-color:#fff;
+}
+
+#myprofileform #subtitle .defaulttext3{
+	font-size:18px;
+}
+
+#myprofileform TD.defaulttext1, #myprofileform TD.defaulttext3 {
+	font-size:13px;
+	padding:4px 0;
+}
+
+#myprofileform TD.defaulttext1 {
+	padding-right:15px;
+}
+
+#myprofileform span.defaulttext1, #myprofileform A.hyLink3:Link, #myprofileform A.hyLink3:Visited, #myprofileform A.hyLink3:Hover  {
+	font-size:12px;
+}
+
+#myprofileform span.defaulttext1 {
+	display:block;
+	padding-top:3px;
+}
+
+#myprofileform span.errormsg {
+	font-size:12px;
+/*	padding:5px 18px;*/
+}
+
+#myprofileform .textfield-208x28 {
+	padding-left:25px;
+}
+
+#myprofileform #cust_dob.textfield-295x28 {
+	padding:4px 8px 4px 25px !important;
+	width:262px !important;
+}
+
+/*#username_password {
+	background-color:#f3f2ed;
+}*/
+
+#username_password {
+	border:1px solid #d8d8d8;
+/*	background-color:#f3f2ed;*/
+}
+
+/********************* My Profile Panel Ends *******************/
+
+/********************* Contact Us Panel Starts *******************/
+
+#contactusdetails TD.defaulttext1 {
+	font-size:17px;
+}
+
+#contactusform {
+	background-color:#fff;
+}
+
+#contactusform #subtitle .defaulttext1{
+	font-size:18px;
+}
+
+#contactusform #disabledtext .defaulttext3{
+	font-size:12px;
+	color:#888888;
+ }
+
+#contactusform TD.defaulttext1, #contactusform TD.defaulttext3 {
+	font-size:12px;
+	padding:4px 0;
+}
+
+#contactusform TD.defaulttext1 {
+	padding-right:15px;
+}
+
+#contactusform span.defaulttext1, #contactusform A.hyLink3:Link, #contactusform A.hyLink3:Visited, #contactusform A.hyLink3:Hover  {
+	font-size:12px;
+}
+
+#contactusform span.defaulttext1 {
+	display:block;
+	padding-top:3px;
+}
+
+#contactusform span.errormsg {
+	font-size:12px;
+/*	padding:5px 18px;*/
+}
+
+#contactusform #cust_dob.textfield-295x28 {
+	padding:4px 8px 4px 25px !important;
+	width:262px !important;
+}
+
+
+/********************* Contact Us Panel Ends *******************/
+/********************* JRI Card Section Starts *******************/
+
+#jricardbalance span.defaulttext1, #jricardbalance span.defaulttext2 {
+	font-size:18px;
+}
+
+#jricardbalance span.rupeesign {
+	font-size:18px;
+}
+
+#jricardbalance A.hyLink3:Link, #jricardbalance A.hyLink3:Visited {
+	font-size:13px;
+}
+
+#jricardbalance TD.defaulttext1 {
+	font-size:15px;
+}
+
+#jricardbalance #listingtable .listheader{
+	border-top: 0px;
+}
+
+#jricardbalance #listingtable span.rupeesign {
+	font-size:14px;
+	padding:0 3px;
+}
+
+#jricardbalance #listingtable .listcontent {
+	padding:8px 5px;
+}
+
+/********************* JRI Card Section Ends *******************/
+
+/********************* Corporate Card Section Starts *******************/
+
+#corporatecard_listtable #listingtable .listcontent {
+	padding:8px 5px;
+}
+
+#corporatecardbalance #contentpanel, #corporatedefaulttitle #contentpanel {
+	background-color:#f0efe8;
+	padding:22px 0px 15px 0px;
+}
+
+#corporatedefaulttitle #contentpanel {
+	background-color:#f0efe8;
+	padding:10px 0px 15px 0px;
+}
+
+
+#corporatecardbalance span.defaulttext1, #corporatecardbalance span.defaulttext2, #corporatecardbalance span.rupeesign, #corporatedefaulttitle span.defaulttext1, #corporatedefaulttitle span.defaulttext2, #corporatedefaulttitle span.rupeesign  {
+font-size:18px;
+}
+
+#pagetitle .defaulttext3 {
+	font-size:22px;
+	padding-bottom:5px;
+}
+
+#pagetitle .defaulttext2 {
+	font-size:18px;
+	padding-bottom:5px;
+	font-weight:bold;
+
+}
+
+#bulkuploadrecharge .defaulttext2 {
+	font-size:17px;
+	padding-bottom:5px;
+	padding-left:10px;
+}
+
+/********************* Corporate Card Section Ends *******************/
+
+
+/********************* Bulk Upload Popup Starts *********************/
+
+#uploadexcelform .defaulttext1{
+	padding:0px 0px 0px 12px;
+	font-size:11px;
+	}
+
+#uploadexcelform .defaulttext2{
+	font-size:11px;
+	padding:13px 0px 5px 12px;
+	}
+
+#uploadexcelform span.defaulttext1{
+	padding:0;
+	font-size:11px;
+	}
+
+
+#uploadexcelform .defaulttext3{
+	font-size:11px;
+	padding:9px 0 0 12px;
+	}
+#uploadexcelform a.hyLink2:link, #uploadexcelform a.hyLink2:visited{
+	text-decoration:underline;
+	}
+	
+#uploadexcelform a.hyLink2:hover{
+	text-decoration: none;
+	}
+	
+#uploadexcelform  img.tooltiparrow{
+	top:-24px;
+	}
+#uploadexcelform input.textfield-163x28{
+	height:13px;
+	}
+#uploadexcelform .tooltip_mainbox{
+	width:290px;
+	}
+#bulkupload .tooltip_mainbox{
+	width:286px;
+	}	
+
+/********************* Bulk Upload Popup Ends *********************/
+
+/********************* JRI News Starts *********************/
+
+#jrinewspage A.hyLink3:Link, #jrinewspage A.hyLink3:Visited {
+	font-size:18px;
+	text-decoration:none;
+}
+#jrinewspage A.hyLink3:Hover {
+	text-decoration:underline;
+}
+
+#jrinewspage span A.hyLink3:Link, #jrinewspage span A.hyLink3:Visited {
+	font-size:12px;
+	text-decoration:none;
+}
+#jrinewspage span A.hyLink3:Hover {
+	text-decoration:underline;
+}
+
+#jrinewspage span.defaulttext1 {
+	color:#888;
+	font-size:12px;
+}
+
+/********************* JRI News Ends *********************/
+/********************* JRI Recharge Successful Page Starts *********************/
+
+#order_details{
+	
+	/*border:solid 1px #bababa;*/
+	border:solid 1px #d4d4d4;
+}
+
+#order_details .defaulttext1{
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #373737;
+	padding: 0px 21px;	
+}
+
+ #order_details .defaulttext2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight: normal;
+	color:#c50763;
+	padding: 0px 21px;
+ }
+	
+#email_details span.defaulttext1 {
+	font-size:18px;	
+}
+
+#email_details .defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: normal;
+	color:#373737;
+}
+
+#email_details .Emailconfirmation_link {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: normal;
+	color:#c50763;
+}
+
+#failed_reason .defaulttext1{
+	font-size: 15px;
+	line-height:25px;
+}
+
+#failed_reason .hyLink3{
+	font-size: 17px;	
+}
+
+#notifaction_font .defaulttext1{
+	font-size: 16px;
+	line-height:25px;
+}
+
+.email{
+	float:left;
+	width:auto;
+	padding-top:2px;
+	}
+.edit_button{
+	float:left;
+	width:110px;
+	padding-left:20px;
+}
+.submit_inputfield{
+	height:10px;
+	width:130px;
+	}
+/********************* JRI Recharge Successful Page End *********************/
+
+.errormsgPayment {
+	background-image:url(../images/icon_error.png);
+	background-repeat:no-repeat;
+	background-position:left 8px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px !important;
+	color:#ab0202 !important;
+	padding:8px 12px 8px 20px;
+}
+
+.successmsg {
+	/*background-image:url(../images/icon_check_active.png);
+	background-repeat:no-repeat;
+	background-position:left 8px;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px !important;    
+	color:#40ab2f !important;
+    font-weight:bold;
+	padding:8px 12px 8px 25px;
+}
+
+
+
+#myaccountdd .innerbox {
+	box-shadow:1px 0px 8px #919191;
+	width:150px;
+	height:148px;
+	position:relative;
+	left:285px;
+	background-color:#FFF;
+	padding-left:8px;
+	padding-top:10px;
+	margin-top:18px;
+	text-align:left;
+	border:1px solid #c2c2c2;
+}
+#myaccountdd .innerfont {
+	/*height:35px;
+	border-bottom:1px solid #e4e6eb;*/
+}
+#myaccountdd .innerfont2 {
+	height:35px;
+	border-bottom:none;
+}
+#myaccountdd .defaulttext1{
+	height:35px;
+	border-bottom:1px solid #e4e6eb;
+	font-size:15px;
+	font-weight:normal;
+	color:#373737;
+	padding-left:7px;
+	text-decoration:none;
+}
+#myaccountdd img.tooltiparrow {
+	position:absolute;
+	margin-top:-22px;
+	margin-left:17px;
+}  
+
+#myaccountdd A.hyLink2:Link, #myaccountdd A.hyLink2:Visited {
+	font-size:15px;
+	font-weight:normal;
+	color:#373737;
+	text-decoration:none;
+}
+
+.mandatory {	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px !important;
+	color:#ab0202 !important;    
+}
+
+/********************* Change Password Starts *********************/
+
+#jrichangepassword .defaulttext3 {
+	font-size:18px;
+	color:#373737;
+	text-decoration:none;
+}
+
+#jrichangepassword .defaulttext1 {
+	font-size:12px;
+	color:#373737
+}
+
+#jrichangepassword .linehight {
+	font-size:14px;
+	color:#373737;
+	line-height:20px;
+}
+ #jrichangepassword input.textfield-208x28 {
+	width:190px;
+	height:14px;
+}
+
+
+/********************* Change Password Ends *********************/
+/*--- QUICK RECHARGE PANEL ---*/
+#mainpanelform #amount input.textfield-231x36 {
+	width:185px !important;
+	padding:9px 8px 9px 35px !important;
+}
+select.select-231x36 {
+	width:230px;
+	height:36px;
+	padding:6px 8px 6px 8px !important;
+}
+input.textfield-231x36 {
+	font-size:14px;
+	width:210px;
+	height:16px;
+	padding:9px 8px 9px 11px !important;
+}
+/*--- QUICK RECHARGE PANEL ---*/
+
+/********************* JRI faq page Start *********************/
+#question.defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#373737;	
+}
+
+#jri_cardoverview.defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#373737;
+	line-height:20px;	
+}
+
+#faq_subtitle .defaulttext1{
+	font-size:18px;
+}
+
+#faq_parageaph .passage{
+	font-size:13px;
+	line-height:18px;
+}
+
+/********************* JRI faq page End *********************/
+
+
+ #creditcardinformationform #heading{
+	padding: 10px 100px 6px 22px;
+	background-color:#f0efe8;
+	border: 1px solid #e3e1d7;
+	color:#151515 !important;
+}
+
+#operatorsheading .defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:25px;
+	font-weight:normal;
+	color:#373737;	
+}
+
+#operatorsheading .defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:25px;
+	font-weight:normal;
+	color:#373737;	
+}
+
+.operatorsdesc {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	color:#373737;	
+}
+
+
+#whyjri .defaulttext1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:normal;
+	color:#373737;
+	padding:10px 0 0 40px;	
+}
+.jripoints{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+    color:#373737;
+	
+}
+
+
+.whyjustrechargeit_bg{ background:url(../images/whyJRI_bg.png) center top no-repeat;
+height:215px;}
+
+
+/********************* JRI Career page start *********************/
+.AccordionTitle, .AccordionContent, .AccordionContainer
+{
+  position:relative;
+  width:515px;
+}
+
+.AccordionTitle
+{
+  height:20px;
+  overflow:hidden;
+  cursor:pointer;
+  font-family:Arial;
+  font-size:8pt;
+  font-weight:bold;
+  vertical-align:middle;
+  text-align:center;
+  background-repeat:repeat-x;
+  display:table-cell;
+  background-image:url('http://tech.pro/_sotc/sites/default/files/108/images/title_repeater.jpg');
+  -moz-user-select:none;
+}
+
+.AccordionContent
+{
+  height:0px;
+  overflow:auto;
+  display:none; 
+}
+
+.AccordionContainer
+{
+  border-top: solid 1px #C1C1C1;
+  border-bottom: solid 1px #C1C1C1;
+  border-left: solid 2px #C1C1C1;
+  border-right: solid 2px #C1C1C1;
+}
+
+.careers_slidebanner{background:url(../images/big_banner.png) left top no-repeat;}
+
+.hereiam{font-size:20px; color:#373737;}
+
+
+/********************* JRI Career page end *********************/
+
+/***************************About Us Page start********************************/
+
+#aboutus.defaulttext2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	color:#c50763;
+}
+
+.aboutus{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	color:#373737;
+	line-height:20px;
+}
+
+
+/*************************About Us Page end***************************/
+
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{ 
+	border : buttonshadow;
+    background-color : window;
+	border-width : 1px;
+	border-style : solid;
+	cursor : pointer;
+	overflow : auto;
+    text-align : left; 
+    list-style-type : none;
+    margin: 0;
+    padding-left: 0;
+    z-index:10;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #33abff;
+	color: white;
+	padding: 0;
+    margin: 0;
+    z-index:10;
+    padding-left: 24px;
+    /*font-size:15px;*/
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+    /*color : #c60a9c;*/
+	padding: 0;
+    margin: 0;
+    z-index:10;
+    padding-left: 24px;
+    /*font-size:15px;*/
+}
+
+
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItemStyle
+{
+	background-color: #33abff;
+	color: white;
+	padding: 0;
+    margin: 0;
+    z-index:10;
+    padding-left: 40px;
+    font-size:15px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItemStyle 
+{
+	background-color : window;
+	color : windowtext;
+    /*color : #c60a9c;*/
+	padding: 0;
+    margin: 0;
+    z-index:10;
+    padding-left: 40px;
+    font-size:15px;
+}
+
+
+/* AutoComplete highlighted item DTH */
+
+.autocomplete_highlightedListItemStyleDth
+{
+	background-color: #33abff;
+	color: white;
+	padding: 0;
+    margin: 0;
+    z-index:10;
+    padding-left: 11px;
+    font-size:15px;
+}
+
+/* AutoComplete item DTH */
+
+.autocomplete_listItemStyleDth 
+{
+	background-color : window;
+	color : windowtext;
+    /*color : #c60a9c;*/
+	padding: 0;
+    margin: 0;
+    z-index:10;
+    padding-left: 11px;
+    font-size:15px;
+}
+
+/*Cascading DropDown*/
+
+/*****************************  COUPONS STARTS  ------------------------*/
+
+#coupons #contentpanel {
+	padding:10px;
+}
+
+#couponspanel table td.defaulttext2, #couponspanel table td.defaulttext3{
+	font-size:16px;
+}
+
+#couponspanel span.defaulttext2 {
+	font-size:16px;
+}
+
+#couponspanel #couponsummary .rupeesign {
+	color:#c50763;
+	font-size:16px;
+	padding-right:0px !important;
+	padding-left:3px !important;
+}
+
+#rightpanel {
+	background-color:#f9f9f9;
+	border:1px solid #eaeaea;
+	padding:12px;
+/*	padding:13px 12px 13px 12px;*/
+	
+}
+
+#rightpanel span.defaulttext3 {
+	font-size:12px;
+}
+
+#rightpanel TD.defaulttext1 {
+	font-size:12px;
+	line-height:10px;
+}
+
+#rightpanel span.defaulttext1 {
+	font-size:11px;
+}
+
+#rightpanel .rupeesign {
+	font-size:13px;
+}
+
+#rightpanel #couponsleft span.rupeesign {
+	font-size:12px;
+}
+
+#selectedcoupon {
+	background-color:#ffffff;
+	border:1px solid #d9d9d9;
+	border-radius:3px;
+	padding-left:10px;
+}
+
+#selectedcoupon .defaulttext1, #selectedcoupon span.rupeesign{
+	font-size:13px !important;
+}
+
+A.icon:Link, A.icon:Visited, A.icon:Hover { display:inline-block; border:0px; text-decoration:none; }
+
+A.delete:link, A.delete:visited {
+    background-image: url("../images/icon_remove.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 11px;
+}
+A.delete:hover {
+    background-image: url("../images/icon_remove_hover.png");
+}
+
+div.coupon_details A.hyLink1:Link, div.coupon_details A.hyLink1:Visited {
+	font-size:11px;
+	text-decoration:none;
+}
+
+div.coupon_details A.hyLink1:Hover {
+		color:#c9186d;
+}
+
+div.coupon_details {
+	/*position:absolute;
+	left:0;
+	top:0;
+	z-index:50;
+	width:165px;
+	padding:24px 20px 24px 26px;*/
+	position:absolute;
+
+    left:0;
+
+    top:0;
+
+    z-index:50;
+
+    width:165px;
+
+    padding:22px 20px 24px 26px;
+}
+
+div.coupon_details .defaulttext3 {
+	font-size:28px !important;
+}
+
+div.coupon_details .rupeesign {
+	font-size:18px;
+}
+
+
+
+A.btn-style1:Link, A.btn-style1:Visited {font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight:normal; color:#0d0d0d;text-decoration:none; background-color:#e8e8e8;padding:5px 9px 5px 9px; border:1px solid #d1d1d1; text-transform:uppercase; display:inline-block;}
+A.btn-style1:Hover { background-color:#2c2c2c; color:#ffffff; border:1px solid #2c2c2c; 
+-webkit-transition: all 0.5s ease 0s;
+-moz-transition: all 0.5s ease 0s;
+-o-transition: all 0.5s ease 0s;
+-ms-transition: all 0.5s ease 0s;
+transition: all 0.5s ease 0s;
+}
+
+A.btn-style1-hover {
+	font-family: Arial, Helvetica, sans-serif; font-size: 10px; font-weight:normal; color:#0d0d0d;text-decoration:none; 
+	padding:5px 9px 5px 9px; 
+	border:1px solid #d1d1d1; 
+	text-transform:uppercase; display:inline-block;
+	background-color:#2c2c2c; color:#ffffff; border:1px solid #2c2c2c; 
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	-ms-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+div.fadehover {
+	position: relative;
+	}
+
+div.a {
+	position: absolute;
+		/*background-image:url(../images/coupon_bg.png);*/
+	background-image:url(../images/coupon_bg_new.png);
+	background-position:left top;
+	left: 0;
+	top: 0;
+    z-index: 10;
+	width:211px;
+	height:149px;
+	}
+	
+div.b {
+	position: absolute;
+		/*background-image:url(../images/coupon_bg_hover.png);*/
+	background-image:url(../images/coupon_bg_hover_new.png);
+	background-position:left top;
+	left: 0;
+	top: 0;
+	width:211px;
+  	z-index: 5;
+	height:149px;
+	}
+	
+	
+#coupons #coupon_thankyoupage .defaulttext1 {
+	font-size:15px;
+}
+
+#redeemedcoupon {
+	background-image:url(../images/coupon_sleek_bg.gif);
+	background-position: left top;
+	background-repeat:no-repeat;
+}
+
+#redeemedcoupon .defaulttext3 {
+	padding-top:10px;
+	padding-bottom:6px;
+	font-size:15px !important;
+}
+
+
+#redeemedcoupon .rupeesign {
+	font-size:15px;
+}
+
+#coupons #contentpanel #couponslandingpagebg {
+	background-image:url(../images/jri_coupons_landingpage_bg.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+
+#couponcode {
+	border:1px solid #454545;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+#couponcode .text1 {
+	color:#070707;
+	padding:3px 6px 2px 6px;
+}
+
+#couponcode .text2 {
+	background-color:#454545;
+	color:#ffffff;
+	padding:2px 6px;
+}
+
+#redeemedcoupon #coupons_terms_conditions .rupeesign {
+	font-size:12px !important;
+	color:#070707 !important;
+	padding:0px 3px !important;
+}
+
+#redeemedcoupon #coupons_terms_conditions .defaulttext1 {
+	font-size:11px;
+	padding-bottom:5px;
+	line-height:13px;
+}
+
+#couponslandingpage .defaulttext2 {
+	font-size:21px;
+}
+
+
+/*****************************  COUPONS ENDS  ------------------------*/
+
+/*****************************  WINEERS LIST STARTS  ------------------------*/
+#winnerslist_offer {
+	border-top: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+   }
+#winnerslist_offer TD {
+	border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    height: 25px;
+    padding-left: 11px;
+}
+	
+
+/*****************************  WINEERS LIST ENDS  ------------------------*/
+
+/*****************************  HOME PAGE COUPON SLIDER 22/11/13 STARTS ------------------------*/
+#slideshow {position:relative;height:266px;width:382px;margin-right:30px;margin-top:30px}
+#slideshow IMG {position:absolute;top:0;left:0;z-index:8;opacity:0.0;}
+#slideshow IMG.active {z-index:10; opacity:1.0;}
+#slideshow IMG.last-active {z-index:9;}
+/*****************************  HOME PAGE COUPON SLIDER 22/11/13 ENDS ------------------------*/
+
+/*****************************  INSIDE PAGE NEW DESIGN 19/11/13 STARTS ------------------------*/
+.icon_success, .icon_inprocess, .icon_failed {
+    background-image:url(../images/icon_sprite.png);
+    background-repeat:no-repeat;
+    padding-left:36px;
+    font-family:'MyriadProRegular', Arial, Helvetica, sans-serif;font-weight:normal;color:#000000;
+	font-size: 24px; margin:1px 0 18px 0;
+}
+.icon_success{background-position:0 0;}
+.icon_inprocess{background-position:0 -128px;}
+.icon_failed{background-position:0 -61px;}
+
+
+#order_details .order_title{
+	background:#f7f7f3;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #c50763;
+	padding: 0px 12px;	
+    border-bottom:1px solid #f0f0ec;
+}
+
+ #order_details .order_detail_txt {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#151414;
+	padding: 0px 0 0 12px;
+    border-bottom:1px solid #e7e7e7;
+ }
+.bor_bot_zero {
+    border-bottom:0px !important;
+}
+.marR10 {margin-right:10px}
+.marT7 {margin-top:7px}
+.marT6 {margin-top:6px}
+.fr {float:right}
+.fl {float:left}
+.td_title{
+	font-family:'MyriadProRegular', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #373737;
+	padding: 0px;	
+    border-bottom:1px solid #e4e4e4;
+}
+.txt17 {font-size:17px !important}
+.txt15 {font-size:15px !important}
+.txt14 {font-size:14px !important}
+.txt13 {font-size:13px !important}
+.line_hght_auto {line-height:normal !important}
+.padB17 {  padding-bottom:17px}
+.coupon_panel {padding:11px 12px 15px 12px;border:1px solid #dddddd}
+.coupon_panel .coupon_title {font-family:'MyriadProSemibold', Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #000;}
+.coupon_panel .coupon_title span {color:#c50763 !important;text-transform:uppercase}
+.coupon_panel .btn_redeem_now { background:url(../images/btn_redeemnow.gif) 0 0 no-repeat;width:144px;height:37px;text-indent:-1000px;overflow:hidden}
+
+.qr_code_panel {padding:17px 0 0 13px;}
+.free_app_title {font-family:'MyriadProRegular', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #000;
+}
+.free_app_title span {font-family:'MyriadProSemibold', Arial, Helvetica, sans-serif;
+color: #34a109;text-transform:uppercase;
+}
+.free_app_title i {font-style:normal;font-size:14px;}
+.mobile_browser_title {font-family:'MyriadProRegular', Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	color: #000;
+}
+.mobile_browser_title span {color:#c61a6f;}
+.mobile_browser_title i {font-style:normal;font-size:14px;}
+/*****************************  INSIDE PAGE NEW DESIGN 19/11/13 ENDS ------------------------*/
+
+
+/*Home Page New Bus Tab Changes STARTS*/
+.sub_nav {font-family: 'MyriadProSemibold',Verdana,Geneva,sans-serif;font-size:18px;text-transform:uppercase;width:100%;display:inline-block;padding:0;margin:0}
+.sub_nav li{display:inline-block; border-right:1px solid #fff;*float:left;}
+.sub_nav li a {color:#8b8b88;padding:16px 1em;line-height:3.000em;position:relative;z-index:3;text-decoration:none}
+.sub_nav li a.current, .sub_nav li a:hover {text-decoration:none;color:#000;}
+.sub_nav li a.current span {display:block;background:url(../images/home_tab_arrow.png) center 0px no-repeat;width:100%;height:13px;position:absolute;left:0;bottom:-13px}
+.sub_nav li a span {display:none}
+.new_tab_placement {margin-top:12px !important}
+.new_tab_placement .selected div{background:none !important}
+.sub_nav li a.bus_tab i{ position:absolute;width:26px;height:32px;right:0;top:0;background:url(../images/bus_tab_animation.gif) left top no-repeat }
+/*Home Page New Bus Tab Changes ENDS*/
+
+/*Discount Offer Layout STARTS*/
+
+.discount_offer_list {list-style-type:none;margin:35px 0 0 0;padding:0}
+
+.discount_offer_list li { float:left;width:260px; margin-right:21px;margin-bottom:21px}
+
+.discount_offer_list li.last {margin-right:0px}
+
+.discount_offer_list a img {border:1px solid #c7c7c7}
+
+.discount_offer_list a { background:#808080;display:inline-block;color:#fff;font-family:Arial;font-size:13px;text-decoration:none}
+
+.discount_offer_list a:hover { text-decoration:none}
+
+.discount_offer_list a:hover img {border:1px solid #808080}
+
+.inner_pad {padding:3px 7px 6px 7px;}
+
+.offer_date {font-size:11px;background:url(../images/offer_calender.gif) left top no-repeat;padding-left:16px;float:left;margin-top:4px;height:10px;line-height:11px}
+
+.clear {width:100%;height:0;line-height:0;margin:0;padding:0;font-size:0;clear:both}
+
+.discount_offer_list li.active a img {border:1px solid #c10056}
+
+.discount_offer_list li.active a:hover img {border:1px solid #c10056}
+
+.discount_offer_list li.active a { background:#c10056;}
+
+.discount_offer_list li.active .offer_date {background:url(../images/offer_calender_active.gif) left top no-repeat;}
+
+/*Discount Offer Layout END*/
+
+
+/*Successfull Mailer - Basic Life Banner STARTS*/
+
+.basic_life_banner {border-top:1px solid #dddddd;margin-top:18px;position:relative}
+
+.rupees_txt {font-size: 18px;color: #000;font-style:normal !important;padding:0 !important;font-weight:bold}
+
+.basic_life_coupon_code {position:absolute;font-size:17px;font-family:Arial;color:#121314;top:96px;right:60px;font-weight:bold}
+
+.basic_life_TandC {color:#4d4b4b;font-size:11px;padding-top:8px}
+
+.basic_life_TandC a {color:#c50763;}
+
+.basic_life_TandC ul {margin:0px;padding:0px}
+
+.basic_life_TandC li { float: left;list-style-type: square;margin-left: 16px;margin-right: 10px;line-height: 18px;}
+
+/*Successfull Mailer - Basic Life Banner END*/
+
+/*SuccessTransaction Coupon Popup STARTS*/
+
+.popup_coupon { width:660px !important;left: !important;top: !important;z-index: 101;background-image: url('../images/modal_transparent.png');padding:8px;position: absolute;opacity: 1; visibility: hidden;}
+
+.padL22 {padding-left:22px !important}
+
+.popup_coupon_title {font-family:'MyriadProSemibold', Arial, Helvetica, sans-serif;font-size: 20px;color: #000;}
+
+.popup_coupon_title span {color:#c50763 !important;text-transform:uppercase}
+
+.popup_btn_redeem_now { background:url(../images/btn_redeemnow.gif) 0 0 no-repeat;width:144px;height:37px;text-indent:-1000px;overflow:hidden;display:inline-block;margin-top:20px}
+
+ 
+
+.popup_coupon .popUpContentWrap {background-color:#fff;padding:10px 0 30px;}
+
+.popup_coupon .popUpHeading{padding: 10px 0 6px 22px;background-color:#f0efe8;border: 1px solid #e3e1d7;color:#151515 !important;font-family:Arial, Helvetica, sans-serif;font-size:15px;position:relative;text-align:left}
+
+.popup_coupon .popUpHeading span.close-link {position:absolute;right:18px;top:9px;}
+
+/*SuccessTransaction Coupon Popup END*/
+
+.coupon_tlt {font-size:16px;color:#4F9503;display:inline-block;padding-bottom:0px}
+
+
+/* services page css */
+.icons{ -webkit-transition: linear .3s; -moz-transition: linear .3s; -ms-transition: linear .3s; -o-transition: linear .3s; transition: linear .3s;}
+
+div.features-tabs { position:fixed; top:0px; padding:10px 0; width:915px; margin:0 auto; height:68px; text-align:center; z-index:555;/* box-shadow:1px 1px 6px #ccc;*/ background-color:#fff; -webkit-transition: linear .3s; -moz-transition: linear .3s; -ms-transition: linear .3s; -o-transition: linear .3s; transition: linear .3s; border-bottom:1px solid #E3E3E3 }
+div.features-tabs table { display:block; max-width:950px; margin:0 auto; }
+div.features-tabs table td.icons { display:block; min-width:950px; }
+div.features-tabs table .span12.icons .owl-carousel { width:100%; max-width:950px; vertical-align:top; text-align:center; float:none; }
+
+/*-- Features Icons --*/
+a.features-icons:link, a.features-icons:visited { display:inline-block; width:172px; border:solid #d8d8d8; border-width:0 1px 0 0; height:25px; background-position:center -142px; background-repeat:no-repeat; background-size:auto auto; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:12px; color:#798a96; text-align:center; vertical-align:top; padding-top:50px;}
+a.features-icons:link:last-child, a.features-icons:visited:last-child{ border-width:0px;} 
+a.features-icons:hover {background-position:center -2px; color:#273038;}
+
+a.active-feature { background-position:center -2px !important; color:#273038 !important;}
+
+.recharge-api {background-image:url('../images/rechargeAPI_icon.gif');}
+.recharge-plans-api {background-image:url('../images/rechargeplanAPI_icon.gif');}
+.coupons-api {background-image:url('../images/couponsAPI_icon.gif');}
+.giftcards-api {background-image:url('../images/giftcardsAPI_icon.gif');}
+.recharge-voucher-api { background-image:url('../images/rechargeVoucher_icon.gif');}
+
+.pagetitle.opensance-light{ font-size:35px; font-weight: normal;}
+P.opensance-regular{ font-size:15px;}
+
+.services_content ul{ margin:25px 0 0 15px; padding:0;}
+.services_content ul li{ list-style-image:url('../images/bulletsImg.gif'); font-size:14px; font-family:'opensans-regular', Arial, Helvetica, sans-serif; margin:5px 0;}
+
+/* popup styles */
+div.popup{ display:none; background:#FFF !important; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; z-index:5555;}
+div.popup .close{ position:relative; float:right; margin-top:23px; cursor:pointer; background: url('../images/closex.png') no-repeat 0 0; opacity:0.8; width:17px; height:16px; display:block;}
+div.popup .popup-header{background-color:#7a7a7a; padding: 0px 20px; line-height:60px; position:absolute; top:0; display:block; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; z-index:555; border-top-left-radius:5px; -moz-border-top-left-radius:5px; -webkit-border-top-left-radius:5px;  border-top-right-radius:5px; -moz-border-top-right-radius:5px; -webkit-border-top-right-radius:5px; z-index:5555;}
+div.popup .popup-header .sub-header{ padding-right:10px; font-size:13px; font-family:Arial, Helvetica, sans-serif;}
+div.popup .popup-header .popup-sub-header { padding:0px; font-size:12px;}
+div.popup .popup-header.divider{ border-width:0 0 1px 0;}
+div.popup .popup-footer{ padding: 17px 0px; width:100%; bottom:10px; left:0; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; background-color:#ffffff;}
+div.popup .popup-footer{ border:solid #e1e1e1; border-width:1px 0 0 0;}
+div.popup .popup-footer .main-button{ margin-right:20px;}
+
+#getstartedForm_popup{ width:490px; height:690px;}
+#getstartedForm_popup .popup_container {margin-top:0px; overflow:auto; position:relative; padding:70px 30px 0px 30px;}
+#getstartedForm_popup .title{font-size:24px; color:#ffffff;}
+#getstartedForm_popup .popup_container .popup_content{ font-size:13px; font-family:Arial, Helvetica, sans-serif; padding:10px 0 20px 0;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content{ font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:18px; padding-bottom:10px;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content label{ font-size:15px;  font-family:'opensans-regular', Arial, Helvetica, sans-serif; line-height:20px; color:#000000; margin-bottom:10px; display:block;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content span{ font-family:'opensans-regular', Arial, Helvetica, sans-serif; display:inline-block; margin-bottom:10px;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content input{ height:38px; width:100%; line-height:25px; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; border:1px solid #e1e1e1; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; font-size:14px; font-family:'opensans-regular', Arial, Helvetica, sans-serif;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content input:focus{ border-color:#aaaaaa; -webkit-transition: linear .3s; -moz-transition: linear .3s; -ms-transition: linear .3s; -o-transition: linear .3s; transition: linear .3s;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content textarea{ height:auto; width:100%; line-height:25px; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; border:1px solid #e1e1e1; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content textarea:focus{ border-color:#aaaaaa;}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content select {
+  background: transparent;
+  width: 100%;
+  padding: 5px 35px 5px 5px;
+  font-size: 14px;
+  border: 1px solid #e1e1e1;
+  font-family:'opensans-regular', Arial, Helvetica, sans-serif;
+  border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+  height: 38px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url('../images/select_arrow.png') right 10px center no-repeat;
+}
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content select:focus{ border-color:#aaaaaa;}
+/* CAUTION: IE hackery ahead */
+#getstartedForm_popup .popup_container .inner_table .formTable .list-content select::-ms-expand { 
+    display: none; /* remove default arrow on ie10 and ie11 */
+}
+
+/* target Internet Explorer 9 to undo the custom arrow */
+@media screen and (min-width:0\0) {
+   #getstartedForm_popup .popup_container .inner_table .formTable .list-content select {
+        background:none\9;
+        padding: 5px\9;
+    } 
+}
+/*#thankyouPopup{ width:490px; height:500px;}
+#thankyouPopup .close{ position:relative; float:right; margin-top:-8px; cursor:pointer; background: url('../images/closex.png') no-repeat 0 0; width:17px; height:16px; display:block;}
+#thankyouPopup .popup-header{background-color:#4f9503; padding: 30px 20px; position:absolute; top:0; display:block; width:100%; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; z-index:555; border-top-left-radius:5px; -moz-border-top-left-radius:5px; -webkit-border-top-left-radius:5px;  border-top-right-radius:5px; -moz-border-top-right-radius:5px; -webkit-border-top-right-radius:5px; z-index:5555; text-align:center;}
+#thankyouPopup .popup_container {margin-top:0px; overflow:auto; position:relative; padding:235px 30px 50px 30px; text-align:center;}
+#thankyouPopup .popup_container .title{ font-family:Arial, Helvetica, sans-serif; font-size:42px; text-transform:uppercase; color:#4f9503;}
+#thankyouPopup .popup_container .content{font-size:25px; color:#444444; padding-top:25px;}
+#thankyouPopup .popup-footer .content{ border:solid #e1e1e1; border-width:0px 0 0 0; font-size:15px; padding-bottom:15px;}*/
+
+
+#thankyou .container {margin-top:0px; overflow:auto; position:relative; padding:10px 30px 20px 30px; text-align:center;}
+#thankyou .container .title{ font-family:Arial, Helvetica, sans-serif; font-size:42px; text-transform:uppercase; color:#4f9503;}
+#thankyou .container .content{font-size:25px; color:#444444; padding-top:25px;}
+#thankyou .socialPanel .content{ border:solid #e1e1e1; border-width:0px 0 0 0; font-size:15px; padding-bottom:15px;}
+#thankyou .socialPanel{ border:solid #aaaaaa; border-width:1px 0 0 0;}

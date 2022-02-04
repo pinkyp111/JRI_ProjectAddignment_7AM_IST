@@ -1,0 +1,148 @@
+#signupform.modal {
+	width:660px;
+	top:20% !important;
+	left:17% !important;
+}
+
+#loginform.modal, #forgotpasswordform.modal {
+	width:600px;
+	top:32% !important;
+	left:20% !important;
+}
+
+#corporateform.modal, #sessiontimeoutform.modal {
+	width:375px;
+	top:32% !important;
+/*	left:20% !important;*/
+}
+#jricardinformationform.modal {
+	width:570px;
+	top:32% !important;
+	left:20% !important;
+}
+
+#loginform #heading, #signupform #heading, #forgotpasswordform #heading, #sessiontimeoutform #heading, #corporateform #heading{
+	padding: 10px 0 6px 22px;
+	background-color:#f0efe8;
+	border: 1px solid #e3e1d7;
+	color:#151515 !important;
+}
+#jricardinformationform #heading{
+	padding: 10px 100px 6px 22px;
+	background-color:#f0efe8;
+	border: 1px solid #e3e1d7;
+	color:#151515 !important;
+}
+
+#loginform #heading span.close-link, #signupform #heading span.close-link, #forgotpasswordform #heading span.close-link, #sessiontimeoutform #heading span.close-link, #corporateform #heading span.close-link, #jricardinformationform #heading span.close-link {
+	position:absolute;
+	right:18px;
+	top:12px;
+}
+
+#mobile_schedule_recharge div.modal, #mobile_view_scheduled_recharge div.modal, #dth_schedule_recharge div.modal, #dth_view_scheduled_recharge div.modal, #datacard_schedule_recharge div.modal, #datacard_view_scheduled_recharge div.modal {
+	position:fixed !important;
+	top:25% !important;
+	left:28% !important;
+}
+
+div.modal {
+	visibility:hidden;
+	width:450px;
+	padding:8px;
+	background-image:url('../images/modal_transparent.png');
+	position:absolute;	
+	top:13%;
+	left:0; right:0;        
+	margin:0 auto;
+	/*left:28%;
+	margin-top:-94px !important;
+	margin-left:-180px !important;*/
+	z-index:101;
+}
+
+div.modalpop {
+	visibility:hidden;
+	width:550px;
+	padding:8px;
+	background-image:url('../images/modal_transparent.png');
+	/*position:fixed;
+	top:2% !important;*/
+	left:0; right:0;
+	margin:0 auto;
+	/*left:22%;
+	margin-top:-94px !important;
+	margin-left:-180px !important;*/
+	z-index:101;
+}
+
+
+
+#heading {
+	padding: 15px 15px 10px 15px;
+	border-bottom:3px solid #525252;
+	background-color:#343432;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#ffffff !important;
+	position:relative;
+}
+
+
+#heading span.close-link {
+	position:absolute;
+	right:18px;
+	top:20px;
+}
+
+#footer {
+  padding: 13px 15px;
+  text-align: right;
+  background-color: #f5f5f5;
+}
+
+#content {
+	background-color:#fff;
+}
+
+.reveal-modal-bg { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	display: none;
+	top: 0;
+	left: 0;
+	background-image:url('../images/transparent.png');
+}
+
+/*--- STYLE FOR SESSION OUT POP UP START ---*/
+.sessionout-overlay
+{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    z-index:50;
+}
+
+.dark-class
+{
+   background-color: #F0F0F0;
+   filter:alpha(opacity=50); /* IE */
+   opacity: 0.5; /* Safari, Opera */
+   -moz-opacity:0.50; /* FireFox */
+   z-index: 20;
+   background-repeat:no-repeat;
+   background-position:center;
+   width: 100%;
+   height: 100%;
+   position:absolute;
+   top: 0px;
+   left: 0px;
+}
+/*--- STYLE FOR SESSION OUT POP UP END ---*/

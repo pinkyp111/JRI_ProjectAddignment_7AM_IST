@@ -1,0 +1,2085 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0042)https://www.justrechargeit.com/SignUp.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    
+    <title>Online Prepaid Mobile, DTH &amp; Data Card Recharge &amp; Top Up Service Provider Company - Justrechargeit
+    </title>
+    <meta name="Description" content="Sign up at JustRechargeIt to avail Instant, Safe and Secure ways to recharge your prepaid mobile, DTH &amp; Data Cards with Credit/Debit/Cash Cards &amp; Net Banking.">
+    <meta name="Keywords" content="Online mobile recharge, Online mobile top up, recharge mobile, prepaid mobile recharge, airtel recharge, aircel recharge, BPL mobile recharge, loop mobile recharge, tata indicom recharge, reliance mobile recharge, MTS recharge, idea recharge, mtnl recharge, bsnl recharge, virgin mobile recharge, tata sky recharge, dish tv recharge, airtel recharge, reliance digital tv recharge, sun direct recharge, videocon d2h recharge, Loop Mobile (BPL Mobile) top up, instant mobile recharge, Dish Tv recharge, DTH recharge, flexi recharge, easy recharge, Vodafone recharge">
+    <link id="link1" rel="shortcut icon" href="https://www.justrechargeit.com/images/favicon_jri.ico" type="image/x-icon">
+    <link id="Linkjustrecharge" rel="stylesheet" type="text/css" href="./page2_files/justrecharge.css">
+    <link id="Linktabcontent" rel="stylesheet" type="text/css" href="./page2_files/tabcontent.css">
+    <link rel="shortcut icon" href="https://www.justrechargeit.com/images/favicon_jri.ico" type="image/x-icon">
+    <link href="./page2_files/justrecharge.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="./page2_files/ga.js.download"></script><script src="./page2_files/all.js.download" async="" crossorigin="anonymous"></script><script src="./page2_files/global.js.download" type="text/javascript"></script>
+    <script type="text/javascript" src="./page2_files/jquery.1.7.1.min.js.download"></script>
+    <script type="text/javascript" src="./page2_files/animatedcollapse.js.download"></script>
+
+
+
+    <link href="./page2_files/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="./page2_files/jquery-ui.min.js.download"></script>
+    <script src="./page2_files/jquery.maskedinput-1.3.js.download"></script>
+    <script language="javascript" src="./page2_files/validateAddress.js.download"></script>
+    <script language="javascript" src="./page2_files/validatepassword.js.download"></script>
+    <script language="javascript" src="./page2_files/Validation.js.download"></script>
+
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            var date = new Date();
+            var currentMonth = date.getMonth();
+            var currentDate = date.getDate();
+            var currentYear = date.getFullYear();
+            /*
+                                    $('#dob').datepicker({ dateFormat: 'dd/mm/yy', changeMonth: true, changeYear: true, yearRange: "1950:", maxDate: new Date(currentYear, currentMonth, currentDate) });
+                                    $('#dob').mask("99/99/9999");
+                                    */
+    });
+
+    function checkRegForm9(fr) {
+        if (fr == 'C') {
+            //window.location.href = window.location.href;
+            window.location.href = "SignUp.aspx";
+            return false;
+        }
+        $("#tdcondition").attr("class", "");
+        $("#tdcondition").html("");
+        var validStr;
+        if (document.getElementById('signup_name').value.search(/\S/) == -1) {
+            //alert('Please enter your name');
+            $("td#nameTD").attr('valign', 'middle');
+            $("td#nameTD").html("<span class='errormsg'>Enter your name</span>");
+            document.getElementById('signup_name').focus();
+            return false;
+        }
+        $("td#nameTD").attr('valign', 'top');
+        $("td#nameTD").html("<div id='name_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Full name as appearing on your bank statement</div></div>");
+
+        if (document.getElementById('signup_name').value.search(/\S/) != -1) {
+            validStr = /^[a-zA-Z][\w\.]*[a-zA-Z. ]+$/;
+            if (!validStr.test(document.getElementById('signup_name').value)) {
+                //alert('Enter valid name');
+                $("td#nameTD").attr('valign', 'middle');
+                $("td#nameTD").html("<span class='errormsg'>Enter correct name</span>");
+                document.getElementById('signup_name').focus();
+                return false;
+            }
+        }
+        $("td#nameTD").attr('valign', 'top');
+        $("td#nameTD").html("<div id='name_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Full name as appearing on your bank statement</div></div>");
+
+        // if (document.getElementById('signup_address').value.search(/\S/) == -1) {
+        //alert('Please enter your address');
+        //  $("td#addressTD").attr('valign', 'middle');
+        //  $("td#addressTD").html("<span class='errormsg'>Enter your address</span>");
+        //  document.getElementById('signup_address').focus();
+        //  return false;
+        //}
+        // $("td#addressTD").attr('valign', 'top');
+        // $("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Address as appearing on your bank statement</div></div>");
+
+        //FOR ADDRESS VALIDATION
+        //if (document.getElementById('signup_address').value.length > 200) {
+        //alert('Please enter your address');
+        //  $("td#addressTD").attr('valign', 'middle');
+        //  $("td#addressTD").html("<span class='errormsg'>Address field should not exceed 200 characters.</span>");
+        //  document.getElementById('signup_address').focus();
+        //  return false;
+        //}
+        // $("td#addressTD").attr('valign', 'top');
+        //$("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Address as appearing on your bank statement</div></div>");
+
+        // if (document.getElementById('signup_address').value.indexOf("<") != -1 || document.getElementById('signup_address').value.indexOf(">") != -1) {
+        //   $("td#addressTD").attr('valign', 'middle');
+        //    $("td#addressTD").html("<span class='errormsg'>Enter valid address.</span>");
+        //    document.getElementById('signup_address').focus();
+        //    return false;
+        // }
+        //  $("td#addressTD").attr('valign', 'top');
+        // $("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Address as appearing on your bank statement</div></div>");
+
+        //var addressVal;
+        //addressVal = document.getElementById('signup_address').value.replace(/\n/g, "").replace(/\r/g, "");
+        //addressVal = addressVal.replace(/\s+/g, '');
+        //addressVal = addressVal.replace(/\\/g, "");
+        //addressVal = addressVal.replace(/\"/g, "");
+        ////alert(addressVal);
+        //var isValidAddress = validateAddress(addressVal, {
+        //length: [1, 200],
+        //lower: 1,
+        //upper: 1,
+        //numeric: 1,
+        //special: 1,
+        //badWords: ["--", "/*"],
+        //custom: [/^[A-Za-z0-9!,.:~`^|+=()<>@#$%&?*_-]{1,200}$/], badSequenceLength: 0
+        //}); 
+
+        //if (!isValidAddress) {
+        //if (document.getElementById('signup_address').value.length > 200) {
+        ////alert('Address field should not exceed 200 characters.');
+        //$("td#addressTD").attr('valign', 'middle');
+        //$("td#addressTD").html("<span class='errormsg'>Address field should not exceed 200 characters.</span>");
+        //}
+        //else {
+        //    var noteAddress = "Note:" + '\n';
+        //    noteAddress += "Address field should not have" + '\n';
+        //    noteAddress += "single quote. ','" + '\n';
+        //    noteAddress += "two consecutive dashes. '--'" + '\n';
+        //    noteAddress += "semicolon. ';'" + '\n';
+        //    noteAddress += "forward slash.  '/'" + '\n';
+        //    noteAddress += "and any non- English characters : �, �, � etc" + '\n';
+        ////alert('Please enter valid Address format' + '\n' + noteAddress);
+        //$("td#addressTD").attr('valign', 'middle');
+        //$("td#addressTD").html("<span class='errormsg'>Please enter valid Address format</span>");
+        //}
+        //document.getElementById('signup_address').focus();
+        //return false;
+        //}
+        //$("td#addressTD").attr('valign', 'top');
+        //$("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='images/formnotification_arrow.gif' width='10' height='14' />Address as appearing on your bank statement</div></div>");
+
+        // if (document.getElementById('signup_city').value.search(/\S/) == -1) {
+        //alert('Please enter your city');
+        //   $("td#CityTD").attr('valign', 'middle');
+        //    $("td#CityTD").html("<span class='errormsg'>Enter your city</span>");
+        //    document.getElementById('signup_city').focus();
+        //   return false;
+        // }
+        //   $("td#CityTD").attr('valign', 'top');
+        //  $("td#CityTD").html("<div id='city_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter your city</div></div>");
+
+        //  if (document.getElementById('signup_city').value.search(/\S/) != -1) {
+        //      //validStr = /^[a-zA-Z]*[a-zA-Z0-9 -]+$/;
+        //      //validStr = /^[a-zA-Z][\w\.]*[a-zA-Z0-9 -]+$/;
+        //      validStr = /^[a-zA-Z. ]+$/;
+        //      if (!validStr.test(document.getElementById('signup_city').value)) {
+        //          //alert('Enter valid city');
+        //          $("td#CityTD").attr('valign', 'middle');
+        //          $("td#CityTD").html("<span class='errormsg'>Enter correct city</span>");
+        //          document.getElementById('signup_city').focus();
+        //          return false;
+        //      }
+        //  }
+        //  $("td#CityTD").attr('valign', 'top');
+        //  $("td#CityTD").html("<div id='city_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter your city</div></div>");
+
+        //     if (document.getElementById('ddlState').value == '0') {
+        //         //alert('Please select your state');
+        //         $("td#StateTD").attr('valign', 'middle');
+        //         $("td#StateTD").html("<span class='errormsg'>Select a state / province</span>");
+        //         document.getElementById('ddlState').focus();
+        //         return false;
+        //     }
+        //     $("td#StateTD").attr('valign', 'top');
+        //     $("td#StateTD").html("<div id='state_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Select your state</div></div>");
+        //
+        //     if (document.getElementById('ddlState').value != '0') {
+        //         validStr = /^[a-zA-Z]*[a-zA-Z0-9 -]+$/;
+        //         if (!validStr.test(document.getElementById('ddlState').value)) {
+        //             //alert('Enter valid state');
+        //             $("td#StateTD").attr('valign', 'middle');
+        //             $("td#StateTD").html("<span class='errormsg'>Select valid state</span>");
+        //             document.getElementById('ddlState').focus();
+        //             return false;
+        //         }
+        //     }
+        //     $("td#StateTD").attr('valign', 'top');
+        //     $("td#StateTD").html("<div id='state_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Select your state</div></div>");
+        //
+        //
+        //     if (document.getElementById('signup_pincode').value.search(/\S/) == -1) {
+        //         //alert('Please enter your pin code');
+        //         $("td#pincodeTD").attr('valign', 'middle');
+        //         $("td#pincodeTD").html("<span class='errormsg'>Enter your pin code</span>");
+        //         document.getElementById('signup_pincode').focus();
+        //         return false;
+        //     }
+        //     $("td#pincodeTD").attr('valign', 'top');
+        //     $("td#pincodeTD").html("<div id='pincode_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid pin code</div></div>");
+        //
+        //   if (document.getElementById('signup_pincode').value.search(/\S/) != -1) {
+        //       //validStr = /^[0-9]+$/;
+        //       validStr = /\d{6}/;
+        //       if (!validStr.test(document.getElementById('signup_pincode').value)) {
+        //           //alert('Enter valid pin code');
+        //           $("td#pincodeTD").attr('valign', 'middle');
+        //           $("td#pincodeTD").html("<span class='errormsg'>Enter valid pin code</span>");
+        //           document.getElementById('signup_pincode').focus();
+        //           return false;
+        //       }
+        //   }
+        //   $("td#pincodeTD").attr('valign', 'top');
+        //   $("td#pincodeTD").html("<div id='pincode_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid pin code</div></div>");
+        //
+        //   if (document.getElementById('drpCountry').value == 0) {
+        //       alert('Please select your country');
+        //       document.getElementById('drpCountry').focus();
+        //       return false;
+        //   }
+
+        //        if (theForm.txtBirthDate.value.search(/\S/) == -1) {
+        //            alert('Please enter your date of birth');
+        //            theForm.txtBirthDate.focus();
+        //            return false;
+        //        }
+        //     if (document.getElementById('dob').value.search(/\S/) != -1) {
+        //         var objFromDate = document.getElementById('dob').value;
+        //         //var FromDate = new Date(objFromDate);
+        //
+        //         if (!isDate(objFromDate)) {
+        //             $("td#dobTD").attr('valign', 'middle');
+        //             $("td#dobTD").html("<span class='errormsg'>Enter valid date of birth</span>");
+        //             document.getElementById('dob').focus();
+        //             return false;
+        //         }
+        //
+        //         var frmDate = objFromDate.split("/");
+        //         var dtFromDate = new Date(frmDate[1] + '/' + frmDate[0] + '/' + frmDate[2]);
+        //         var ToDate = new Date();
+        //         if (dtFromDate > ToDate) {
+        //             //alert('Please enter valid date of birth');
+        //             $("td#dobTD").attr('valign', 'middle');
+        //             $("td#dobTD").html("<span class='errormsg'>Enter valid date of birth</span>");
+        //             document.getElementById('dob').focus();
+        //             return false;
+        //         }
+        //     }
+        //     $("td#dobTD").attr('valign', 'top');
+        //     $("td#dobTD").html("<div id='dob_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please enter correct date of birth</div></div>");
+        //
+
+        if (document.getElementById('signup_mobileno').value.search(/\S/) == -1) {
+            //alert('Please enter mobile no.');
+            $("td#mobilenoTD").attr('valign', 'middle');
+            $("td#mobilenoTD").html("<span class='errormsg'>Enter mobile no.</span>");
+            document.getElementById('signup_mobileno').focus();
+            return false;
+        }
+        $("td#mobilenoTD").attr('valign', 'top');
+        $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+        if (document.getElementById('signup_mobileno').value.search(/\S/) != -1) {
+            validStr = /^[0-9]+$/;
+            if (!validStr.test(document.getElementById('signup_mobileno').value)) {
+                //alert('Enter valid mobile no.');
+                $("td#mobilenoTD").attr('valign', 'middle');
+                $("td#mobilenoTD").html("<span class='errormsg'>Enter valid 10 digit mobile no.</span>");
+                document.getElementById('signup_mobileno').focus();
+                return false;
+            }
+            $("td#mobilenoTD").attr('valign', 'top');
+            $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+            if (document.getElementById('signup_mobileno').value.charAt(0) == '0') {
+                //alert('First digit should not be 0');
+                $("td#mobilenoTD").attr('valign', 'middle');
+                $("td#mobilenoTD").html("<span class='errormsg'>First digit should not be 0</span>");
+                document.getElementById('signup_mobileno').focus();
+                return false;
+            }
+            $("td#mobilenoTD").attr('valign', 'top');
+            $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+            if (document.getElementById('signup_mobileno').value.charAt(0) != '7' && document.getElementById('signup_mobileno').value.charAt(0) != '8' && document.getElementById('signup_mobileno').value.charAt(0) != '9' && document.getElementById('signup_mobileno').value.charAt(0) != '6') {
+                //alert('First digit should not be 0');
+                $("td#mobilenoTD").attr('valign', 'middle');
+                $("td#mobilenoTD").html("<span class='errormsg'>Enter valid mobile number</span>");
+                document.getElementById('signup_mobileno').focus();
+                return false;
+            }
+            $("td#mobilenoTD").attr('valign', 'top');
+            $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+        }
+        if (document.getElementById('signup_mobileno').value.length < 10) {
+            //alert('Please enter valid mobile number of 10 digits');
+            $("td#mobilenoTD").attr('valign', 'middle');
+            $("td#mobilenoTD").html("<span class='errormsg'>Enter 10 digit mobile no.</span>");
+            document.getElementById('signup_mobileno').focus();
+            return false;
+        }
+        $("td#mobilenoTD").attr('valign', 'top');
+        $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+        if (document.getElementById('signup_email').value.search(/\S/) == -1) {
+            //alert('Please enter your email id');
+            $("td#emailTD").attr('valign', 'middle');
+            $("td#emailTD").html("<span class='errormsg'>Enter your email id</span>");
+            document.getElementById('signup_email').focus();
+            return false;
+        }
+        $("td#emailTD").attr('valign', 'top');
+        $("td#emailTD").html("<div id='email_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid email id. We proactively track all bounced emails</div></div>");
+
+        if (document.getElementById('signup_email').value.search(/\S/) != -1) {
+            validStr = /^([a-zA-Z0-9_'+*$%\^&!\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9:]{2,4})+$/;
+            if (!validStr.test(document.getElementById('signup_email').value)) {
+                //alert('Enter valid email id');
+                $("td#emailTD").attr('valign', 'middle');
+                $("td#emailTD").html("<span class='errormsg'>Enter valid email id</span>");
+                document.getElementById('signup_email').focus();
+                return false;
+            }
+        }
+        $("td#emailTD").attr('valign', 'top');
+        $("td#emailTD").html("<div id='email_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid email id. We proactively track all bounced emails</div></div>");
+
+        if (document.getElementById('signup_password').value.search(/\S/) == -1) {
+            //alert('Please enter your password');
+            $("td#passwordTD").attr('valign', 'middle');
+            $("td#passwordTD").html("<span class='errormsg'>Enter your password</span>");
+            document.getElementById('signup_password').focus();
+            return false;
+        }
+        $("td#passwordTD").attr('valign', 'top');
+        $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+        //		else
+        //		{
+        //		    if (theForm.txtName.value.indexOf(theForm.txtPassword.value) != -1 || theForm.txtAddress.value.indexOf(theForm.txtPassword.value) != -1 || theForm.txtCity.value.indexOf(theForm.txtPassword.value) != -1 || theForm.txtState.value.indexOf(theForm.txtPassword.value) != -1 || theForm.txtEmail.value.indexOf(theForm.txtPassword.value) != -1)
+        //		    {
+        //                alert('Password should not be similar to name, address, email, city and state');
+        //		        theForm.txtPassword.focus();
+        //		        return false;
+        //            }
+        //        }
+
+        //		var isValidPassword = validatePassword(theForm.txtPassword.value, {
+        //		    length: [6, 20],
+        //		    lower: 0,
+        //		    upper: 0,
+        //		    alpha: 1,
+        //		    numeric: 1,
+        //		    special: 0,
+        //		    badWords: [" "],
+        //		    badSequenceLength: 0
+        //		});
+        //		if (!isValidPassword) {
+        //		    var notePassword = "Note:" + '\n';
+        //		    notePassword += "Password field should have combination of alphabets and digits" + '\n\n';
+        //		    alert('Please enter valid password format' + '\n\n' + notePassword);
+        //		    theForm.txtPassword.focus();
+        //		    return false;
+        //		}
+
+
+
+
+        if (document.getElementById('signup_password').value.length < 6) {
+            //alert('Enter 6-digit numeric characters only');
+            $("td#passwordTD").attr('valign', 'middle');
+            $("td#passwordTD").html("<span class='errormsg'>Enter 6-digit numeric characters only</span>");
+            document.getElementById('signup_password').focus();
+            return false;
+        }
+        $("td#passwordTD").attr('valign', 'top');
+        $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+        validStr = /^[0-9]+$/;
+        if (!validStr.test(document.getElementById('signup_password').value)) {
+            //alert('Enter 6-digit numeric characters only');
+            $("td#passwordTD").attr('valign', 'middle');
+            $("td#passwordTD").html("<span class='errormsg'>Enter 6-digit numeric characters only</span>");
+            document.getElementById('signup_password').focus();
+            return false;
+        }
+        $("td#passwordTD").attr('valign', 'top');
+        $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+        //    if (document.getElementById('signup_confirmpassword').value.search(/\S/) == -1) {
+        //        //alert('Please enter confirm password');
+        //        $("td#confirmpasswordTD").attr('valign', 'middle');
+        //        $("td#confirmpasswordTD").html("<span class='errormsg'>Re-enter Password</span>");
+        //        document.getElementById('signup_confirmpassword').focus();
+        //        return false;
+        //    }
+        //    $("td#confirmpasswordTD").attr('valign', 'top');
+        //    $("td#confirmpasswordTD").html("<div id='confirmpassword_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid confirm password</div></div>");
+        //
+        //    if (document.getElementById('signup_password').value != document.getElementById('signup_confirmpassword').value) {
+        //        //alert('Password is different from confirm password');
+        //        $("td#confirmpasswordTD").attr('valign', 'middle');
+        //        $("td#confirmpasswordTD").html("<span class='errormsg'>Your password did not match.</span>");
+        //        document.getElementById('signup_confirmpassword').focus();
+        //        return false;
+        //    }
+        //    $("td#confirmpasswordTD").attr('valign', 'top');
+        //    $("td#confirmpasswordTD").html("<div id='confirmpassword_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid confirm password</div></div>");
+        //
+        if (document.getElementById('checkbox').checked == false) {
+            //alert('Please check the agree option of terms and conditions');
+            $("#tdcondition").attr("class", "errormsg");
+            $("#tdcondition").html("Please agree to the terms & conditions");
+            document.getElementById('checkbox').focus();
+            return false;
+        }
+        $("#tdcondition").attr("class", "");
+        $("#tdcondition").html("");
+
+        $("#lblError").attr("class", "");
+        $("#lblError").html("");
+    }
+
+    </script>
+    <script language="javascript" type="text/javascript">
+        function myFunction() {
+
+
+            var checkbox = document.getElementById('checkbox');
+            if (checkbox.checked) {
+                $("#tdcondition").attr("class", "");
+                $("#tdcondition").html("");
+            }
+            else {
+                $("#tdcondition").attr("class", "errormsg");
+                $("#tdcondition").html("Please agree to the terms & conditions");
+            }
+
+
+
+        }
+        
+        </script>
+
+    <script language="javascript" type="text/javascript">
+        function mobtooltipoff() {
+
+            if (document.getElementById('signup_mobileno').value!='') {
+                $("td#mobilenoTD").html("");
+                document.getElementById('signup_mobileno').focus();
+                //alert(document.getElementById('signup_mobileno').value.length);
+                return false;
+            }
+            else {
+               // if (document.getElementById('signup_mobileno').value.search(/\S/) == -1) {
+                    //alert('1');
+                    $("td#mobilenoTD").attr('valign', 'middle');
+                    $("td#mobilenoTD").html("<span class='errormsg'>Enter mobile no.</span>");
+                    //document.getElementById('signup_mobileno').focus();
+                    return false;
+               // }
+              //  $("td#mobilenoTD").attr('valign', 'top');
+               // $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+//
+              //  if (document.getElementById('signup_mobileno').value.search(/\S/) != -1) {
+                //    validStr = /^[0-9]+$/;
+                 //   if (!validStr.test(document.getElementById('signup_mobileno').value)) {
+                   // alert('2');
+                //    $("td#mobilenoTD").attr('valign', 'middle');
+                //    $("td#mobilenoTD").html("<span class='errormsg'>Enter valid 10 digit mobile no.</span>");
+                //    //document.getElementById('signup_mobileno').focus();
+                //    return false;
+               // }
+               // $("td#mobilenoTD").attr('valign', 'top');
+               // $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+              //  if (document.getElementById('signup_mobileno').value.charAt(0) == '0') {
+              //      //alert('First digit should not be 0');
+              //      $("td#mobilenoTD").attr('valign', 'middle');
+               //     $("td#mobilenoTD").html("<span class='errormsg'>First digit should not be 0</span>");
+               //     //document.getElementById('signup_mobileno').focus();
+                 //   return false;
+                //}
+              //  $("td#mobilenoTD").attr('valign', 'top');
+              //  $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+              //  if (document.getElementById('signup_mobileno').value.charAt(0) != '7' && document.getElementById('signup_mobileno').value.charAt(0) != '8' && document.getElementById('signup_mobileno').value.charAt(0) != '9') {
+               //     //alert('First digit should not be 0');
+               //     $("td#mobilenoTD").attr('valign', 'middle');
+               //     $("td#mobilenoTD").html("<span class='errormsg'>Enter valid mobile number</span>");
+                    //document.getElementById('signup_mobileno').focus();
+              //      return false;
+              //  }
+              //  $("td#mobilenoTD").attr('valign', 'top');
+              //  $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+           // }
+           // if (document.getElementById('signup_mobileno').value.length < 10) {
+                    //alert('Please enter valid mobile number of 10 digits');
+           //         $("td#mobilenoTD").attr('valign', 'middle');
+           //     $("td#mobilenoTD").html("<span class='errormsg'>Enter 10 digit mobile no.</span>");
+                //document.getElementById('signup_mobileno').focus();
+            //    return false;
+           // }
+           // $("td#mobilenoTD").attr('valign', 'top');
+           //     $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+           //     $('#mobileno_info').fadeOut('fast');
+            }
+        }
+
+        function nametooltipoff() {
+
+            if (document.getElementById('signup_name').value.length>0) {
+                $("td#nameTD").html("");
+                document.getElementById('signup_name').focus();
+                return false;
+            }
+            else if (document.getElementById('signup_name').value.length == 0) {
+               // alert('1');
+                $("td#nameTD").attr('valign', 'middle');
+                $("td#nameTD").html("<span class='errormsg'>Enter your name</span>");
+                //document.getElementById('signup_name').focus();
+                return false;
+                
+                //if (document.getElementById('signup_name').value == '') {
+                   // alert('2');
+                   // $("td#nameTD").attr('valign', 'middle');
+                   // $("td#nameTD").html("<span class='errormsg'>Enter your name</span>");
+                    //document.getElementById('signup_name').focus();
+                   // return false;
+               // }
+                //$("td#nameTD").attr('valign', 'top');
+               // $("td#nameTD").html("<div id='name_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Full name as appearing on your bank statement</div></div>");
+                //alert('3');
+                //if (document.getElementById('signup_name').value.search(/\S/) != -1) {
+                  //  validStr = /^[a-zA-Z][\w\.]*[a-zA-Z. ]+$/;
+                   // if (!validStr.test(document.getElementById('signup_name').value)) {
+                  //  //alert('4');
+                  //  $("td#nameTD").attr('valign', 'middle');
+                  //  $("td#nameTD").html("<span class='errormsg'>Enter correct name</span>");
+                    //document.getElementById('signup_name').focus();
+                  //  return false;
+               // }
+            //}
+            //$("td#nameTD").attr('valign', 'top');
+               // $("td#nameTD").html("<div id='name_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Full name as appearing on your bank statement</div></div>");
+               // $('#name_info').fadeOut('fast');
+                //alert('5');
+            }
+        }
+
+        function emailtooltipoff() {
+
+            if (document.getElementById('signup_email').value != '') {
+                $("td#emailTD").html("");
+                document.getElementById('signup_email').focus();
+                return false;
+            }
+            else {
+               // if (document.getElementById('signup_email').value.search(/\S/) == -1) {
+                    //alert('Please enter your email id');
+                    $("td#emailTD").attr('valign', 'middle');
+                     $("td#emailTD").html("<span class='errormsg'>Enter your email id</span>");
+                     //document.getElementById('signup_email').focus();
+                     return false;
+                // }
+                // $("td#emailTD").attr('valign', 'top');
+               // $("td#emailTD").html("<div id='email_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid email id. We proactively track all bounced emails</div></div>");
+
+               // if (document.getElementById('signup_email').value.search(/\S/) != -1) {
+                  //  validStr = /^([a-zA-Z0-9_'+*$%\^&!\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9:]{2,4})+$/;
+                 //   if (!validStr.test(document.getElementById('signup_email').value)) {
+                    //alert('Enter valid email id');
+                  //  $("td#emailTD").attr('valign', 'middle');
+                 //   $("td#emailTD").html("<span class='errormsg'>Enter valid email id</span>");
+                    //document.getElementById('signup_email').focus();
+                //    return false;
+               // }
+           // }
+            //$("td#emailTD").attr('valign', 'top');
+            //    $("td#emailTD").html("<div id='email_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid email id. We proactively track all bounced emails</div></div>");
+            //    $('#email_info').fadeOut('fast');
+            }
+        }
+        
+        function passwordtooltipoff() {
+
+            if (document.getElementById('signup_password').value != '') {
+                $("td#passwordTD").html("");
+                document.getElementById('signup_password').focus();
+                return false;
+            }
+            else {
+               // if (document.getElementById('signup_password').value.search(/\S/) == -1) {
+                    //alert('Please enter your password');
+                    $("td#passwordTD").attr('valign', 'middle');
+                    $("td#passwordTD").html("<span class='errormsg'>Enter your password</span>");
+                    //document.getElementById('signup_password').focus();
+                    return false;
+               // }
+               // $("td#passwordTD").attr('valign', 'top');
+              //  $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+               // if (document.getElementById('signup_password').value.length < 6) {
+                    //alert('Enter 6-digit numeric characters only');
+              //      $("td#passwordTD").attr('valign', 'middle');
+              //  $("td#passwordTD").html("<span class='errormsg'>Enter 6-digit numeric characters only</span>");
+                //document.getElementById('signup_password').focus();
+               // return false;
+            //}
+           // $("td#passwordTD").attr('valign', 'top');
+              //  $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+              //  validStr = /^[0-9]+$/;
+              //  if (!validStr.test(document.getElementById('signup_password').value)) {
+                //alert('Enter 6-digit numeric characters only');
+              //  $("td#passwordTD").attr('valign', 'middle');
+             //   $("td#passwordTD").html("<span class='errormsg'>Enter 6-digit numeric characters only</span>");
+             //   //document.getElementById('signup_password').focus();
+              //  return false;
+           // }
+           // $("td#passwordTD").attr('valign', 'top');
+           //     $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+           //     $('#password_info').fadeOut('fast');
+           }
+        }
+
+        </script>
+
+
+    
+    <style type="text/css">
+        .ui-datepicker {
+            font-size: 12px;
+        }
+
+        #signup #jriBottomPanel_signup2_dob.textfield-232x28 {
+            padding: 4px 8px 4px 25px !important;
+            width: 199px !important;
+        }
+
+        /* Newly added CSS 09_14 ST*/
+        .topPadZero {
+            padding-top: 0px !important;
+        }
+
+            .topPadZero .sub_nav {
+                text-transform: none !important;
+            }
+
+        input.pad0 {
+            padding: 0 !important;
+        }
+
+        #signup .formtext {
+            font-size: 14px !important;
+        }
+
+        #signup .hyperLink {
+            font-family: Verdana !important;
+            font-size: 12px !important;
+            text-decoration: underline !important;
+        }
+
+            #signup .hyperLink:hover {
+                text-decoration: none;
+            }
+
+        #signup .errormsg {
+            float: left;
+            padding: 3px 12px 0px 20px;
+            background-position: left 5px;
+        }
+
+        #operatorpanel {
+            width: auto !important;
+        }
+
+        #signup {
+            background-color: #ffffff;
+            padding: 18px 0 13px 27px;
+        }
+
+        .padT20 {
+            padding-top: 20px;
+        }
+
+        .padT5 {
+            padding-top: 5px;
+        }
+
+        .padT11 {
+            padding-top: 11px;
+        }
+
+        .padRow {
+            padding-top: 17px;
+        }
+
+        .txt12 {
+            font-size: 12px !important;
+        }
+
+        .marT2 {
+            margin-top: 2px;
+        }
+
+        .textfield-348x36.mobiNumber {
+            padding: 9px 8px 9px 35px !important;
+            background: url("images/mobile_number_bg.jpg") no-repeat 0 0 !important;
+            width: 303px !important;
+        }
+
+        #signup div.formnotification div {
+            left: 0 !important;
+            top: 10px !important;
+        }
+
+        #signup div.formnotification img {
+            left: 5px;
+            top: -10px;
+        }
+
+        #signup div.formnotification {
+            width: 100% !important;
+        }
+        /* Newly added CSS  09_14 EN*/
+    </style>
+
+<meta http-equiv="origin-trial" content="A+sitaPn3hlQ8QipTsncwHz+k1NvfPtFsQqIOiD8GK3M9v9XCeQqlF7x1P9AVJdoYTiJPZXZc5XZYpwc10fH4wEAAACfeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="./page2_files/f.txt"></script><meta http-equiv="origin-trial" content="A+sitaPn3hlQ8QipTsncwHz+k1NvfPtFsQqIOiD8GK3M9v9XCeQqlF7x1P9AVJdoYTiJPZXZc5XZYpwc10fH4wEAAACfeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="./page2_files/f(1).txt"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body id="aboutus" oncut="return false;" oncopy="return false;" onpaste="return false;" oncontextmenu="return false;" onrightclick="return false;" ondragstart="return false;" ondrop="return false;">
+    <form method="post" action="https://www.justrechargeit.com/SignUp.aspx" id="frmaboutus">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="z8ZLtQ+V9hi8qe/BndltdPFv9ivByMJLvx5sOgOHOAsM9+YEtfURYE9rCfB/Uc+3Oh/JlY8QO9REjaCbduJIR46j5gjenOwBLpSucfwUHNIVFbknuU7i26j24B5jM1g0cQAVEn6oOtlvz2yfYCNDwolJmYbPymBaIm6BpuBaJ6P89s0+1IsBtlzga0KxmgwHgW/ZuFn1fYuqFP5oTIrcLVaeedYzsBOGc1VW/a7Idjnr4rP49XSd2+pxN6FZuS/SX3cpCCK2nDf+8D5c61ViucYAJojATKyIoPb+RvsiRsQieW0DDhgufa1CpUTTn8Uxgzx6oymcgcr8Zgjhf7BRxLcqL5tt0A6ed4E0nIPAUn60KxsqjnIXjzddsaRvQckipsQTQ3qdNMyl/dZGgAd8PWzHUlwPun4K7ywIuGome/7UfxvMm75EJxGUhEXs9MWOmxqBaA0jrLAIeEf/hRE1+3iD9NZhiDzHuTz+yYWErearjtt802EF855KDgEfj5KS8rswbMWCxwP7aaCSm/rEX09DQLOjnnuuCcLjXm5Y2YIQ27wvPF3seh2fjMRJC/JD7iyU+/jPb6+asN19PXVTPF1XSa2z+X4eD+zqw8aLn8pRq+94cqt1rvZ9P9XisLOvMd57eFd5SLEovLnnW59qg6l1rxP5dVMslp+mZe/HYMgf8v5x25yxtZY+kN0PgPUie3cduuoifw2ESU8ItTtaDvTgL1sEkDCmWPZ7/xFB5KC1U/DykghBnFHnVwCiC6nwS4hJuQk7bnibZ3j+vSr4177CkGMmYcy9ezEgV/0eeTNFV88tjOwVp8bCRPFJiLNP+u9POpMY6k/KLuU7ufcRC697WjQngyHRc2mWP7lDgN9hX0wOt1iN/DPK8VVjcxcLYdJU/CI+ZyXMYyPo6BTX0IMkEhhmWYThKKSHZvZUhoKLhFu9P6Y0Qw9rhr+neGvKNk2RgZ/STfydOQYg3CIvtNTtFnjgr4lY1LI6Q+ytmqH9JEd7JNB5G3rPLY9B2FEBh20iC9mfP0M0hKK1ptjwCkmOdadB2TIy6URhBRJTRHT023u/TbKS5En+Vd3ZsICFqRgnBcTjioa39xoss3I/4Lm8yA8ZCGz8SYhwBTBkpJbfd3tyXZSEXnbiaOyKMKDjx+1HKtROwI9t5gMCPyi/38/7u7gTwldA2tCqsYD2n0IhCOJzW3DWH4CbbV1hoeNjajnVcNSRBmV936/KmL82htdwNdl5yYCTOA9tZrwxuAvoT4B3Tgpgay3IXc2+yBbPwBuIZXxZQZybiMViAXVx1XyWmLwilnA6282++yGDLRtPdc8DTSPmAy6zPabCy5prukS7ZfvqM7KEGnUzyft89oIp7pWmKkdwHVblx+trxtGvzsnCo1L71UOSVnvsqxsPR15tNS78G/iZJ+wrea9z0Vs9jiqIxCdz5gb3xaGO0heU6ll48SODAEHMHLNoMLXlRMxlq8foTTUKn3wJ3047GhaBOrQ/95B1cLdRyGvb1Sa7ynMNAdrapmqXcRNXTCJnHcXNBVR3VQHR9Btxfi/NZtJ/MLWItMfSdopYgQGjdmBCxcRTs8Z+DfAhO8Tit39iVhmY1hRuIySbMlQ3Lp2n1r9MBV5RVK41QAEwzERpbnDcvWTM/Tzt+LTQ2j+QW2R1QHotyBORZnWrAAN/yC9wvuly5rQ=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="36F90C25">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="W/hBAIn0LAjhpCjHgN1StS0kotcSv9FF/VTCUArEa9JOaIfuIw2fyoljqB/S3cRerP/U9za/7+klaTwDizevYQurEKq8RQclP8NHr6WKCOP0GixMpl2p4E7k0DS4zgymJzp2z26gXFN1AHF6OTak4gn+foFqgEIkv4MXnNAzOBJ87nfBcrkZEhHdhu+fk63h5wYpR5I6JgXY2fytzSYs1WJ1w1m8nONAfY9s1sTVp0lWYT4cqPt4tOCT2t6ne5txMM8bWoBwoVeFG35ElG+uzDBWoGwXb6Roal1tHYVz2IRBr2ly9XKRxUVqKVCibQqQtLvhxewd8rK8ooNYHjARQNExx1ukSLzcoIFdV4aFvRr9OoAvBT6URG6NvqOqTIME+/mq4bHxTH6R8ubaCRJNLaVtwuRdT7Xlde3Xm2CNam4UO6ip1nIjuQ5/YUiroSWK06kZsqMz3oozxVCZSPTH6CPCpIfns18ZtMRJ0RsSLR3QZ9l/LvxYTefhLQCS1JMQvkE2Sz1e7YJrB7idbuNhAbNtTa1Co+hrdc4XLopsvLRiPmkMwabWttChDn5dbBMNcEVywMdBiIz3/UgLfaThhJyYGp0zgup3E85vdwI+N9aJBayOH3rpI4dkiShMkx8RDTJkwASNr70mNkESzGVa9ME8JKmgeLRosQJwTWTu/OjXxBXvXpt9ITngm9yolePGXOPhlSEoayGopufAwchrAi2NcVbR4xBEjiGbXg7rXID6/AApW8ELWUDg2oB4onrZPzs5rtr3lUlWX8WPt0rhWg6c/ktfjXl+QwWY0VC8GfQFmHrqf5qz+5aFJ8fAXiw6L2griJV1vSGwDojj8NCp3W7zEP4CvKJhE24Bm8V1CvqKDSvvsrTm729ikJWE7K5Te1A1u4GfYl3vX2TQ+AYqfPAo2r8i9VS2XCqJ2zlpbriFuWRCb4JrE8TuhiuIc1VFCiN+TOIU8RNr7gyebRz/plhKx3/5PR8pSjwrWv1zlmpr/Uyse9KKgW16h3nKROn7Bwc9frmwrtg3IM5Wl8ZTXutOXm/gyHNT2ywYNm9dpz1XtA1M5cUcxp013J+aTUEfBz473uEAVjo5BWixzML6B6wqdaxjq/dfCr7GIgFYOC3kzLnGI0nCAKJBvBTzNY3L/YCEfhjND0W8Pp13bA8IpXWorJk=">
+</div>
+        <table border="0" align="center" cellpadding="0" cellspacing="0" id="maincontainer">
+            <tbody><tr>
+                <td align="left" valign="top" id="aboutusform">
+                    
+
+<link href="./page2_files/modal.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="./page2_files/global.js.download"></script>
+<style type="text/css">
+
+a.sample_attach, a.sample_attach:visited, div.sample_attach
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#373737;
+	font-size:13px;
+	text-align:left;
+    display: block;
+/*  width:   100px;*/
+/*  border:  1px solid black;*/
+    padding: 5px 5px;
+    text-decoration: none;
+
+}
+
+div.hyperLink {
+	color:red;
+}
+
+a.sample_attach, a.sample_attach:visited {
+	 border-bottom: none; font-family:Arial, Helvetica, sans-serif; color:#373737;}
+div#sample_attach_menu_child {
+	background-color:#ffffff;
+	width:130px;
+	position:absolute;
+	right:-80px;
+	visibility: hidden;
+	
+}
+	 
+</style>
+
+
+
+<table id="jriTop_tbPreLoginPanel" width="860" border="0" cellspacing="0" cellpadding="0" style="display:">
+	<tbody><tr>
+		<td width="152" height="65" align="right" valign="top"><a href="https://www.justrechargeit.com/"><img src="./page2_files/logo_jri.gif" alt="JustRechargeIt" title="JustRechargeIt" width="147" height="60" border="0"></a></td>
+		<td width="36" align="center" valign="bottom"><img src="./page2_files/logo_divider.gif" width="1" height="58"></td>
+		<td width="228" align="left" valign="bottom"><img src="./page2_files/anymobile-anydth_anydatacard.gif" width="206" height="16" alt="Any Mobile, Any DTH, Any Data Card"></td>
+		<td width="444" align="right" valign="middle">
+              <span id="jriTop_lblUserMsg999" class="defaulttext1" style="font-size:12px"></span><br>
+            
+              
+            
+            
+              <a href="https://www.justrechargeit.com/SignIn.aspx" id="jriTop_signin9" title="Sign In" class="hyperLink">Sign In</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+              <a href="https://www.justrechargeit.com/SignUp.aspx" id="signup-link9" title="Create New Account" class="hyperLink">Create New Account</a>&nbsp;&nbsp;&nbsp;
+            
+        </td>
+	</tr>
+</tbody></table>
+
+<table id="jriTop_tbPostLoginPanel" width="908" border="0" cellspacing="0" cellpadding="0" style="display:none">
+	<tbody><tr>
+		<td width="152" height="65" align="right" valign="top"><a href="https://www.justrechargeit.com/index_justrecharge.aspx"><img src="./page2_files/logo_jri.gif" alt="JustRechargeIt" title="JustRechargeIt" width="147" height="60" border="0"></a></td>
+		<td width="36" align="center" valign="bottom"><img src="./page2_files/logo_divider.gif" width="1" height="58"></td>
+		<td width="228" align="left" valign="bottom"><img src="./page2_files/anymobile-anydth_anydatacard.gif" width="206" height="16" alt="Any Mobile, Any DTH, Any Data Card"></td>
+		<td width="444" align="right" valign="middle"><br><span id="jriTop_lblUserMsg"></span><br>
+<table width="444" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td align="right" valign="middle" id="myaccountmenu"><div style="position:relative;"><a href="https://www.justrechargeit.com/SignUp.aspx#" onclick="toggle_visibility(&#39;myaccountdd&#39;);return false;" class="hyperLink">My Account</a>
+    
+<div id="myaccountdd" style="z-index:1000;display:none; position:absolute;">
+                            
+                              <div class="innerbox radius" align="left" style="height: 250px;">
+                                  
+                               <table width="138" border="0" cellspacing="0" cellpadding="0">
+                               <!--  <table width="120" border="0" cellspacing="0" cellpadding="0">-->
+                                <tbody><tr>
+   <td align="left" valign="top"><img src="./page2_files/tooltip_up_arrow2.png" width="23" height="12" class="tooltiparrow"></td>
+   </tr>
+  <tr>
+    <td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_myprofile.aspx" class="hyLink2">My Profile</a></td>
+  </tr>
+
+     <tr id="jriTop_directory_tab">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_directory.aspx" class="hyLink2">Directory</a></td>
+		</tr>
+		
+  <tr id="jriTop_trMenuJriCard">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_jricard.aspx" class="hyLink2">JRI Card</a></td>
+		</tr>
+		
+  <tr id="jriTop_trMenuCorpCard" style="display:none">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_corporatecard.aspx" class="hyLink2">Corporate Card</a></td>
+		</tr>
+		
+  <tr>
+      <td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_transactionhistory.aspx" class="hyLink2">Transaction History</a></td>
+  </tr>
+    <tr id="jriTop_trCoupons">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/coupons_landingpage.aspx" class="hyLink2">Coupons</a></td>
+		</tr>
+		
+     <tr id="jriTop_trAlerts">
+			<td id="jriTop_tdAlerts" class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_alerts.aspx" class="hyLink2">Alerts</a>
+          
+        </td>
+		</tr>
+		
+
+        <!-- added by sanghita for adding bus in my accounts dropdown  --> 
+           <tr id="jriTop_trbus">
+			<td class="defaulttext1" style="border-bottom-width: 0px;"><a href="https://www.justrechargeit.com/bus/" class="hyLink2">Bus</a></td>
+		</tr>
+		
+
+
+</tbody></table>
+
+ </div>
+                            
+                          </div></div></td>
+    <td align="right" valign="middle" width="84">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <a href="https://www.justrechargeit.com/logout.aspx" id="jriTop_signOut" title="Sign out" class="hyperLink">Sign out</a></td>
+  </tr>
+     
+    
+</tbody></table>
+
+        <div style="display:none">
+            <a href="https://www.justrechargeit.com/SignUp.aspx#" class="hyLink3" id="sessiontimeout">Session Timeout</a>
+        </div>		
+              
+        <script type="text/javascript">
+            //at_attach("myaccountmenu", "sample_attach_menu_child", "hover", "y", "pointer");
+</script></td>
+		<td width="48" height="65" align="right" valign="top"></td>
+	</tr>
+</tbody></table>
+
+<!--include file topmenu-->
+
+
+
+<script type="text/javascript">
+    function CloseDiv() {
+        //alert(document.getElementById('pagetitle'));
+        document.getElementById('pagetitle').style.display = 'none';
+
+        createCookie('jriCloseAnnounce', "closed", 1);
+    }
+
+    function CloseDiv1() {
+        document.getElementById('pagetitle').style.display = 'none';
+    }
+
+    function OpenDiv() {
+        document.getElementById('pagetitle').style.display = 'table';
+    }
+
+    function createCookie(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+</script>
+
+
+
+<script type="text/javascript">
+    function CreateCustomerCookie(CustId) {
+        //alert("CustomerId");
+        createCookieCustId('jriCustomerId', CustId, 365);
+    }
+
+    function createCookieCustId(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+</script>
+<style type="text/css">
+    #menu_coupons_tab A.menu div { background-image:url('../images/menu_coupons_tab.png');}
+    #couponstab #menu_coupons_tab A.active div { background-image:url('../images/menu_coupons_active.png'); }
+    #couponstab #menu_coupons_tab A.active {
+	background-image:url('../images/menu_active_bg.gif');
+	background-position: left bottom;
+	background-repeat:repeat-x;
+	padding:17px 0px 15px 0px;	
+}
+
+    #menu_jri_offer A.menu div { background-image:url('../images/menu_jri_offer.png');}
+    #jri_offer #menu_jri_offer A.active div { background-image:url('../images/menu_jri_offer_active.png'); }
+    #jri_offer #menu_jri_offer A.active {
+	background-image:url('../images/menu_active_bg.gif');
+	background-position: left bottom;
+	background-repeat:repeat-x;
+	padding:17px 0px 15px 0px;	
+}
+</style>
+
+<table width="915" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+          <td width="100" align="center" valign="bottom" id="menu_home"><a href="https://www.justrechargeit.com/index_justrecharge.aspx" title="Home" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page2_files/menu_divider.gif" width="1" height="48"></td>
+          
+          <td width="121" align="center" valign="bottom" id="menu_jri_offer"><a href="https://www.justrechargeit.com/offers_list.aspx" title="JRI OFFER" class="menu active"><div>&nbsp;</div></a></td>
+          
+          
+          <td width="1" align="center" valign="bottom"><img src="./page2_files/menu_divider.gif" width="1" height="48"></td>
+          <td width="121" align="center" valign="bottom" id="menu_coupons_tab"><a href="https://www.justrechargeit.com/coupons_list.aspx" title="Coupons" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page2_files/menu_divider.gif" width="1" height="48"></td>
+          <td width="114" align="center" valign="bottom" id="menu_jrinews"><a href="http://blog.justrechargeit.com/" target="_blank" title="Blog" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page2_files/menu_divider.gif" width="1" height="48"></td>
+          
+          
+            <td width="1" align="center" valign="bottom"><img src="./page2_files/menu_divider.gif" width="1" height="48"></td>
+          
+            <td width="134" align="center" valign="bottom" id="menu_mobile_app"><a href="https://www.justrechargeit.com/mobile_app.aspx" title="Mobile App" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page2_files/menu_divider.gif" width="1" height="48"></td>
+
+            <td width="142" align="center" valign="bottom" id="menu_contactus"><a href="https://www.justrechargeit.com/helpdesk_contactus.aspx" title="Contact Us" class="menu active"><div>&nbsp;</div></a></td>
+            <td width="270" align="left" valign="top"><a href="mailto:helpdesk@justrechargeit.com" title="helpdesk@justrechargeit.com"><img src="./page2_files/jri_email_id.gif" alt="helpdesk@justrechargeit.com" width="270" height="63" border="0"></a></td>
+        </tr>
+        <tr>
+          <td height="23" colspan="12" align="left" valign="top">&nbsp;</td>
+        </tr>
+    </tbody></table>
+
+    <table width="902" border="0" cellspacing="0" cellpadding="0" id="pagetitle" style="display:none">
+         
+              <tbody><tr>
+                <td height="0" align="left" valign="top" style="border:1px solid #c7c7c7;"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="notifaction_font" style="height:auto">
+                  <tbody><tr>
+                    <td width="82" align="center" valign="middle"><img src="./page2_files/speaker.gif" width="59" height="49"></td>
+                    <td width="23" align="left" valign="top" style="background-image:url(&#39;/images/notifaction_divder.gif&#39;); background-repeat:repeat-y">&nbsp;</td>
+                    <td id="jriTop_jriTopMenu_tdAnnouncement" align="left" valign="middle" class="defaulttext1" style="padding-bottom:8px;padding-top:8px;"></td>
+
+                    <td width="14" align="left" valign="top"><img src="./page2_files/small_close_icon.gif" width="10" height="10" style="padding-top:5px; cursor:pointer" onclick="CloseDiv();"></td>
+                  </tr>
+                </tbody></table>
+                </td>
+             </tr>
+        
+              <tr>
+                <td height="20" align="left" valign="middle"></td>
+            </tr>
+    </tbody></table>
+
+
+<div id="fb-root" class=" fb_reset"><script async="" src="./page2_files/all.js(1).download"></script><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+
+        <script src="./page2_files/all.js(1).download"></script>
+        <script type="text/javascript">
+            //initializing API
+            window.fbAsyncInit = function () {
+                FB.init({
+                    appId: '483017605054633', status: true, cookie: true, oauth: true,
+                    //appId: '261412550663143', status: true, cookie: true, oauth: true, // for test server
+                    xfbml: true
+                });
+            };
+            (function () {
+                var e = document.createElement('script'); e.async = true;
+                e.src = document.location.protocol +
+                  '//connect.facebook.net/en_US/all.js';
+                document.getElementById('fb-root').appendChild(e);
+            }());
+        </script>
+        <script language="javascript" type="text/javascript">
+            function FacebookLogout() {
+                //if (FB.getLoginStatus() != null) {
+                //alert(FB.getSession().uid);
+                FB.logout(function (response) {
+                    // user is now logged out
+                    window.location = 'logout.aspx';
+                });
+                //} else {
+                //alert('user is not logged in');
+                //}
+            }
+
+        </script>
+
+
+
+
+
+    <!--<script type="text/javascript" src="//platform.linkedin.com/in.js">
+        api_key: p8edcosgoeow
+        scope: r_basicprofile r_emailaddress
+        onLoad: onLinkedInLoad
+        authorize: true
+    </script>
+    <script type="text/javascript">
+        function Linkedinlogout() {
+            //alert(2);
+            //alert(IN.User.isAuthorized());
+
+            if (IN.User.isAuthorized() == true) {
+                IN.User.logout(onLinkedInLogout);
+            }            
+        }
+        function onLinkedInLogout() {
+            //alert(3);
+            window.location = 'logout.aspx';
+            //for example window.location='//linkedin.com/user/logout';            
+        }
+
+
+        function onLinkedInLoad() {
+            //IN.Event.on(IN, "auth", onLinkedInAuth);
+            $('a[id*=li_ui_li_gen_]').html('<img src="images/btn_linkedin_new.gif" width="223" height="36"  border="0" title="Sign In with Linkedin" alt="alt="Linkedin"" />');
+            //alert(IN.User.isAuthorized());
+            if (IN.User.isAuthorized() == false) {
+                //IN.User.authorize(onLinkedInAuth);
+                IN.Event.on(IN, "auth", onLinkedInAuth);
+            }
+        }
+
+        // 2. Runs when the viewer has authenticated
+        function onLinkedInAuth() {
+            var ex = document.referrer;
+            //alert(ex);            
+
+            if (ex.toLowerCase().indexOf("linkedin/linkedin.html") == -1) {
+                window.location = 'LinkedIn/LinkedIn.html';
+            }
+        }
+
+    </script>-->
+
+
+
+<script language="javascript" type="text/javascript">
+    function GoogleLogout() {
+        /*
+        //URL=//accounts.google.com/logout        
+        $.get('//accounts.google.com/logout', function (data) {
+            //$('.result').html(data);
+            alert(data);
+        });
+        */
+        myIFrame.location = '//www.google.com/accounts/Logout';
+        return false;
+    }
+
+    function TwitterLogout() {
+        /*
+        //URL=//twitter.com/logout
+        $.get('//twitter.com/logout', function (data) {
+            //$('.result').html(data);
+            alert(data);
+        });
+        */
+        myIFrame.location = '//twitter.com/logout';
+        return false;
+    }
+</script>
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $('#jriTop_signOut').click(function (e) {
+            //alert(1);
+            FacebookLogout();
+            //Linkedinlogout();
+            //GoogleLogout();
+            //TwitterLogout();
+            
+            window.location.href = '/logout.aspx';
+            return true;
+            
+        });
+
+        //$('input').bind("cut copy paste", function (e) {
+        //    e.preventDefault();
+        //});
+
+        $("body").attr("ondragstart", "return false;");
+        $("body").attr("ondrop", "return false;");
+
+        /*--- Enable/Disable dropdown menu height start ---*/
+        //TwitterLogout();
+        
+        ///////
+        if ($("#myaccountdd tr:eq(6)").css("display") == "none") {
+         
+            
+            //  $("#myaccountdd tr td:eq(6)").css("border-bottom-width", "0px");
+            //new change by sanghita
+            $("#myaccountdd tr td:eq(8)").css("border-bottom-width", "0px");
+            
+            //  $('#myaccountdd .innerbox').css({ height: '210px' });
+            $('#myaccountdd .innerbox').css({ height: '220px' });
+
+           
+           
+        }
+        else  {
+          
+            //  $("#myaccountdd tr td:eq(7)").css("border-bottom-width", "0px");
+            //new change by sanghita
+            $("#myaccountdd tr td:eq(8)").css("border-bottom-width", "0px");
+            //$('#myaccountdd .innerbox').css({ height: '210px' });
+            $('#myaccountdd .innerbox').css({ height: '250px' });
+            
+           
+        }
+
+        
+   
+
+   
+        //when if else statement remains in commented format
+      //  $("#myaccountdd tr td:eq(8)").css("border-bottom-width", "0px");
+     //   $('#myaccountdd .innerbox').css({ height: '250px' });
+
+        /////////
+
+
+        
+        /*--- Enable/Disable dropdown menu height end ---*/
+    });
+
+</script>
+
+
+
+
+                    <table width="902" border="0" cellspacing="0" cellpadding="0" id="insidemidcontainer" class="topPadZero">
+                        <tbody><tr id="pagetitle">
+                            
+                            
+                            
+                            <td>
+                                <ul class="sub_nav">
+                                    <li><a title="Sign In" href="https://www.justrechargeit.com/SignIn.aspx">Sign In<span></span></a></li>
+
+                                    <li><a title="Create New Account" id="ancRegister9" href="javascript:void(0);" class="current">Create New Account<span></span></a></li>
+                                </ul>
+                            </td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td align="center" valign="top">
+
+                                <div id="content">
+
+                                    <div id="MessageCaption">
+                                        <center>
+                                            <span id="lblError" class=""></span></center>
+                                    </div>
+
+
+                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="signup">
+                                        <tbody><tr>
+                                            <td width="350" align="left" valign="top" class="padT20 padB17">
+                                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                    
+
+                                                    <tbody><tr>
+                                                        <td align="left" valign="middle" class="formtext">
+                                                            <span id="lblName">Name</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle" class="padT5">
+                                                            
+                                                            <input name="signup_name" type="text" maxlength="50" id="signup_name" class="textfield-348x36 radius inputsbg" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}};" onkeyup="nametooltipoff()">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="nameTD" align="left" valign="top">
+                                                            <div id="name_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Full name as appearing on your bank statement
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="top" class="defaulttext1">
+                                                            <span id="lblAddress">Address:</span><span class="mandatory">*</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            
+                                                            <textarea name="signup_address" rows="5" cols="45" id="signup_address" class="textarea-232x53 radius"></textarea>
+                                                        </td>
+                                                        <td id="addressTD" align="left" valign="top">
+                                                            <div id="address_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Address as appearing on your bank statement
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="middle" class="defaulttext1">
+                                                            <span id="lblCity">City:</span><span class="mandatory">*</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            
+                                                            <input name="signup_city" type="text" maxlength="50" id="signup_city" class="textfield-232x28 radius" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}}">
+                                                        </td>
+                                                        <td id="CityTD" align="left" valign="top">
+                                                            <div id="city_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Enter your city
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="middle" class="defaulttext1">
+                                                            <span id="lblState">State / Province:</span><span class="mandatory">*</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            
+                                                            <select name="ddlState" id="ddlState" class="select-232x28 radius">
+	<option value="0">----- Select State -----</option>
+	<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+	<option value="Andhra Pradesh">Andhra Pradesh</option>
+	<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+	<option value="Assam">Assam</option>
+	<option value="Bihar">Bihar</option>
+	<option value="Chandigarh">Chandigarh</option>
+	<option value="Chhattisgarh">Chhattisgarh</option>
+	<option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+	<option value="Daman and Diu">Daman and Diu</option>
+	<option value="Delhi">Delhi</option>
+	<option value="Goa">Goa</option>
+	<option value="Gujarat">Gujarat</option>
+	<option value="Haryana">Haryana</option>
+	<option value="Himachal Pradesh">Himachal Pradesh</option>
+	<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+	<option value="Jharkhand">Jharkhand</option>
+	<option value="Karnataka">Karnataka</option>
+	<option value="Kerala">Kerala</option>
+	<option value="Lakshadweep">Lakshadweep</option>
+	<option value="Madhya Pradesh">Madhya Pradesh</option>
+	<option value="Maharashtra">Maharashtra</option>
+	<option value="Manipur">Manipur</option>
+	<option value="Meghalaya">Meghalaya</option>
+	<option value="Mizoram">Mizoram</option>
+	<option value="Nagaland">Nagaland</option>
+	<option value="Orissa">Orissa</option>
+	<option value="Puducherry">Puducherry</option>
+	<option value="Punjab">Punjab</option>
+	<option value="Rajasthan">Rajasthan</option>
+	<option value="Sikkim">Sikkim</option>
+	<option value="Tamil Nadu">Tamil Nadu</option>
+	<option value="Tripura">Tripura</option>
+	<option value="Uttar Pradesh">Uttar Pradesh</option>
+	<option value="Uttarakhand">Uttarakhand</option>
+	<option value="West Bengal">West Bengal</option>
+
+</select>
+                                                        </td>
+                                                        <td id="StateTD" align="left" valign="middle">
+                                                            <div id="state_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Select your state
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="middle" class="defaulttext1">
+                                                            <span id="lblPincode">Pin Code:</span><span class="mandatory">*</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            
+                                                            <input name="signup_pincode" type="text" maxlength="6" id="signup_pincode" class="textfield-232x28 radius" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}}">
+                                                        </td>
+                                                        <td id="pincodeTD" align="left" valign="top">
+                                                            <div id="pincode_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Enter valid pin code
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="middle" class="defaulttext1">
+                                                            <span id="lblCountry">Country:</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            <span id="lblIndia">India</span>
+                                                            <select name="drpCountry" id="drpCountry" style="width:150px;display: none;">
+	<option value="92">India</option>
+
+</select>
+                                                        </td>
+                                                        <td align="left" valign="middle">&nbsp;</td>
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="middle" class="defaulttext1">
+                                                            <span id="lblDOB">Date of Birth:</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            
+                                                            <input name="dob" type="text" maxlength="10" id="dob" class="textfield-232x28 radius calendar_sign" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}}">
+                                                        </td>
+                                                        <td id="dobTD" align="left" valign="top">
+                                                            <div id="dob_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Please enter correct date of birth
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td align="left" valign="middle" class="formtext padRow">
+                                                            <span id="lblMobile">Mobile #</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle" class="padT5">
+                                                            
+                                                            <input name="signup_mobileno" type="text" maxlength="10" id="signup_mobileno" class="textfield-348x36 radius inputsbg mobiNumber" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}};" onkeyup="mobtooltipoff()" onpaste="return false" autocomplete="off">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="mobilenoTD" align="left" valign="top">
+                                                            <div id="mobileno_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Enter a valid mobile number. This could be a prepaid or postpaid number.
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle" class="formtext padRow">
+                                                            <span id="lblEmail">Email</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle" class="padT5">
+                                                            
+                                                            <input name="signup_email" type="text" maxlength="75" id="signup_email" class="textfield-348x36 radius inputsbg" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}};" onkeyup="emailtooltipoff()" autocomplete="off">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="emailTD" align="left" valign="top">
+                                                            <div id="email_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Enter a valid email id. We proactively track all bounced emails
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle" class="formtext padRow">
+                                                            <span id="lblPassword">Password</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="middle" class="padT5">
+                                                            
+                                                            <input name="signup_password" type="password" maxlength="6" id="signup_password" class="textfield-348x36 radius inputsbg" autocomplete="off" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}};" onkeyup="passwordtooltipoff()">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="passwordTD" align="left" valign="top">
+                                                            <div id="password_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Please restrict it to 6 characters only.
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr style="display: none">
+                                                        <td align="right" valign="middle" class="defaulttext1">
+                                                            <span id="lblConfirmPasswd">Confirm Password:</span><span class="mandatory">*</span>
+                                                        </td>
+                                                        <td align="left" valign="middle" class="defaulttext3">
+                                                            
+                                                            <input name="signup_confirmpassword" type="password" maxlength="6" id="signup_confirmpassword" class="textfield-232x28 radius" autocomplete="off" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}}">
+                                                        </td>
+                                                        <td id="confirmpasswordTD" align="left" valign="top">
+                                                            <div id="confirmpassword_info" align="left" class="formnotification" style="display: none;">
+                                                                <div class="radius">
+                                                                    <img src="./page2_files/formnotification_arrow_up.gif" width="14" height="10">Enter valid confirm password
+                                                                </div>
+                                                            </div>
+                                                        </td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" valign="top" class="padRow">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tbody><tr>
+                                                                    <td width="5%" align="left" valign="middle">
+                                                                        <div class="marT2">
+                                                                            <span class="checkbox" style="display:inline-block;border-width:0px;"><input id="checkbox1" type="checkbox" name="checkbox1" checked="checked"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td align="left" valign="top">
+                                                                        <span id="Label1" class="defaulttext1 txt12">
+                                Subscribe for monthly newsletters
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td width="5%" align="left" valign="top" class="padT5">
+                                                                        
+                                                                        <div class="marT2">
+                                                                            <span class="checkbox" onchange="myFunction()" style="display:inline-block;border-width:0px;"><input id="checkbox" type="checkbox" name="checkbox"></span>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td align="left" valign="top" class="padT5">
+                                                                        <span id="lblAgree" class="defaulttext1 txt12">
+                I have read and understood the <a href="https://www.justrechargeit.com/jri_terms_conditions_policies.aspx" class="hyLink3 txt12">terms &amp; conditions</a>, <a href="https://www.justrechargeit.com/jri_terms_conditions_policies.aspx" class="hyLink3 txt12">refund policy 
+        </a>and <a href="https://www.justrechargeit.com/jri_terms_conditions_policies.aspx" class="hyLink3 txt12">fraud policy</a> and agree to it.
+                                                                        </span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                            <br>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="tdcondition" align="left" valign="top"></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td height="26" align="left" valign="top" class="padT11">
+                                                            <input type="image" name="imgbtnSubmit" id="imgbtnSubmit" title="Create Account" class="pad0" src="./page2_files/btn_createAccount.png" onclick="javascript:return checkRegForm9(&#39;S&#39;); theForm.txtPassword.maxLength=&#39;20&#39;;theForm.txtConfirmPassword.maxLength=&#39;20&#39;;" style="border-width:0px;"></td>
+                                                    </tr>
+                                                </tbody></table>
+                                            </td>
+                                            
+                                            <td width="118" align="left" valign="top">
+                                                <img src="./page2_files/signup_middle_shadow.jpg" width="77" height="456"></td>
+                                            <td align="left" valign="top" class="padT20">
+                                                <img src="./page2_files/signup_y_jri.gif" alt="">
+                                            </td>
+                                        </tr>
+                                    </tbody></table>
+
+
+
+                                </div>
+
+
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+
+                    
+
+<style type="text/css">
+    #operatorpanel {font-family:Arial !important;font-size:11px;color:#919191;width:100%;margin-top:20px}
+    #operatorpanel h1 {font-size:13px;font-weight:bold;color:#929292;border-bottom:1px solid #c5c5c5;line-height:27px;margin-bottom:13px}
+    .mobileRechargeDv {width:349px;float:left;}
+    .dthRechargeDv {width:160px;float:left;margin-left:30px}
+    .dataCardRechargeDv {width: 164px;float:left;margin-left:30px}
+    .paymentOptionDv{width: 137px;float:left;margin-left:30px}
+    .operatorPanelStyle ul { margin:0;padding:0;list-style:none;}
+    .operatorPanelStyle ul li { margin:0 0 7px 0;padding:0;list-style:none;display:list-item}
+    .operatorPanelStyle ul li .hyLink2 {color:#919191;}
+    .operatorPanelStyle ul li .hyLink2:hover {color:#c50763}
+    .w196{width:196px;float:left}
+    .optionList li:hover{ color:#000;cursor:default}
+</style>
+
+<div id="operatorpanel" class="operatorPanelStyle">
+              <div class="dthRechargeDv">
+              <h1>Mobile Recharges</h1> 
+              <ul>
+                  <!--<li><a href="/aircel-online-prepaid-recharge-services.aspx" class="hyLink2" title="Aircel Recharges">Aircel Recharge</a></li>-->
+                 <li><a href="https://www.justrechargeit.com/airtel-online-prepaid-recharge-services.aspx" class="hyLink2" title="Airtel Recharges">Airtel Recharge</a> </li>
+                 <li><a href="https://www.justrechargeit.com/bsnl-online-prepaid-recharge-services.aspx" class="hyLink2" title="BSNL Recharges">BSNL Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/idea-online-prepaid-recharge-services.aspx" class="hyLink2" title="Idea Recharges">Idea Recharge</a></li>
+		 <li><a href="https://www.justrechargeit.com/jio-online-prepaid-recharge-services.aspx" class="hyLink2" title="Jio Recharges">Jio Recharges</a></li>
+                 <!--<li><a href="/loop-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Loop Mobile Recharges">Loop Mobile Recharges</a></li>-->
+                 <li><a href="https://www.justrechargeit.com/mtnl-online-prepaid-recharge-services.aspx" class="hyLink2" title="MTNL Recharges">MTNL Recharge</a></li>
+		 <li><a href="https://www.justrechargeit.com/vodafone-online-prepaid-recharge-services.aspx" class="hyLink2" title="Vodafone Recharges">Vodafone Recharge</a></li>
+                <!-- <li><a href="/mts-online-prepaid-recharge-services.aspx" class="hyLink2" title="MTS Recharges">MTS Recharge</a></li>-->
+                 <!--<li><a href="/reliance-cdma-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Reliance CDMA Mobile Recharges">Reliance CDMA Mobile Recharge</a></li>-->
+                 <!--<li><a href="/reliance-gsm-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Reliance GSM Mobile Recharges">Reliance GSM Mobile Recharge</a></li>-->
+             </ul> 
+             <!--<ul>
+                 <li><a href="/tata-docomo-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Docomo Recharges">Tata Docomo Recharge</a></li>
+                 <li><a href="/tata-indicom-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Indicom Recharges">Tata Indicom Recharge</a></li>
+                 <li><a href="/tata-walky-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Walky Recharges">Tata Walky Recharge</a></li>
+                 <li><a href="/uninor-online-prepaid-recharge-services.aspx" class="hyLink2" title="Telenor Recharges">Telenor Recharge</a></li>
+                 <li><a href="/videocon-online-prepaid-recharge-services.aspx" class="hyLink2" title="Videocon Recharges">Videocon Recharge</a></li>
+                <li><a href="/virgin-cdma-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Virgin CDMA Mobile Recharges">Virgin CDMA Mobile Recharges</a></li>
+                 <li><a href="/virgin-gsm-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Virgin GSM Mobile Recharges">Virgin GSM Mobile Recharges</a></li>
+                 <li><a href="/vodafone-online-prepaid-recharge-services.aspx" class="hyLink2" title="Vodafone Recharges">Vodafone Recharge</a></li>
+             </ul>--> 
+            </div>
+         <div class="dthRechargeDv">
+              <h1>DTH Recharges</h1>
+             <ul>
+                 <li><a href="https://www.justrechargeit.com/airtel-digital-tv-online-prepaid-recharge-services.aspx" class="hyLink2" title="Airtel Digital TV Recharges">Airtel Digital TV Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/dish-tv-online-prepaid-recharge-services.aspx" class="hyLink2" title="Dish TV Recharges">Dish TV Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/tata-sky-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Sky Recharges">Tata Sky Recharge</a></li>
+                 <!--<li><a href="/reliance-digital-tv-online-prepaid-recharge-services.aspx" class="hyLink2" title="Reliance Digital TV Recharges">Reliance Digital TV Recharge</a></li>--> 
+                 <li><a href="https://www.justrechargeit.com/sun-direct-online-prepaid-recharge-services.aspx" class="hyLink2" title="Sun Direct Recharges">Sun Direct Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/videocon-d2h-online-prepaid-recharge-services.aspx" class="hyLink2" title="Videocon D2H Recharges">Videocon D2H Recharge</a></li>
+             </ul>  
+        </div>
+       <div class="dataCardRechargeDv">
+           <!--<h1>Data Card Recharges</h1> 
+            <ul>
+                 <li><a href="/aircel-data-card-online-recharge-services.aspx" class="hyLink2" title="Aircel Recharge">Aircel Data Card Recharge</a></li>
+                 <li><a href="/airtel-data-card-online-recharge-services.aspx" class="hyLink2" title="Airtel Recharge">Airtel Data Card Recharge</a></li>
+                <li><a href="/bsnl-data-card-online-recharge-services.aspx" class="hyLink2" title="BSNL Recharge">BSNL Data Card Recharge</a></li>
+                <li><a href="/idea-data-card-online-recharge-services.aspx" class="hyLink2" title="Idea Recharge">Idea Data Card Recharge</a></li>
+                <li><a href="/mtnl-data-card-online-recharge-services.aspx" class="hyLink2" title="MTNL Recharge">MTNL Data Card Recharge</a></li>
+                 <li><a href="/mts-mblaze-data-card-online-recharge-services.aspx" class="hyLink2" title="MTS MBlaze Recharges">MTS MBlaze Recharge</a></li>
+                 <li><a href="/mts-mbrowse-data-card-online-recharge-services.aspx" class="hyLink2" title="MTS MBrowse Recharges">MTS MBrowse Recharge</a></li>
+                <li><a href="/reliance-netconnect-data-card-online-recharge-services.aspx" class="hyLink2" title="Reliance NetConnect Recharges">Reliance NetConnect Recharge</a></li>
+                 <li><a href="/tata-photon-plus-data-card-online-recharge-services.aspx" class="hyLink2" title="Tata Photon Plus Recharges">Tata Photon Plus Recharge</a></li>
+                 <li><a href="/tata-photon-whiz-data-card-online-recharge-services.aspx" class="hyLink2" title="Tata Photon Whiz Recharges">Tata Photon Whiz Recharge</a></li>
+                <li><a href="/vodafone-data-card-online-recharge-services.aspx" class="hyLink2" title="Vodafone Recharge">Vodafone Data Card Recharge</a></li>
+             </ul>-->
+        </div> 
+        <div class="paymentOptionDv">
+            <h1>Payment Options</h1>
+            <ul class="optionList">
+                 <li>Credit Cards</li>
+                 <li>Debit Cards</li>
+                 <li>Any Visa Debit Card (VBV)</li>
+                 <li>Direct Bank Debits</li>
+                 <li>Cash Cards</li>
+                 <li>UPI</li>
+             </ul>     
+            </div>
+    </div>
+
+
+<script type="text/javascript">
+    var _sf_async_config = { uid: 2995, domain: "justrechargeit.com" };
+    (function () {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+               (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+               "static.chartbeat.com/js/chartbeat.js");
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+            loadChartbeat : function () { oldonload(); loadChartbeat(); };
+    })();
+
+</script>
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21391758-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<!-- Google Code for Remarketing 90 Days (all visitors on home page) Remarketing List -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 985023183;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "666666";
+    var google_conversion_label = "Y3j9CPHX6gIQz4XZ1QM";
+    var google_conversion_value = 0;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="./page2_files/f(2).txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/985023183/?label=Y3j9CPHX6gIQz4XZ1QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for All 30 Days visitors Remarketing List -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1017939962;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "233sCJ6gyAIQ-o-y5QM";
+    var google_conversion_value = 0;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="./page2_files/f(2).txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1017939962/?label=233sCJ6gyAIQ-o-y5QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+                    <table border="0" cellspacing="0" cellpadding="0" id="operatorpanel">
+                        <tbody><tr>
+                            <td align="left" valign="middle" class="defaulttext1">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="left" valign="middle" class="horizontaldivider">
+                                <img src="./page2_files/blank_spacer.gif" width="1" height="1"></td>
+                        </tr>
+                        <tr>
+                            <td align="right" valign="bottom" height="38">
+                                
+
+<table width="902" border="0" cellspacing="0" cellpadding="0" align="left">
+    <tbody><tr>
+        <td width="80" valign="middle" align="left">
+            <a href="https://plus.google.com/104337947390884833804" rel="publisher" target="_blank"><img src="./page2_files/googleplusicon.gif" border="0"></a>
+        </td>
+         <td width="1"><img src="./page2_files/social-icon-divider.png"></td>
+	    <td width="43" align="center" valign="middle"><a href="https://twitter.com/jritwit" target="_blank"><img src="./page2_files/twittericon.gif" alt="Follow us on Twitter" title="Follow us on Twitter" border="0"></a></td>	    
+        <td width="1"><img src="./page2_files/social-icon-divider.png"></td>        
+	    <td width="42" align="center" valign="middle"><a href="https://www.facebook.com/JustRechargeIt" target="_blank"><img src="./page2_files/facebooktext.gif" title="Facebook" alt="Facebook" border="0"></a></td>
+	    <td width="397" align="center" valign="middle">
+            
+            <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/JustRechargeIt" data-layout="standard" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=483017605054633&amp;container_width=635&amp;href=https%3A%2F%2Fwww.facebook.com%2FJustRechargeIt&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f12ecf9361d54e" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./page2_files/like.html" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
+	    </td>
+    </tr>
+</tbody></table>
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+        </tbody></table>
+        
+
+
+
+
+
+<style type="text/css">
+    .footerLink{color:#3d3d3d;font-family:Arial;font-size:12px;}
+    .footerLink a{color:#3d3d3d;text-decoration:none;margin:0 6px;}
+    .footerLink a:hover{text-decoration:underline}
+    .footerLink a.first{ margin-left:0px}
+    .defaulttext3{color:#3d3d3d !important;}
+</style>
+<table width="902" border="0" align="center" cellpadding="0" cellspacing="0" id="bottompanel">
+  <tbody><tr>
+    <td height="35" align="left" valign="bottom" class="footerLink">
+<a id="jriBottomPanel_hypAboutus" title="About Us" class="first" href="https://www.justrechargeit.com/aboutus.aspx">About Us </a> | <a id="jriBottomPanel_hyppartnerwithUs" title="Partner With Us" href="https://www.justrechargeit.com/mobile-recharge-API-and-coupons-API.aspx"> Partner With Us </a> | <a id="jriBottomPanel_hypHelpdesk" title="Helpdesk" href="https://www.justrechargeit.com/faq_general.aspx"> Helpdesk</a> | <a id="jriBottomPanel_hypTerms" title="Terms, Conditions &amp; Policies" href="https://www.justrechargeit.com/jri_terms_conditions_policies.aspx"> Terms, Conditions &amp; Policies</a>
+    </td>
+    <td height="35" align="right" valign="bottom" class="defaulttext3">© Copyright <script language="javascript">
+                                                                                           var yy = (new Date()).getYear(); var year = (yy < 1000) ? yy + 1900 : yy; document.write("" + year);</script>2022 - JRI Technologies Pvt. Ltd. All rights reserved.</td>
+  </tr>
+</tbody></table>
+
+
+
+
+    </form>
+
+    <script src="./page2_files/jquery.reveal.js.download" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+
+            $('#signup_name').focusin(function () {
+            $('#name_info').fadeIn('fast');
+        });
+        $('#signup_name').focusout(function () {
+            if (document.getElementById('signup_name').value.search(/\S/) == -1) {
+                //alert('Please enter your name');
+                $("td#nameTD").attr('valign', 'middle');
+                $("td#nameTD").html("<span class='errormsg'>Enter your name</span>");
+                //document.getElementById('signup_name').focus();
+                return false;
+            }
+            $("td#nameTD").attr('valign', 'top');
+            $("td#nameTD").html("<div id='name_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Full name as appearing on your bank statement</div></div>");
+
+            if (document.getElementById('signup_name').value.search(/\S/) != -1) {
+                validStr = /^[a-zA-Z][\w\.]*[a-zA-Z. ]+$/;
+                if (!validStr.test(document.getElementById('signup_name').value)) {
+                    //alert('Enter valid name');
+                    $("td#nameTD").attr('valign', 'middle');
+                    $("td#nameTD").html("<span class='errormsg'>Enter correct name</span>");
+                    //document.getElementById('signup_name').focus();
+                    return false;
+                }
+            }
+            $("td#nameTD").attr('valign', 'top');
+            $("td#nameTD").html("<div id='name_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Full name as appearing on your bank statement</div></div>");
+            $('#name_info').fadeOut('fast');
+        });
+
+        $('#signup_address').focusin(function () {
+            $('#address_info').fadeIn('fast');
+        });
+        $('#signup_address').focusout(function () {
+            if (document.getElementById('signup_address').value.search(/\S/) == -1) {
+                //alert('Please enter your address');
+                $("td#addressTD").attr('valign', 'middle');
+                $("td#addressTD").html("<span class='errormsg'>Enter your address</span>");
+                //document.getElementById('signup_address').focus();
+                return false;
+            }
+            $("td#addressTD").attr('valign', 'top');
+            $("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Address as appearing on your bank statement</div></div>");
+
+            //FOR ADDRESS VALIDATION
+            if (document.getElementById('signup_address').value.length > 200) {
+                //alert('Please enter your address');
+                $("td#addressTD").attr('valign', 'middle');
+                $("td#addressTD").html("<span class='errormsg'>Address field should not exceed 200 characters.</span>");
+                //document.getElementById('signup_address').focus();
+                return false;
+            }
+            $("td#addressTD").attr('valign', 'top');
+            $("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Address as appearing on your bank statement</div></div>");
+
+            if (document.getElementById('signup_address').value.indexOf("<") != -1 || document.getElementById('signup_address').value.indexOf(">") != -1) {
+                $("td#addressTD").attr('valign', 'middle');
+                $("td#addressTD").html("<span class='errormsg'>Enter valid address.</span>");
+                //document.getElementById('signup_address').focus();
+                return false;
+            }
+            $("td#addressTD").attr('valign', 'top');
+            $("td#addressTD").html("<div id='address_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Address as appearing on your bank statement</div></div>");
+            $('#address_info').fadeOut('fast');
+        });
+
+
+        $('#signup_email').focusin(function () {
+            $('#email_info').fadeIn('fast');
+        });
+        $('#signup_email').focusout(function () {
+            if (document.getElementById('signup_email').value.search(/\S/) == -1) {
+                //alert('Please enter your email id');
+                $("td#emailTD").attr('valign', 'middle');
+                $("td#emailTD").html("<span class='errormsg'>Enter your email id</span>");
+                //document.getElementById('signup_email').focus();
+                return false;
+            }
+            $("td#emailTD").attr('valign', 'top');
+            $("td#emailTD").html("<div id='email_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid email id. We proactively track all bounced emails</div></div>");
+
+            if (document.getElementById('signup_email').value.search(/\S/) != -1) {
+                validStr = /^([a-zA-Z0-9_'+*$%\^&!\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9:]{2,4})+$/;
+                if (!validStr.test(document.getElementById('signup_email').value)) {
+                    //alert('Enter valid email id');
+                    $("td#emailTD").attr('valign', 'middle');
+                    $("td#emailTD").html("<span class='errormsg'>Enter valid email id</span>");
+                    //document.getElementById('signup_email').focus();
+                    return false;
+                }
+            }
+            $("td#emailTD").attr('valign', 'top');
+            $("td#emailTD").html("<div id='email_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid email id. We proactively track all bounced emails</div></div>");
+            $('#email_info').fadeOut('fast');
+        });
+
+        $('#signup_city').focusin(function () {
+            $('#city_info').fadeIn('fast');
+        });
+        $('#signup_city').focusout(function () {
+            if (document.getElementById('signup_city').value.search(/\S/) == -1) {
+                //alert('Please enter your city');
+                $("td#CityTD").attr('valign', 'middle');
+                $("td#CityTD").html("<span class='errormsg'>Enter your city</span>");
+                //document.getElementById('signup_city').focus();
+                return false;
+            }
+            $("td#CityTD").attr('valign', 'top');
+            $("td#CityTD").html("<div id='city_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter your city</div></div>");
+
+            if (document.getElementById('signup_city').value.search(/\S/) != -1) {
+                //validStr = /^[a-zA-Z]*[a-zA-Z0-9 -]+$/;
+                validStr = /^[a-zA-Z. ]+$/;
+                if (!validStr.test(document.getElementById('signup_city').value)) {
+                    //alert('Enter valid city');
+                    $("td#CityTD").attr('valign', 'middle');
+                    $("td#CityTD").html("<span class='errormsg'>Enter correct city</span>");
+                    //document.getElementById('signup_city').focus();
+                    return false;
+                }
+            }
+            $("td#CityTD").attr('valign', 'top');
+            $("td#CityTD").html("<div id='city_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter your city</div></div>");
+            $('#city_info').fadeOut('fast');
+        });
+
+        $('#signup_pincode').focusin(function () {
+            $('#pincode_info').fadeIn('fast');
+        });
+        $('#signup_pincode').focusout(function () {
+            if (document.getElementById('signup_pincode').value.search(/\S/) == -1) {
+                //alert('Please enter your pin code');
+                $("td#pincodeTD").attr('valign', 'middle');
+                $("td#pincodeTD").html("<span class='errormsg'>Enter your pin code</span>");
+                //document.getElementById('signup_pincode').focus();
+                return false;
+            }
+            $("td#pincodeTD").attr('valign', 'top');
+            $("td#pincodeTD").html("<div id='pincode_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid pin code</div></div>");
+
+            if (document.getElementById('signup_pincode').value.search(/\S/) != -1) {
+                //validStr = /^[0-9]+$/;
+                validStr = /\d{6}/;
+                if (!validStr.test(document.getElementById('signup_pincode').value)) {
+                    //alert('Enter valid pin code');
+                    $("td#pincodeTD").attr('valign', 'middle');
+                    $("td#pincodeTD").html("<span class='errormsg'>Enter valid pin code</span>");
+                    //document.getElementById('signup_pincode').focus();
+                    return false;
+                }
+            }
+            $("td#pincodeTD").attr('valign', 'top');
+            $("td#pincodeTD").html("<div id='pincode_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid pin code</div></div>");
+            $('#pincode_info').fadeOut('fast');
+        });
+
+        $('#dob').focusin(function () {
+            $('#dob_info').fadeIn('fast');
+        });
+        $('#dob').focusout(function () {
+            alert(111);
+            if (document.getElementById('dob').value.search(/\S/) != -1) {
+                var objFromDate = document.getElementById('dob').value;
+
+                if (!isDate(objFromDate)) {
+                    $("td#dobTD").attr('valign', 'middle');
+                    $("td#dobTD").html("<span class='errormsg'>Enter valid date of birth</span>");
+                    document.getElementById('dob').focus();
+                    return false;
+                }
+                //var FromDate = new Date(objFromDate);
+                var frmDate = objFromDate.split("/");
+                var dtFromDate = new Date(frmDate[1] + '/' + frmDate[0] + '/' + frmDate[2]);
+                var ToDate = new Date();
+                if (dtFromDate > ToDate) {
+                    //alert('Please enter valid date of birth');
+                    $("td#dobTD").attr('valign', 'middle');
+                    $("td#dobTD").html("<span class='errormsg'>Enter valid date of birth</span>");
+                    //document.getElementById('dob').focus();
+                    return false;
+                }
+            }
+            $("td#dobTD").attr('valign', 'top');
+            $("td#dobTD").html("<div id='dob_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please enter correct date of birth</div></div>");
+            $('#dob_info').fadeOut('fast');
+        });
+
+        $('#signup_mobileno').focusin(function () {
+            $('#mobileno_info').fadeIn('fast');
+        });
+        $('#signup_mobileno').focusout(function () {
+            if (document.getElementById('signup_mobileno').value.search(/\S/) == -1) {
+                //alert('Please enter mobile no.');
+                $("td#mobilenoTD").attr('valign', 'middle');
+                $("td#mobilenoTD").html("<span class='errormsg'>Enter mobile no.</span>");
+                //document.getElementById('signup_mobileno').focus();
+                return false;
+            }
+            $("td#mobilenoTD").attr('valign', 'top');
+            $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+            if (document.getElementById('signup_mobileno').value.search(/\S/) != -1) {
+                validStr = /^[0-9]+$/;
+                if (!validStr.test(document.getElementById('signup_mobileno').value)) {
+                    //alert('Enter valid mobile no.');
+                    $("td#mobilenoTD").attr('valign', 'middle');
+                    $("td#mobilenoTD").html("<span class='errormsg'>Enter valid 10 digit mobile no.</span>");
+                    //document.getElementById('signup_mobileno').focus();
+                    return false;
+                }
+                $("td#mobilenoTD").attr('valign', 'top');
+                $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+                if (document.getElementById('signup_mobileno').value.charAt(0) == '0') {
+                    //alert('First digit should not be 0');
+                    $("td#mobilenoTD").attr('valign', 'middle');
+                    $("td#mobilenoTD").html("<span class='errormsg'>First digit should not be 0</span>");
+                    //document.getElementById('signup_mobileno').focus();
+                    return false;
+                }
+                $("td#mobilenoTD").attr('valign', 'top');
+                $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+                if (document.getElementById('signup_mobileno').value.charAt(0) != '7' && document.getElementById('signup_mobileno').value.charAt(0) != '8' && document.getElementById('signup_mobileno').value.charAt(0) != '9' && document.getElementById('signup_mobileno').value.charAt(0) != '6') {
+                    //alert('First digit should not be 0');
+                    $("td#mobilenoTD").attr('valign', 'middle');
+                    $("td#mobilenoTD").html("<span class='errormsg'>Enter valid mobile number</span>");
+                    //document.getElementById('signup_mobileno').focus();
+                    return false;
+                }
+                $("td#mobilenoTD").attr('valign', 'top');
+                $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+
+            }
+            if (document.getElementById('signup_mobileno').value.length < 10) {
+                //alert('Please enter valid mobile number of 10 digits');
+                $("td#mobilenoTD").attr('valign', 'middle');
+                $("td#mobilenoTD").html("<span class='errormsg'>Enter 10 digit mobile no.</span>");
+                //document.getElementById('signup_mobileno').focus();
+                return false;
+            }
+            $("td#mobilenoTD").attr('valign', 'top');
+            $("td#mobilenoTD").html("<div id='mobileno_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter a valid mobile number. This could be a prepaid or postpaid number.</div></div>");
+            $('#mobileno_info').fadeOut('fast');
+        });
+
+        $('#signup_password').focusin(function () {
+            $('#password_info').fadeIn('fast');
+        });
+        $('#signup_password').focusout(function () {
+            if (document.getElementById('signup_password').value.search(/\S/) == -1) {
+                //alert('Please enter your password');
+                $("td#passwordTD").attr('valign', 'middle');
+                $("td#passwordTD").html("<span class='errormsg'>Enter your password</span>");
+                //document.getElementById('signup_password').focus();
+                return false;
+            }
+            $("td#passwordTD").attr('valign', 'top');
+            $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+            if (document.getElementById('signup_password').value.length < 6) {
+                //alert('Enter 6-digit numeric characters only');
+                $("td#passwordTD").attr('valign', 'middle');
+                $("td#passwordTD").html("<span class='errormsg'>Enter 6-digit numeric characters only</span>");
+                //document.getElementById('signup_password').focus();
+                return false;
+            }
+            $("td#passwordTD").attr('valign', 'top');
+            $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+
+            validStr = /^[0-9]+$/;
+            if (!validStr.test(document.getElementById('signup_password').value)) {
+                //alert('Enter 6-digit numeric characters only');
+                $("td#passwordTD").attr('valign', 'middle');
+                $("td#passwordTD").html("<span class='errormsg'>Enter 6-digit numeric characters only</span>");
+                //document.getElementById('signup_password').focus();
+                return false;
+            }
+            $("td#passwordTD").attr('valign', 'top');
+            $("td#passwordTD").html("<div id='password_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Please restrict it to 6 characters only.</div></div>");
+            $('#password_info').fadeOut('fast');
+        });
+
+        $('#signup_confirmpassword').focusin(function () {
+            $('#confirmpassword_info').fadeIn('fast');
+        });
+        $('#signup_confirmpassword').focusout(function () {
+            if (document.getElementById('signup_confirmpassword').value.search(/\S/) == -1) {
+                //alert('Please enter confirm password');
+                $("td#confirmpasswordTD").attr('valign', 'middle');
+                $("td#confirmpasswordTD").html("<span class='errormsg'>Re-enter password</span>");
+                //document.getElementById('signup_confirmpassword').focus();
+                return false;
+            }
+            $("td#confirmpasswordTD").attr('valign', 'top');
+            $("td#confirmpasswordTD").html("<div id='confirmpassword_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid confirm password</div></div>");
+
+            if (document.getElementById('signup_password').value != document.getElementById('signup_confirmpassword').value) {
+                //alert('Password is different from confirm password');
+                $("td#confirmpasswordTD").attr('valign', 'middle');
+                $("td#confirmpasswordTD").html("<span class='errormsg'>Your password did not match.</span>");
+                //document.getElementById('signup_confirmpassword').focus();
+                return false;
+            }
+            $("td#confirmpasswordTD").attr('valign', 'top');
+            $("td#confirmpasswordTD").html("<div id='confirmpassword_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Enter valid confirm password</div></div>");
+            $('#confirmpassword_info').fadeOut('fast');
+        });
+
+        $('#ddlState').focusin(function () {
+            $('#state_info').fadeIn('fast');
+        });
+        $('#ddlState').focusout(function () {
+            if (document.getElementById('ddlState').value == '0') {
+                //alert('Please select your state');
+                $("td#StateTD").attr('valign', 'middle');
+                $("td#StateTD").html("<span class='errormsg'>Select a state / province</span>");
+                //document.getElementById('ddlState').focus();
+                return false;
+            }
+            $("td#StateTD").attr('valign', 'top');
+            $("td#StateTD").html("<div id='state_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Select your state</div></div>");
+
+            if (document.getElementById('ddlState').value != '0') {
+                validStr = /^[a-zA-Z]*[a-zA-Z0-9 -]+$/;
+                if (!validStr.test(document.getElementById('ddlState').value)) {
+                    //alert('Enter valid state');
+                    $("td#StateTD").attr('valign', 'middle');
+                    $("td#StateTD").html("<span class='errormsg'>Select valid state</span>");
+                    //document.getElementById('ddlState').focus();
+                    return false;
+                }
+            }
+            $("td#StateTD").attr('valign', 'top');
+            $("td#StateTD").html("<div id='state_info' align='left' class='formnotification' style='display:none;'><div class='radius'><img src='/images/formnotification_arrow_up.gif' width='14' height='10' />Select your state</div></div>");
+            $('#state_info').fadeOut('fast');
+        });
+
+    });
+    </script>
+
+
+
+<script language="javascript" type="text/javascript" src="./page2_files/chartbeat.js.download"></script></body></html>

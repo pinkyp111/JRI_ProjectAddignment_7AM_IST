@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.testscenarios.className"/>
+      <class name="com.JRI_TestScenarios.TS_001_VerifyTheNewAccountCreation"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

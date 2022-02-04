@@ -1,0 +1,2886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0054)https://www.justrechargeit.com/index_justrecharge.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Online Mobile Recharge|Online Prepaid Mobile,DTH Recharge &amp; Top Up for Airtel,Idea,Vodafone,Aircel,Tata Indicom,DOCOMO,Dish TV,Tata Sky &amp; Videocon D2H</title>
+
+<meta name="Description" content="Online Mobile Recharge | Prepaid Mobile, DTH Recharge &amp; Top Up Airtel, Idea, Reliance, Vodafone, BSNL, Tata Indicom, Docomo, MTNL, MTS, Uninor, Loop Mobile,  Videocon &amp; Virgin Mobile. DTH recharge services for Tata Sky, Dish TV, Reliance Digital TV, Sun Direct and Videocon d2h.">
+ 
+<meta name="Keywords" content="Online mobile recharge, Online mobile top up, recharge mobile, prepaid mobile recharge, instant mobile recharge, Dish TV recharge, DTH recharge, flexi recharge, easy recharge, Vodafone recharge, airtel recharge, aircel recharge, BPL mobile recharge, loop mobile recharge, tata indicom recharge, reliance mobile recharge, MTS recharge, idea recharge, mtnl recharge, bsnl recharge, virgin mobile recharge, tata sky recharge, dish tv recharge, airtel recharge, reliance digital tv recharge, sun direct recharge, videocon d2h recharge, Loop Mobile (BPL Mobile) top up">
+<meta name="google-site-verification" content="ZO0NHrLOaY2lOgOEK4AgwD1DSvl3TSiooIQq4BnXdwA">
+<meta name="y_key" content="b474eb61a8066ebf">
+<meta name="msvalidate.01" content="763B2A0CA92FA42A2671B1D1F72B36D7">
+
+<link rel="shortcut icon" href="https://www.justrechargeit.com/images/favicon_jri.ico" type="image/x-icon">
+<link rel="canonical" href="https://www.justrechargeit.com/">
+<link href="./page1_files/justrecharge.css" rel="stylesheet" type="text/css">
+<link href="./page1_files/tabcontent.css" rel="stylesheet" type="text/css">
+<link href="./page1_files/slider.css" rel="stylesheet" type="text/css" media="screen">
+<script src="./page1_files/all.js.download" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./page1_files/all.js(1).download"></script><script type="text/javascript" async="" src="./page1_files/ga.js.download"></script><script src="./page1_files/tabcontent.js.download" type="text/javascript" language="javascript1.2"></script>
+<script src="./page1_files/jquery.1.7.1.min.js.download" type="text/javascript"></script>
+<script src="./page1_files/validate2.js.download" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function () {
+        $('#amount_textfield').focus(function () {
+            $('#overlay').fadeIn('fast', function () {
+                $('#innerbox').animate({ 'top': '-1px' }, 350);
+            });
+        });
+        $('body').click(function () {
+            $('#innerbox').animate({ 'top': '-200px' }, 500, function () {
+                $('#overlay').fadeOut('fast');
+            });
+        });
+
+    });
+</script>
+
+    <script language="javascript" type="text/javascript">
+        function processkey(textBox, e) {
+            if (document.getElementById("txtMobileNo").value.search(/\S/) != -1) {
+                var validMobNumber = /^(\d)+$/;
+                if (!validMobNumber.test(document.getElementById("txtMobileNo").value)) {
+                    //alert("Mobile number field only accepts numeric");
+                    $("#errorMsgMobile").attr("class", "errormsg");
+                    $("#errorMsgMobile").html("Mobile number field only accepts numeric");
+                    document.getElementById("txtMobileNo").value = '';
+                    document.getElementById("txtMobileNo").focus();
+                    return false;
+                }
+                
+                $("#errorMsgMobile").attr("class", "");
+                $("#errorMsgMobile").html("");
+
+                if (textBox.value.length == 10) {
+
+                    xmlHttp = GetXmlHttpObject()
+                    if (xmlHttp == null) {
+                        //alert("Your browser does not support AJAX!");
+                        $("#errorMsgMobile").attr("class", "errormsg");
+                        $("#errorMsgMobile").html("Your browser does not support AJAX!");
+                        return false;
+                    }
+                    var url = "myaccount_directory_ajaxSP.aspx";
+                    url = url + "?q=" + document.getElementById("txtMobileNo").value;
+                    xmlHttp.onreadystatechange = stateChanged;
+                    xmlHttp.open("GET", url, true);
+                    xmlHttp.send(null);
+                }
+                else if (textBox.value.length == 9) {
+                    var KeyID = (window.event) ? event.keyCode : e.keyCode;
+                    switch (KeyID) {
+                        case 8:   //backspace
+
+                            xmlHttp = GetXmlHttpObject()
+                            if (xmlHttp == null) {
+                                //alert("Your browser does not support AJAX!");
+                                $("#errorMsgMobile").attr("class", "errormsg");
+                                $("#errorMsgMobile").html("Your browser does not support AJAX!");
+                                return false;
+                            }
+                            var url = "myaccount_directory_ajaxSP.aspx";
+                            url = url + "?q=" + document.getElementById("txtMobileNo").value;
+                            xmlHttp.onreadystatechange = stateChanged;
+                            xmlHttp.open("GET", url, true);
+                            xmlHttp.send(null);
+                            break;
+                    }
+                }
+                else {
+                    return false;
+                }               
+            }
+        }
+
+        function stateChanged() {
+            if (xmlHttp.readyState == 4) {
+                var selval = '0';
+                var arrStr;
+                if (xmlHttp.responseText != "") {
+                    //select mobile service provider if present
+                    var str = xmlHttp.responseText;
+                    arrStr = str.split("|");
+                    var sel = document.getElementById('ddlMobileServiceProvider');
+                    for (x = 0 ; x <= sel.options.length - 1 ; x++) {
+                        var abc = sel.options[x].text;
+                        var abc = abc.toLowerCase();
+
+                        if (arrStr[0].indexOf(abc) > -1) {
+                            sel.options[x].selected = true;
+                            selval = sel.options[x].value;
+                            getData(selval,'M');
+                            break;
+                        }
+                    }
+                    //alert(arrStr[1]);
+                    PopulateMobileSPLocation(selval, arrStr[1]);
+                    PopulatePopularAmount(selval, arrStr[1]);
+                    DisplayPopularRechargeLink(1);
+                }
+                else {
+                    var sel = document.getElementById('ddlMobileServiceProvider');
+                    sel.options[0].selected = true;
+                    PopulateMobileSPLocation(selval, '');
+                    DisplayPopularRechargeLink(1);
+                }
+
+            }
+        }
+        function GetXmlHttpObject() {
+            var xmlHttp = null;
+            try {
+                // Firefox, Opera 8.0+, Safari
+                xmlHttp = new XMLHttpRequest();
+            }
+            catch (e) {
+                // Internet Explorer
+                try {
+                    xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            return xmlHttp;
+        }
+
+        function PopulatePopularAmount(ServiceProviderId, Location) {
+            //alert(document.getElementById("txtMobileNo").value);
+            //alert(ServiceProviderId);
+            //alert(Location);
+
+            xmlHttp1 = GetXmlHttpObject1()
+            if (xmlHttp1 == null) {
+                //alert("Your browser does not support AJAX!");
+                $("#errorMsgMobile").attr("class", "errormsg");
+                $("#errorMsgMobile").html("Your browser does not support AJAX!");
+                return false;
+            }
+            var url = "Ajax_GetPopularRecharge.aspx";
+            url = url + "?serviceproviderid=" + ServiceProviderId + "&location=" + Location +"&rand=" + Math.random();
+            xmlHttp1.onreadystatechange = stateChangedRechargeValues;
+            xmlHttp1.open("GET", url, true);
+            xmlHttp1.send(null);
+
+        }
+        
+        function stateChangedRechargeValues() {
+            if (xmlHttp1.readyState == 4) {
+                if (xmlHttp1.responseText != "") {
+                    //populate location according to service provider and select the appropriate location if present                    
+                    var strData = xmlHttp1.responseText.substring(2);
+                    var arrStrData = strData.split('~!');                                       
+                    
+                    if (arrStrData.length > 0) {
+                        var btl = '<table width="90%" border="0" cellspacing="0" cellpadding="0" id="popularrecharge_values">';
+                        btl = btl + '<tr><td align="left" valign="middle" class="defaulttext1"><strong>Popular Recharge Values:</strong></td></tr>';
+
+                        for (var i = 0; i < arrStrData.length; i++) {
+                            btl = btl + '<tr><td align="left" valign="middle" class="defaulttext1">`&nbsp;<a href="javascript:void(0)" class="hyLink1" onclick="return SetAmountValue(' + arrStrData[i] + ')">' + arrStrData[i] + '</a></td></tr>';
+                        }
+
+                        btl = btl + '</table>';
+
+                        document.getElementById("amount_list").innerHTML = btl;
+                    }
+                    else {
+                        document.getElementById("amount_list").innerHTML = "";
+                    }
+                    
+
+                    /*
+                    var sel1 = document.getElementById('ddlMobileServiceProviderLocation');
+                    sel1.options.length = 0;
+                    var newElement = document.createElement('OPTION');
+                    newElement.text = "Select";
+                    newElement.value = "0";
+                    sel1.options.add(newElement);
+                    var i = 0;
+
+                    while (i < arrStrData.length) {
+                        var arrThis = arrStrData[i].split('~');
+                        var newElement = document.createElement('OPTION');
+                        newElement.text = arrThis[1];
+                        newElement.value = arrThis[0];
+                        if (arrThis[2] == 'S')
+                            newElement.selected = true;
+                        sel1.options.add(newElement);
+                        i += 1;
+                    }
+                    */
+
+                }
+                else {                    
+                    document.getElementById("amount_list").innerHTML = "";                    
+                }
+            }
+        }
+
+        function PopulateMobileSPLocation(spid, locname) {
+            xmlHttp2 = GetXmlHttpObject2()
+            if (xmlHttp2 == null) {
+                alert("Your browser does not support AJAX!");
+                return false;
+            }
+            var url = "myaccount_directory_ajaxSPLocation.aspx";
+            url = url + "?q=" + spid + "&n=" + locname;
+            xmlHttp2.onreadystatechange = stateChangedMobileLocation;
+            xmlHttp2.open("GET", url, true);
+            xmlHttp2.send(null);
+        }
+
+        function stateChangedMobileLocation() {
+            if (xmlHttp2.readyState == 4) {
+                if (xmlHttp2.responseText != "") {
+                    //populate location according to service provider and select the appropriate location if present
+                    var strData = xmlHttp2.responseText.substring(2);
+                    var arrStrData = strData.split('~!');
+
+                    //var sel1 = document.getElementById('ddlMobileServiceProviderLocation');
+                    //sel1.options.length = 0;
+                    //var newElement = document.createElement('OPTION');
+                    //newElement.text = "Select";
+                    //newElement.value = "0";
+                    //sel1.options.add(newElement);
+                    var i = 0;
+                    var flag = 0;
+
+                    while (i < arrStrData.length) {
+                        var arrThis = arrStrData[i].split('~');
+                        //var newElement = document.createElement('OPTION');
+                        //newElement.text = arrThis[1];
+                        //newElement.value = arrThis[0];
+                        if (arrThis[2] == 'S') {
+                            //newElement.selected = true;
+                            document.getElementById("hidMobileSPLocation").value = arrThis[0];
+                            flag = 1;
+                        }
+                        //sel1.options.add(newElement);
+                        i += 1;
+                    }
+                    if (flag == 0) {
+                        document.getElementById("hidMobileSPLocation").value = "";
+                    }
+
+                }
+                else {
+                    //var sel1 = document.getElementById('ddlMobileServiceProviderLocation');
+                    //sel1.options[0].selected = true;
+
+                }
+            }
+        }
+
+        function GetXmlHttpObject2() {
+            var xmlHttp2 = null;
+            try {
+                // Firefox, Opera 8.0+, Safari
+                xmlHttp2 = new XMLHttpRequest();
+            }
+            catch (e) {
+                // Internet Explorer
+                try {
+                    xmlHttp2 = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                    xmlHttp2 = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            return xmlHttp2;
+        }
+
+        function GetXmlHttpObject1() {
+            var xmlHttp1 = null;
+            try {
+                // Firefox, Opera 8.0+, Safari
+                xmlHttp1 = new XMLHttpRequest();
+            }
+            catch (e) {
+                // Internet Explorer
+                try {
+                    xmlHttp1 = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                    xmlHttp1 = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            return xmlHttp1;
+        }
+
+        function processDatacardkey(textBox, e) {
+            if (document.getElementById("txtDataCardNo").value.search(/\S/) != -1) {
+                var validMobNumber = /^(\d)+$/;
+                if (!validMobNumber.test(document.getElementById("txtDataCardNo").value)) {
+                    //alert("Mobile number field only accepts numeric");
+                    $("#errorMsgDataCard").attr("class", "errormsg");
+                    $("#errorMsgDataCard").html("Data card only accepts numeric");
+                    document.getElementById("txtDataCardNo").value = '';
+                    document.getElementById("txtDataCardNo").focus();
+                    return false;
+                }
+                
+                $("#errorMsgDataCard").attr("class", "");
+                $("#errorMsgDataCard").html("");                
+            }
+        }
+
+
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        //$(function () {
+        //    $('.hyLink1').click(function(e) {
+        //        e.preventDefault();
+        //        alert($(this).text());
+        //        return false;
+        //    });
+        //});
+        var DTHText = "";
+        var DTHNo = 30;
+        var DTHMin = 1;
+
+        function SetAmountValue(Amount) {
+            document.getElementById('amount_textfield').value = Amount;
+            return false;
+        }
+
+        function ValidateMobileRecharge() {
+            $("#errorMsgMobile").attr("class", "");
+            $("#errorMsgMobile").html("");
+
+            $("#errorMsgMobileServiceProvider").attr("class", "");
+            $("#errorMsgMobileServiceProvider").html("");
+
+            $("#errorMsgMobileAmount").attr("class", "");
+            $("#errorMsgMobileAmount").html("");
+
+            if (document.getElementById("txtMobileNo").value.search(/\S/) == -1) {
+                //alert("Please enter mobile number");
+                document.getElementById("txtMobileNo").focus();
+                $("#errorMsgMobile").attr("class", "errormsg");
+                $("#errorMsgMobile").html("Enter mobile number");
+                return false;
+            }
+            else {
+                var expNum = /^\s*\d+\s*$/;
+                if (!expNum.test(document.getElementById("txtMobileNo").value)) {
+                    //alert('Please enter valid mobile number');
+                    document.getElementById("txtMobileNo").focus();
+                    $("#errorMsgMobile").attr("class", "errormsg");
+                    $("#errorMsgMobile").html("Enter valid mobile number");
+                    return false;
+                }
+                if (parseInt(document.getElementById("txtMobileNo").value) <= 0) {
+                    //alert('Please enter valid mobile number');
+                    document.getElementById("txtMobileNo").focus();
+                    $("#errorMsgMobile").attr("class", "errormsg");
+                    $("#errorMsgMobile").html("Enter valid mobile number");
+                    return false;
+                }
+                var mob = document.getElementById("txtMobileNo").value;
+                if (mob.length < 10) {
+                    //alert('Please enter valid mobile number of 10 digits');
+                    document.getElementById("txtMobileNo").focus();
+                    $("#errorMsgMobile").attr("class", "errormsg");
+                    $("#errorMsgMobile").html("Enter valid 10 digits mobile number");
+                    return false;
+                }
+
+                // FOR TATA WALKY ALL NUMBERS EXCEPT 0 WILL ACCEPT
+                if (document.getElementById('ddlMobileServiceProvider').value != "32") {
+                    if (document.getElementById("txtMobileNo").value.charAt(0) != '7' && document.getElementById("txtMobileNo").value.charAt(0) != '8' && document.getElementById("txtMobileNo").value.charAt(0) != '9' && document.getElementById("txtMobileNo").value.charAt(0) != '6') {
+                        document.getElementById("txtMobileNo").focus();
+                        $("#errorMsgMobile").attr("class", "errormsg");
+                        $("#errorMsgMobile").html("Enter valid mobile number");
+                        return false;
+                    }
+                }
+                else {
+                    if (document.getElementById("txtMobileNo").value.charAt(0) == '0') {
+                        document.getElementById("txtMobileNo").focus();
+                        $("#errorMsgMobile").attr("class", "errormsg");
+                         $("#errorMsgMobile").html("Enter valid mobile number");
+                        return false;
+                    }
+                }
+            }
+
+            if (document.getElementById('ddlMobileServiceProvider').value == "0") {
+                //alert('Please select your service provider');
+                document.getElementById('ddlMobileServiceProvider').focus();
+                $("#errorMsgMobileServiceProvider").attr("class", "errormsg");
+                $("#errorMsgMobileServiceProvider").html("Select your service provider");
+                return false;
+            }
+
+            if (document.getElementById('amount_textfield').value.search(/\S/) == -1  && document.getElementById("drpMobDenomination").value=="") {
+                //alert('Please enter recharge amount');
+                document.getElementById('amount_textfield').focus();
+                $("#errorMsgMobileAmount").attr("class", "errormsg");
+                $("#errorMsgMobileAmount").html("Enter recharge amount");
+                return false;
+            }
+            if (document.getElementById('amount_textfield').value.search(/\S/) != -1) {
+                var expNum = /^\d*[0-9](\.\d*[0-9]{2})?$/;
+                if (!expNum.test(document.getElementById('amount_textfield').value)) {
+                    //alert('Please enter valid amount');
+                    document.getElementById('amount_textfield').focus();
+                    $("#errorMsgMobileAmount").attr("class", "errormsg");
+                    $("#errorMsgMobileAmount").html("Enter valid amount");
+                    return false;
+                }
+                if (parseFloat(document.getElementById('amount_textfield').value) <= 0) {
+                    //alert('Please enter valid amount');
+                    document.getElementById('amount_textfield').focus();
+                    $("#errorMsgMobileAmount").attr("class", "errormsg");
+                    $("#errorMsgMobileAmount").html("Enter valid amount");
+                    return false;
+                }
+                if (parseFloat(document.getElementById('amount_textfield').value) < parseFloat(document.getElementById('hid_MinValMobile').value)) {
+                    //alert('Please enter amount greater than ' + document.getElementById('hid_MinValMobile').value);
+                    document.getElementById('amount_textfield').focus();
+                    $("#errorMsgMobileAmount").attr("class", "errormsg");
+                    $("#errorMsgMobileAmount").html('Enter amount greater than ' + document.getElementById('hid_MinValMobile').value);
+                    return false;
+                }
+                if (parseFloat(document.getElementById('amount_textfield').value) > parseFloat(document.getElementById('hid_MaxValMobile').value)) {
+                    //alert('Please enter amount lesser than ' + document.getElementById('hid_MaxValMobile').value);
+                    document.getElementById('amount_textfield').focus();
+                    $("#errorMsgMobileAmount").attr("class", "errormsg");
+                    $("#errorMsgMobileAmount").html('Enter amount less than or equal to ' + document.getElementById('hid_MaxValMobile').value);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function ValidateDTHRecharge() {
+            $("#errorMsgDTH").attr("class", "");
+            $("#errorMsgDTH").html("");
+
+            $("#errorMsgDTHSubscriber").attr("class", "");
+            $("#errorMsgDTHSubscriber").html("");
+
+            $("#errorMsgDTHAmount").attr("class", "");
+            $("#errorMsgDTHAmount").html("");
+
+            if (document.getElementById('ddlDTHServiceProvider').value == "0") {
+                //alert('Please select your service provider');
+                document.getElementById('ddlDTHServiceProvider').focus();
+                $("#errorMsgDTH").attr("class", "errormsg");
+                $("#errorMsgDTH").html("Select your service provider");
+                return false;
+            }
+
+            if (document.getElementById("txtCardNo").value.search(/\S/) == -1) {
+                //alert("Please enter DTH card number");
+                document.getElementById("txtCardNo").focus();
+                $("#errorMsgDTHSubscriber").attr("class", "errormsg");
+                $("#errorMsgDTHSubscriber").html("Enter " + DTHText);
+                return false;
+            }
+            else {
+                var validDTHNumber = /^(\d)+$/;
+                if (!validDTHNumber.test(document.getElementById("txtCardNo").value)) {
+                    //alert("DTH card number only accept numeric");
+                    document.getElementById("txtCardNo").focus();
+                    $("#errorMsgDTHSubscriber").attr("class", "errormsg");
+                    $("#errorMsgDTHSubscriber").html( DTHText + " only accepts numeric");
+                    return false;
+                }
+
+                /*--- THIS IS VIDEOCON D2H ---*/
+                if (document.getElementById('ddlDTHServiceProvider').value == "34") {
+                    if (document.getElementById("txtCardNo").value.length > DTHNo || document.getElementById("txtCardNo").value.length < DTHMin) {
+                        document.getElementById("txtCardNo").focus();
+                        $("#errorMsgDTHSubscriber").attr("class", "errormsg");
+                        $("#errorMsgDTHSubscriber").html("Enter valid " + DTHText);
+                        return false;
+                    }
+                }
+                else {
+                    if (document.getElementById("txtCardNo").value.length < DTHNo) {
+                        document.getElementById("txtCardNo").focus();
+                        $("#errorMsgDTHSubscriber").attr("class", "errormsg");
+                        $("#errorMsgDTHSubscriber").html("Enter valid " + DTHText);
+                        return false;
+                    }
+                }
+                
+                if (document.getElementById('ddlDTHServiceProvider').value == "23") {                
+                    if (document.getElementById("txtCardNo").value.substring(0, 1) != "0") {
+                        //alert("Please enter valid DTH number. DTH card number is the 11 digit number starting with 0 ");
+                        $("#errorMsgDTHSubscriber").attr("class", "errormsg");
+                        $("#errorMsgDTHSubscriber").html("Enter valid DTH number. DTH card number is the " + DTHNo + " digit number starting with 0");
+                        document.getElementById("txtCardNo").focus();
+                        return false;
+                    }
+                }
+            }
+
+            if (document.getElementById('txtDTHAmount').value.search(/\S/) == -1 && document.getElementById("drpDTHDenomination").value == "") {
+                //alert('Please enter recharge amount');
+                document.getElementById('txtDTHAmount').focus();
+                $("#errorMsgDTHAmount").attr("class", "errormsg");
+                $("#errorMsgDTHAmount").html("Enter recharge amount");
+                return false;
+            }
+            if (document.getElementById('txtDTHAmount').value.search(/\S/) != -1) {
+                var expNum = /^\d*[0-9](\.\d*[0-9]{2})?$/;
+                if (!expNum.test(document.getElementById('txtDTHAmount').value)) {
+                    //alert('Please enter valid amount');
+                    document.getElementById('txtDTHAmount').focus();
+                    $("#errorMsgDTHAmount").attr("class", "errormsg");
+                    $("#errorMsgDTHAmount").html("Enter valid amount");
+                    return false;
+                }
+                if (parseFloat(document.getElementById('txtDTHAmount').value) <= 0) {
+                    //alert('Please enter valid amount');
+                    document.getElementById('txtDTHAmount').focus();
+                    $("#errorMsgDTHAmount").attr("class", "errormsg");
+                    $("#errorMsgDTHAmount").html("Enter valid amount");
+                    return false;
+                }
+                if (parseFloat(document.getElementById('txtDTHAmount').value) < parseFloat(document.getElementById('hid_MinValDTH').value)) {
+                    //alert('Please enter amount greater than ' + document.getElementById('hid_MinValDTH').value);
+                    document.getElementById('txtDTHAmount').focus();
+                    $("#errorMsgDTHAmount").attr("class", "errormsg");
+                    $("#errorMsgDTHAmount").html('Enter amount greater than ' + document.getElementById('hid_MinValDTH').value);
+                    return false;
+                }
+                if (parseFloat(document.getElementById('txtDTHAmount').value) > parseFloat(document.getElementById('hid_MaxValDTH').value)) {
+                    //alert('Please enter amount lesser than ' + document.getElementById('hid_MaxValDTH').value);
+                    document.getElementById('txtDTHAmount').focus();
+                    $("#errorMsgDTHAmount").attr("class", "errormsg");
+                    $("#errorMsgDTHAmount").html('Enter amount less than or equal to ' + document.getElementById('hid_MaxValDTH').value);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function ValidateDataCardRecharge() {
+            $("#errorMsgDataCard").attr("class", "");
+            $("#errorMsgDataCard").html("");
+
+            $("#errorMsgDataCardServiceProvider").attr("class", "");
+            $("#errorMsgDataCardServiceProvider").html("");
+
+            $("#errorMsgDataCardAmount").attr("class", "");
+            $("#errorMsgDataCardAmount").html("");
+
+            if (document.getElementById("txtDataCardNo").value.search(/\S/) == -1) {
+                //alert("Please enter data card number");
+                document.getElementById("txtDataCardNo").focus();
+                $("#errorMsgDataCard").attr("class", "errormsg");
+                $("#errorMsgDataCard").html("Enter data card number");
+                return false;
+            }
+            else {
+                var expNum = /^\s*\d+\s*$/;
+                if (!expNum.test(document.getElementById("txtDataCardNo").value)) {
+                    //alert('Please enter valid data card number');
+                    document.getElementById("txtDataCardNo").focus();
+                    $("#errorMsgDataCard").attr("class", "errormsg");
+                    $("#errorMsgDataCard").html("Enter valid data card number");
+                    return false;
+                }
+                if (parseInt(document.getElementById("txtDataCardNo").value) <= 0) {
+                    //alert('Please enter valid data card number');
+                    document.getElementById("txtDataCardNo").focus();
+                    $("#errorMsgDataCard").attr("class", "errormsg");
+                    $("#errorMsgDataCard").html("Enter valid data card number");
+                    return false;
+                }
+                var mob = document.getElementById("txtDataCardNo").value;
+                if (mob.length < 10) {
+                    //alert('Please enter valid data card number of 10 digits');
+                    document.getElementById("txtDataCardNo").focus();
+                    $("#errorMsgDataCard").attr("class", "errormsg");
+                    $("#errorMsgDataCard").html("Enter valid 10 digits data card number");
+                    return false;
+                }
+                if (document.getElementById("txtDataCardNo").value.charAt(0) != '7' && document.getElementById("txtDataCardNo").value.charAt(0) != '8' && document.getElementById("txtDataCardNo").value.charAt(0) != '9') {
+                    document.getElementById("txtDataCardNo").focus();
+                    $("#errorMsgDataCard").attr("class", "errormsg");
+                    $("#errorMsgDataCard").html("Enter valid data card number");
+                    return false;
+                }
+            }
+
+            if (document.getElementById('ddlDataCardServiceProvider').value == "0") {
+                //alert('Please select your service provider');
+                document.getElementById('ddlDataCardServiceProvider').focus();
+                $("#errorMsgDataCardServiceProvider").attr("class", "errormsg");
+                $("#errorMsgDataCardServiceProvider").html("Select your service provider");
+                return false;               
+            }
+
+            if (document.getElementById('txtDataCardAmount').value.search(/\S/) == -1 && document.getElementById("drpBBDenomination").value == "") {
+                //alert('Please enter recharge amount');
+                document.getElementById('txtDataCardAmount').focus();
+                $("#errorMsgDataCardAmount").attr("class", "errormsg");
+                $("#errorMsgDataCardAmount").html("Enter recharge amount");
+                return false;
+            }
+            if (document.getElementById('txtDataCardAmount').value.search(/\S/) != -1) {
+                var expNum = /^\d*[0-9](\.\d*[0-9]{2})?$/;
+                if (!expNum.test(document.getElementById('txtDataCardAmount').value)) {
+                    //alert('Please enter valid amount');
+                    document.getElementById('txtDataCardAmount').focus();
+                    $("#errorMsgDataCardAmount").attr("class", "errormsg");
+                    $("#errorMsgDataCardAmount").html("Enter valid amount");
+                    return false;
+                }
+                if (parseFloat(document.getElementById('txtDataCardAmount').value) <= 0) {
+                    //alert('Please enter valid amount');
+                    document.getElementById('txtDataCardAmount').focus();
+                    $("#errorMsgDataCardAmount").attr("class", "errormsg");
+                    $("#errorMsgDataCardAmount").html("Enter valid amount");
+                    return false;
+                }
+                if (parseFloat(document.getElementById('txtDataCardAmount').value) < parseFloat(document.getElementById('hid_MinValBB').value)) {
+                    //alert('Please enter amount greater than ' + document.getElementById('hid_MinValBB').value);
+                    document.getElementById('txtDataCardAmount').focus();
+                    $("#errorMsgDataCardAmount").attr("class", "errormsg");
+                    $("#errorMsgDataCardAmount").html('Enter amount greater than ' + document.getElementById('hid_MinValBB').value);
+                    return false;
+                }
+                if (parseFloat(document.getElementById('txtDataCardAmount').value) > parseFloat(document.getElementById('hid_MaxValBB').value)) {
+                    //alert('Please enter amount lesser than ' + document.getElementById('hid_MaxValBB').value);
+                    document.getElementById('txtDataCardAmount').focus();
+                    $("#errorMsgDataCardAmount").attr("class", "errormsg");
+                    $("#errorMsgDataCardAmount").html('Enter amount less than or equal to ' + document.getElementById('hid_MaxValBB').value);
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function changeDTHInstruction(v, t) {
+
+            var hdnDTHList = $.trim($('#hdnDTHData').val());
+            if (hdnDTHList != '') {
+                var DTHList = jQuery.parseJSON(hdnDTHList);
+                $.each(DTHList, function (i, elem) {                    
+                    //alert(elem.ServiceProviderName);
+                    //alert(elem.MaxDTHDigits);
+                    //alert(elem.MinDTHDigits);
+                    //alert(this['serviceproviderid']);
+                    if (parseInt(v) == elem.serviceproviderid) {
+                        DTHNo = elem.MaxDTHDigits;
+                        DTHMin = elem.MinDTHDigits;                        
+                    }
+                });
+            }
+
+            if (t == 2) {
+                if (v == "21") {
+                    document.getElementById("tdDTH").innerHTML = "Enter " + DTHNo + " digit customer id";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Customer Id";
+                    DTHText = "Customer Id";
+                    //DTHNo = 10;                    
+                }
+                else if (v == "23") {
+                    document.getElementById("tdDTH").innerHTML = "Enter " + DTHNo + " digit viewing card no. which starts with 0";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Viewing Card Number";
+                    DTHText = "Viewing Card Number";
+                    //DTHNo = 11;
+                }
+                else if (v == "22") {
+                    document.getElementById("tdDTH").innerHTML = "Enter " + DTHNo + " digit smart card number";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Smart Card Number";
+                    DTHText = "Smart Card Number";
+                    //DTHNo = 12;
+                }
+                else if (v == "24") {
+                    document.getElementById("tdDTH").innerHTML = "Enter " + DTHNo + " digit smart card number";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Smart Card Number";
+                    DTHText = "Smart Card Number";
+                    //DTHNo = 11;
+                }
+                else if (v == "25") {
+                    document.getElementById("tdDTH").innerHTML = "Enter " + DTHNo + " digit subscriber id";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Subscriber Id";
+                    DTHText = "Subscriber Id";
+                    //DTHNo = 10;
+                }
+                else if (v == "34") {
+                    document.getElementById("tdDTH").innerHTML = "Enter customer id";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Customer Id";
+                    DTHText = "Customer Id";
+                    //DTHNo = 10;
+                }
+                else {
+                    document.getElementById("tdDTH").innerHTML = "";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Subscriber ID";
+                    DTHText = "Subscriber ID";
+                    //DTHNo = 12;
+                }
+                document.getElementById("txtCardNo").value = '';
+                document.getElementById("txtCardNo").setAttribute('maxlength',DTHNo);
+            }
+        }
+
+    </script>
+    <script language="javascript" type="text/javascript">
+        //AJAX START
+        var xmlHttp;
+        function getData(str, wh) {
+            xmlHttp = getXmlHttpObject();
+            if (xmlHttp == null) { return false; }
+            if (wh == 'M') {
+                var url = "AjaxDenomination.aspx"
+                url = url + "?s=" + str
+                url = url + "&t=m"
+                url = url + "&rand=" + Math.random()
+                url = url + "&what=1"
+            }
+            else if (wh == 'D') {
+                var url = "AjaxDenomination.aspx"
+                url = url + "?s=" + str
+                url = url + "&t=d"
+                url = url + "&rand=" + Math.random()
+                url = url + "&what=1"
+            }
+
+
+            else if (wh == 'R') {
+                var url = "AjaxDenomination.aspx"
+                url = url + "?s=" + str
+                url = url + "&t=r"
+                url = url + "&rand=" + Math.random()
+                url = url + "&what=1"
+            }
+
+
+            if (wh == 'M') {
+                xmlHttp.onreadystatechange = MobileChange
+            }
+            else if (wh == 'D') {
+                xmlHttp.onreadystatechange = DTHChange
+            }
+            else if (wh == 'R') {
+                xmlHttp.onreadystatechange = BroadBandChange
+            }
+
+            xmlHttp.open("GET", url, true)
+            xmlHttp.send(null)
+        }
+        function MobileChange() {
+            if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
+                document.getElementById('drpMobDenomination').options.length = 0;
+                document.getElementById('amount_textfield').value = "";
+                //alert(document.getElementById("drpBBDenomination").value);
+                //var newElement = document.createElement('OPTION');
+                //newElement.text = '---- Select Location ----';
+                //newElement.value = '0';
+                //document.getElementById('drpMobDenomination').options.add(newElement);
+                if (xmlHttp.responseText != '') {
+                    var strData = xmlHttp.responseText.substring(2);
+                    //var strData = xmlHttp.responseText.substring(1);
+                    var arrStrData = strData.split('~!');
+                    var i = 0;
+
+                    document.getElementById("amount_textfield").style.display = 'none';
+                    document.getElementById("drpMobDenomination").style.display = '';
+
+                    document.getElementById("trMobilePopular").style.display = 'none';
+                    document.getElementById("trMobileDenomination").style.display = '';
+
+                    while (i < arrStrData.length) {
+                        //var arrThis = arrStrData[i].split('~');
+                        var arrThis = arrStrData[i].split(',');
+                        var newElement = document.createElement('OPTION');
+                        //newElement.text = arrThis[1];
+                        newElement.text = arrThis[0];
+                        newElement.value = arrThis[0];
+                        document.getElementById('drpMobDenomination').options.add(newElement);
+                        i += 1;
+                    }
+                }
+
+                else {
+                    document.getElementById("trMobilePopular").style.display = '';
+                    document.getElementById("trMobileDenomination").style.display = 'none';
+
+                    document.getElementById("amount_textfield").style.display = '';
+                    document.getElementById("drpMobDenomination").style.display = 'none';
+                }
+            }
+        }
+
+        function DTHChange() {
+            if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
+                document.getElementById('drpDTHDenomination').options.length = 0;
+                document.getElementById('txtDTHAmount').value = "";
+                if (xmlHttp.responseText != '') {
+                    var strData = xmlHttp.responseText.substring(2);
+                    var arrStrData = strData.split('~!');
+                    var i = 0;
+
+                    document.getElementById("txtDTHAmount").style.display = 'none';
+                    document.getElementById("drpDTHDenomination").style.display = '';
+
+                    while (i < arrStrData.length) {
+                        var arrThis = arrStrData[i].split(',');
+                        var newElement = document.createElement('OPTION');
+                        newElement.text = arrThis[0];
+                        newElement.value = arrThis[0];
+                        document.getElementById('drpDTHDenomination').options.add(newElement);
+                        i += 1;
+                    }
+                }
+
+                else {
+                    document.getElementById("txtDTHAmount").style.display = '';
+                    document.getElementById("drpDTHDenomination").style.display = 'none';
+                }
+            }
+        }
+
+
+
+        function BroadBandChange() {
+            if (xmlHttp.readyState == 4 || xmlHttp.readyState == "complete") {
+                document.getElementById('drpBBDenomination').options.length = 0;
+                document.getElementById('txtDataCardAmount').value = "";
+                if (xmlHttp.responseText != '') {
+                    var strData = xmlHttp.responseText.substring(2);
+                    var arrStrData = strData.split('~!');
+                    var i = 0;
+
+                    document.getElementById("imgrupee").style.display = 'none';
+                    document.getElementById("txtDataCardAmount").style.display = 'none';
+                    document.getElementById("drpBBDenomination").style.display = '';
+
+                    while (i < arrStrData.length) {
+                        var arrThis = arrStrData[i].split(',');
+                        var newElement = document.createElement('OPTION');
+                        newElement.text = arrThis[0];
+                        newElement.value = arrThis[0];
+                        document.getElementById('drpBBDenomination').options.add(newElement);
+                        i += 1;
+                    }
+                }
+
+                else {
+                    document.getElementById("imgrupee").style.display = '';
+                    document.getElementById("txtDataCardAmount").style.display = '';
+                    document.getElementById("drpBBDenomination").style.display = 'none';
+                }
+            }
+        }
+
+        
+        function getXmlHttpObject() {
+            var objXMLHttp = null;
+            if (window.XMLHttpRequest) { objXMLHttp = new XMLHttpRequest() }
+            else if (window.ActiveXObject) { objXMLHttp = new ActiveXObject("Microsoft.XMLHTTP") }
+            return objXMLHttp;
+        }
+        
+        function ResetAll() {
+            //Mobile section
+            $("#errorMsgMobile").attr("class", "");
+            $("#errorMsgMobile").html("");
+
+            $("#errorMsgMobileServiceProvider").attr("class", "");
+            $("#errorMsgMobileServiceProvider").html("");
+
+            $("#errorMsgMobileAmount").attr("class", "");
+            $("#errorMsgMobileAmount").html("");
+
+            $("input#txtMobileNo").val('');
+            $("#ddlMobileServiceProvider option[value='0']").attr("selected", "selected");
+            $("input#amount_textfield").val('');
+
+            document.getElementById("divMobPopularRecharge").style.display = "none";
+
+            //DTH section
+            $("#errorMsgDTH").attr("class", "");
+            $("#errorMsgDTH").html("");
+
+            $("#errorMsgDTHSubscriber").attr("class", "");
+            $("#errorMsgDTHSubscriber").html("");
+
+            $("#errorMsgDTHAmount").attr("class", "");
+            $("#errorMsgDTHAmount").html("");
+
+            $("#ddlDTHServiceProvider option[value='0']").attr("selected", "selected");
+            $("input#txtCardNo").val('');
+            $("input#txtDTHAmount").val('');
+            $('#tdDTH').html('');
+            $('#tdDTHCardNoCaption').html('Subscriber ID');            
+            DTHText = "Subscriber ID";
+            DTHNo = 12;
+
+            document.getElementById("divDTHPopularRecharge").style.display = "none";
+
+            //Data Card section
+            $("#errorMsgDataCard").attr("class", "");
+            $("#errorMsgDataCard").html("");
+
+            $("#errorMsgDataCardServiceProvider").attr("class", "");
+            $("#errorMsgDataCardServiceProvider").html("");
+
+            $("#errorMsgDataCardAmount").attr("class", "");
+            $("#errorMsgDataCardAmount").html("");
+
+            $("input#txtDataCardNo").val('');
+            $("input#txtDataCardAmount").val('');
+            $("#ddlDataCardServiceProvider option[value='0']").attr("selected", "selected");
+
+            document.getElementById("divDatacardPopularRecharge").style.display = "none";
+
+            document.getElementById("hidMobileSPLocation").value="";
+
+        }
+        //AJAX END
+
+        function DisplayPopularRechargeLink(vServiceId) {
+            if (vServiceId == 1) {
+                vServiceProviderId = $("#ddlMobileServiceProvider").val();
+                if (vServiceProviderId != "0") {
+                    checkPopularRechargePlan(vServiceId, vServiceProviderId);
+
+                }
+                else {
+                    document.getElementById("divMobPopularRecharge").style.display = "none";
+                }
+            }
+            else if (vServiceId == 2) {
+                vServiceProviderId = $("#ddlDTHServiceProvider").val();
+                if (vServiceProviderId != "0") {
+                    checkPopularRechargePlan(vServiceId, vServiceProviderId);
+
+                }
+                else {
+                    document.getElementById("divDTHPopularRecharge").style.display = "none";
+                }
+            }
+            else if (vServiceId == 3) {
+                vServiceProviderId = $("#ddlDataCardServiceProvider").val();
+                    if (vServiceProviderId != "0") {
+                        checkPopularRechargePlan(vServiceId, vServiceProviderId);
+
+                    }
+                    else {
+                        document.getElementById("divDatacardPopularRecharge").style.display = "none";
+                    }
+                }
+    }
+    function openpopup(vServiceId) {
+        if (vServiceId == 1) {
+            vServiceProviderId = $("#ddlMobileServiceProvider").val();
+                vLocationId = document.getElementById("hidMobileSPLocation").value;
+            }
+            else if (vServiceId == 2) {
+                vServiceProviderId = $("#ddlDTHServiceProvider").val();
+                    vLocationId = '';
+                }
+                else if (vServiceId == 3) {
+                    vServiceProviderId = $("#ddlDataCardServiceProvider").val();
+                    vLocationId = document.getElementById("hidDatacardSPLocation").value;
+                    }
+
+            //window.open('JRIPopularRecharges.aspx?service_id=' + vServiceId + '&serviceprovider_id=' + vServiceProviderId + '&location_id=' + vLocationId + '&from=1', 'PopularRecharges', 'width=760,height=500,top=100,left=100,resizable=yes,scrollbars=yes,status=yes');
+            window.open('JRIPopularRecharges.aspx?x=' + vServiceId + '&y=' + vServiceProviderId + '&z=' + vLocationId + '&from=1', 'PopularRecharges', 'width=760,height=500,top=100,left=100,resizable=yes,scrollbars=yes,status=yes');
+        }
+
+        function checkPopularRechargePlan(vServiceId, vServiceProviderId) {
+            xmlHttpPR = GetXmlHttpObjectPR()
+            if (xmlHttpPR == null) {
+                return false;
+            }
+            var url = "checkPopularRechargePlan_ajax.aspx";
+            url = url + "?q=" + vServiceId + "&r=" + vServiceProviderId;
+            xmlHttpPR.onreadystatechange = function () { stateChangedPopularRecharge(vServiceId, vServiceProviderId); };
+            xmlHttpPR.open("GET", url, true);
+            xmlHttpPR.send(null);
+        }
+        function stateChangedPopularRecharge(vServiceId, vServiceProviderId) {
+            if (xmlHttpPR.readyState == 4) {
+                if (xmlHttpPR.responseText != "") {
+                    var str = xmlHttpPR.responseText;
+
+                    if (vServiceId == "1") {
+                        if (str == "1") {
+                            document.getElementById("divMobPopularRecharge").style.display = "";
+                        }
+                        else {
+                            document.getElementById("divMobPopularRecharge").style.display = "none";
+                        }
+                    }
+                    if (vServiceId == "2") {
+                        if (str == "1") {
+                            document.getElementById("divDTHPopularRecharge").style.display = "";
+                        }
+                        else {
+                            document.getElementById("divDTHPopularRecharge").style.display = "none";
+                        }
+                    }
+                    if (vServiceId == "3") {
+                        if (str == "1") {
+                            document.getElementById("divDatacardPopularRecharge").style.display = "";
+                        }
+                        else {
+                            document.getElementById("divDatacardPopularRecharge").style.display = "none";
+                        }
+                    }
+                }
+            }
+
+        }
+
+        function GetXmlHttpObjectPR() {
+            var xmlHttpPR = null;
+            try {
+                // Firefox, Opera 8.0+, Safari
+                xmlHttpPR = new XMLHttpRequest();
+            }
+            catch (e) {
+                // Internet Explorer
+                try {
+                    xmlHttpPR = new ActiveXObject("Msxml2.XMLHTTP");
+                }
+                catch (e) {
+                    xmlHttpPR = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+            return xmlHttpPR;
+        }
+
+    </script>
+<!--<script type="text/javascript">
+animatedcollapse.addDiv('popular_recharges', 'fade=1,speed=400,height=auto')
+animatedcollapse.ontoggle=function($, divobj, state){ 
+}
+animatedcollapse.init()
+</script> -->
+    <style type="text/css">
+        /*
+        input.textfield-348x36 {           
+            width: 300px;
+            padding: 9px 8px 9px 40px !important;
+        }
+        */
+        #txtMobileNo, #txtDataCardNo {            
+            padding: 9px 8px 9px 40px !important;
+        }
+        .mobiNumber {
+            width: 300px !important;
+            background: white url(images/mobile_number_bg.jpg) no-repeat 0 0;               
+        }
+       /*3Steps Css START*/
+         #maincontainer {padding: 12px 0 0 0px !important;}
+        .footerBg {background:url(images/footer-top-shadow.png) no-repeat 0 0;padding:7px 18px 12px 18px;width:100%;  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */  box-sizing: border-box;         /* Opera/IE 8+ */ float:left}
+        #midcontainer {padding-bottom:30px !important;}
+        #testimonialspanel {display:none}
+    
+        .homeAniPanel {position:relative;width:100%;float:left;padding:12px 0 }
+        .ani3stepTxt {width:233px;background:url(../images/ani-shadow.gif) right top no-repeat;height:146px;float:left;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;text-align:center}
+        .ani3stepTxt img { margin-top:20px}
+        .aniBox { width:221px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;position:relative;height:146px;border-right:1px solid #d2d2d2;text-align:center;float:left;padding-top:0;font-family:MyriadProRegular;font-size:14px;color:#3c3b38;}
+        .aniBox span {font-family: MyriadProSemibold;color: #000000;}
+        .aniBox.noBor{ border-right:0px}
+        #aniRound {border: 1px solid #2ca1ae;width:0;height:0;position:absolute; border-radius: 50px;left:46px;top: 46px;z-index:5}
+        #aniRound2 {border: 1px solid #2ca1ae;width:0;height:0;position:absolute; border-radius: 50px;left:46px;top: 46px;z-index:5}  
+        #aniRound3 {border: 1px solid #2ca1ae;width:0;height:0;position:absolute; border-radius: 50px;left:46px;top: 46px;z-index:5}
+        .roundBox{border:9px solid #fff; border-radius: 50px;height: 81px;left: 0;margin: 0;padding: 0;position: absolute;top:0;width: 81px;}    
+        
+        .iconDetails {background-color:#2ca1ae;width: 81px;height: 81px;left:9px;top: 9px;border-radius: 50px;position:absolute; background-image:url(../images/icon-details.png);background-position:center center;background-repeat: no-repeat;z-index:15}
+        .iconPayment {background-color:#2ca1ae;width: 81px;height: 81px;left:9px;top: 9px;border-radius: 50px;position:absolute; background-image:url(../images/icon-payment.png);background-position: center center;background-repeat: no-repeat;z-index:15}
+        .iconRechargeCoupon {background-color:#2ca1ae;width: 81px;height: 81px;left:9px;top: 9px;border-radius: 50px;position:absolute; background-image:url(../images/icon-coupon.png);background-position: center center;background-repeat: no-repeat;z-index:15}
+        .boxwidth { position:relative;width:101px;height:101px;margin:-26px auto 0}
+        .txtBox { margin-top:12px}
+         /*3Steps Css END*/
+    </style>
+
+
+
+    <script type="text/javascript">
+        function SetContextKey() {
+            var bVal = 0;
+
+            // In Opera, the true version is after "Opera" or after "Version"
+            if ((navigator.userAgent.indexOf("Opera")) != -1) {
+                //alert("Opera");
+                //bVal = 1;
+            }
+                // In Chrome, the true version is after "Chrome" 
+            else if ((navigator.userAgent.indexOf("Chrome")) != -1) {
+                //alert("Chrome");
+                bVal = 1;
+            }
+
+
+
+
+            if (bVal == 1) {
+                $find('AutoCompleteExtender1').set_contextKey($get("hidAmountMobileDthNo").value + "*");
+                $find('AutoCompleteExtender2').set_contextKey($get("hidAmountDthNo").value + "*");
+                $find('AutoCompleteExtender3').set_contextKey($get("hidAmountDatacardNo").value + "*");
+            }
+            else {
+                $find('AutoCompleteExtender1').set_contextKey($get("hidAmountMobileDthNo").value);
+                $find('AutoCompleteExtender2').set_contextKey($get("hidAmountDthNo").value);
+                $find('AutoCompleteExtender3').set_contextKey($get("hidAmountDatacardNo").value);
+            }
+
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        function SetVal(val) {
+            var cleanText = val.replace(/\xA0/g, ' ');
+
+            var n = cleanText.split(" ");
+
+            document.getElementById('txtMobileNo').value = n[0];
+            if (n.length > 1) {
+                document.getElementById('amount_textfield').value = n[n.length - 1];
+            }
+
+        }
+    </script>
+
+
+
+    <script type="text/javascript">
+        function SetValDth(val) {
+            var cleanText = val.replace(/\xA0/g, ' ');
+            var n = cleanText.split(" ");
+
+            document.getElementById('txtCardNo').value = n[0];
+            if (n.length > 1) {
+                document.getElementById('txtDTHAmount').value = n[n.length - 1];
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        function SetValDatacard(val) {
+            var cleanText = val.replace(/\xA0/g, ' ');
+            var n = cleanText.split(" ");
+
+            document.getElementById('txtDataCardNo').value = n[0];
+            if (n.length > 1) {
+                document.getElementById('txtDataCardAmount').value = n[n.length - 1];
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript" language="javascript">
+
+
+        var xmlHttpMobile;
+        function processkeyForMobileServiceProvider(textBox, e) {
+
+            xmlHttpMobile = getXmlHttpObject1()
+            if (xmlHttpMobile == null) {
+            }
+            var sCVal = document.getElementById('hidCustIdVal').value;
+            var smddVal = document.getElementById("txtMobileNo").value;
+
+            var url = "AjaxGetServiceProvide.aspx"
+            url = url + "?cstVal=" + sCVal
+            url = url + "&mddVal=" + smddVal
+
+            xmlHttpMobile.onreadystatechange = MobileServiceProviderChanged;
+            xmlHttpMobile.open("GET", url, true);
+            xmlHttpMobile.send(null);
+
+        }
+
+        function MobileServiceProviderChanged() {
+            if (xmlHttpMobile.readyState == 4) {
+                var selval = '0';
+                var arrStr;
+                if (xmlHttpMobile.responseText != "") {
+                    var strData = xmlHttpMobile.responseText;
+                    //alert(strData);
+                    var arrStrData = strData.split('~');
+                    //alert(arrStrData);
+                    var str = arrStrData[0];
+                    str = str.toLowerCase();
+                   // alert(str);
+                    var sel = document.getElementById('ddlMobileServiceProvider');
+                    for (x = 0 ; x <= sel.options.length - 1 ; x++) {
+                        var abc = sel.options[x].text;
+                        var abc = abc.toLowerCase();
+                        if (str.indexOf(abc) > -1) {
+                            sel.options[x].selected = true;
+                            selval = sel.options[x].value;
+                            document.getElementById("hidMobileSPLocation").value = arrStrData[1];
+                            //alert(document.getElementById("hidMobileSPLocation").value);
+                            break;
+                        }
+                    }
+
+                    DisplayPopularRechargeLink(1);
+                }
+                else {
+                    //var sel = document.getElementById('ddlMobileServiceProvider');
+                    //sel.options[0].selected = true;
+
+                    DisplayPopularRechargeLink(1);
+                }
+
+            }
+        }
+
+
+
+
+        var xmlHttpDth;
+        function processkeyForDthServiceProvider(textBox, e) {
+
+            xmlHttpDth = getXmlHttpObject1()
+            if (xmlHttpDth == null) {
+            }
+            var sCVal = document.getElementById('hidCustIdVal').value;
+            var smddVal = document.getElementById("txtCardNo").value;
+
+            var url = "AjaxGetServiceProvide.aspx"
+            url = url + "?cstVal=" + sCVal
+            url = url + "&mddVal=" + smddVal
+
+            xmlHttpDth.onreadystatechange = DTHServiceProviderChanged;
+            xmlHttpDth.open("GET", url, true);
+            xmlHttpDth.send(null);
+
+        }
+
+        function DTHServiceProviderChanged() {
+            if (xmlHttpDth.readyState == 4) {
+                var selval = '0';
+                var arrStr;
+                if (xmlHttpDth.responseText != "") {
+                    var str = xmlHttpDth.responseText;
+                    str = str.toLowerCase();
+                    var sel = document.getElementById('ddlDTHServiceProvider');
+                    for (x = 0 ; x <= sel.options.length - 1 ; x++) {
+                        var abc = sel.options[x].text;
+                        var abc = abc.toLowerCase();
+                        if (str.indexOf(abc) > -1) {
+                            sel.options[x].selected = true;
+                            selval = sel.options[x].value;
+                            changeDTHInstructionAutoComplete(selval, 2);
+                            break;
+                        }
+                    }
+
+                    DisplayPopularRechargeLink(2);
+                }
+                else {
+                    //var sel = document.getElementById('ddlDTHServiceProvider');
+                    //sel.options[0].selected = true;
+
+                    DisplayPopularRechargeLink(2);
+                }
+
+            }
+        }
+
+
+        var xmlHttpDatacard;
+        function processkeyForDatacardServiceProvider(textBox, e) {
+
+            xmlHttpDatacard = getXmlHttpObject1()
+            if (xmlHttpDatacard == null) {
+            }
+            var sCVal = document.getElementById('hidCustIdVal').value;
+            var smddVal = document.getElementById("txtDataCardNo").value;
+
+            var url = "AjaxGetServiceProvide.aspx"
+            url = url + "?cstVal=" + sCVal
+            url = url + "&mddVal=" + smddVal
+
+            xmlHttpDatacard.onreadystatechange = DatacardServiceProviderChanged;
+            xmlHttpDatacard.open("GET", url, true);
+            xmlHttpDatacard.send(null);
+
+        }
+
+        function DatacardServiceProviderChanged() {
+            if (xmlHttpDatacard.readyState == 4) {
+                var selval = '0';
+                var arrStr;
+                if (xmlHttpDatacard.responseText != "") {
+
+
+                    //var str = xmlHttpDatacard.responseText;
+                    //str = str.toLowerCase();
+                    //var sel = document.getElementById('ddlDataCardServiceProvider');
+                    //for (x = 0 ; x <= sel.options.length - 1 ; x++) {
+                    //    var abc = sel.options[x].text;
+                    //    var abc = abc.toLowerCase();
+                    //    if (str.indexOf(abc) > -1) {
+                    //        sel.options[x].selected = true;
+                    //        selval = sel.options[x].value;
+                    //        break;
+                    //    }
+                    //}
+
+
+
+                    var strData = xmlHttpDatacard.responseText;
+                    //alert(strData);
+                    var arrStrData = strData.split('~');
+                    //alert(arrStrData);
+                    var str = arrStrData[0];
+                    str = str.toLowerCase();
+                     //alert(str);
+                    var sel = document.getElementById('ddlDataCardServiceProvider');
+                    for (x = 0 ; x <= sel.options.length - 1 ; x++) {
+                        var abc = sel.options[x].text;
+                        var abc = abc.toLowerCase();
+                        if (str.indexOf(abc) > -1) {
+                            sel.options[x].selected = true;
+                            selval = sel.options[x].value;
+                            document.getElementById("hidDatacardSPLocation").value = arrStrData[1];
+                            //alert(document.getElementById("hidDatacardSPLocation").value);
+                            break;
+                        }
+                    }
+
+
+
+                    DisplayPopularRechargeLink(3);
+                }
+                else {
+                   // var sel = document.getElementById('ddlDataCardServiceProvider');
+                    //sel.options[0].selected = true;
+
+                    DisplayPopularRechargeLink(3);
+                }
+
+            }
+        }
+
+        function getXmlHttpObject1() {
+            var objXMLHttp = null;
+            if (window.XMLHttpRequest) { objXMLHttp = new XMLHttpRequest() }
+            else if (window.ActiveXObject) { objXMLHttp = new ActiveXObject("Microsoft.XMLHTTP") }
+            return objXMLHttp;
+        }
+
+
+
+        function changeDTHInstructionAutoComplete(v, t) {
+            if (t == 2) {
+                if (v == "21") {
+                    document.getElementById("tdDTH").innerHTML = "Enter 10 digit customer id";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Customer Id";
+                    DTHText = "Customer Id";
+                    DTHNo = 10;
+                }
+                else if (v == "23") {
+                    document.getElementById("tdDTH").innerHTML = "Enter 11 digit viewing card no. which starts with 0";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Viewing Card Number";
+                    DTHText = "Viewing Card Number";
+                    DTHNo = 11;
+                }
+                else if (v == "22") {
+                    document.getElementById("tdDTH").innerHTML = "Enter 12 digit smart card number";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Smart Card Number";
+                    DTHText = "Smart Card Number";
+                    DTHNo = 12;
+                }
+                else if (v == "24") {
+                    document.getElementById("tdDTH").innerHTML = "Enter 11 digit smart card number";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Smart Card Number";
+                    DTHText = "Smart Card Number";
+                    DTHNo = 11;
+                }
+                else if (v == "25") {
+                    document.getElementById("tdDTH").innerHTML = "Enter 10 digit subscriber id";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Subscriber Id";
+                    DTHText = "Subscriber Id";
+                    DTHNo = 10;
+                }
+                else if (v == "34") {
+                    document.getElementById("tdDTH").innerHTML = "Enter customer id";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Customer Id";
+                    DTHText = "Customer Id";
+                    DTHNo = 10;
+                }
+                else {
+                    document.getElementById("tdDTH").innerHTML = "";
+                    document.getElementById("tdDTHCardNoCaption").innerHTML = "Subscriber ID";
+                    DTHText = "Subscriber ID";
+                    DTHNo = 12;
+                }
+            }
+        }
+
+
+    </script>
+
+
+<meta http-equiv="origin-trial" content="A+sitaPn3hlQ8QipTsncwHz+k1NvfPtFsQqIOiD8GK3M9v9XCeQqlF7x1P9AVJdoYTiJPZXZc5XZYpwc10fH4wEAAACfeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="./page1_files/f.txt"></script><meta http-equiv="origin-trial" content="A+sitaPn3hlQ8QipTsncwHz+k1NvfPtFsQqIOiD8GK3M9v9XCeQqlF7x1P9AVJdoYTiJPZXZc5XZYpwc10fH4wEAAACfeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGVhZHNlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><script src="./page1_files/f(1).txt"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head>
+
+<body id="home" ondragstart="return false;" ondrop="return false;">
+    <form method="post" action="https://www.justrechargeit.com/index_justrecharge.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="G6bhlTGQHA9XqLAz0KtHsuiWZwUAFnV7K9E95RkK3d7li4uaNwyW/w3KR0KIEaFcfvbLHASSFAJzAuoCyMwn/9fwsJeBsN2QIXIVBzO8amLH54JWMHZpHXbsbYdVMGsrrtsh32WnZ34FlaXIJi24BvpciiNcI3bqef7ERGu/a7nYXcuF6M7nVxeRkv7ffgURIbnZhTl/Ec6yUVfW4T2j2MADMn6rywug/o5P5ScYXFgzpuCw07pAqxlDUFxIrTC6ninZT8VxLGG9ga+DdSPH3ksTnHXqKMlXSkUvnaTycCnF/H4ubhtThM1aLJgtKS0NiR0yXynn5Pb12wZHYwzs0ptBj2zcQwFx/tgeqXacKVqlCPN4MNIgfNfqDDPdnXwREbUUoGC/geUcxUqpMEWpJc5ZY3IYewxAt/mA9wTeE8dvoX1GAA8urJ87OMpgRSy3tfFACGFFs5/gCZhOxT2XRzkHctK9aVk6vcxMZ3vweDNM1a0xTYrnOhxyBJUFEzHoRoQ1gjIOISkx4OiLcY7OFHtoxHglFFMDiRZkEZBt6Epg9AoAGVwqKAZdVjwifEjydgMhWGoJP7vqQ6ihUjxH3CjztliPmZCOJ2x6vO/9q7n6+d/V2PP677RLmrmh7PG0dHlGNL9aDIUStSMW+uQ+k8nZUdN52TlekmlAAnyi8bf6ZOLeEYY9rYbUfa+WnplRXLYK1j0ivvSb3sKQxFidshUZ8GE7OWVEMDoneX7BROXx82Iv6b478UddAmwlnkCDvzMaM7Vm2/5RW8tkvba/FsOqdF6PLzZxl1TiykS608igOqJjl/TkBp4WbAEiez6blbV2hwDaVNwdpFMeVCnVAkIfg4Fbxa53IeWgmiMFszCv4ghdgQ0btmutSDB6/7ORJ/dvLfCHYNf9rgLGjxQ8cF6ntDpmwr3Dj4XDRgWRy6nQcpiP">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./page1_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./page1_files/ScriptResource.axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(1).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(2).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(3).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(4).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(5).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(6).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(7).axd" type="text/javascript"></script>
+<script src="./page1_files/ScriptResource(8).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E213F9B7">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="wy+gFLhm9yhbEIdyP9LmJK7kK5fPFS8VXDeQ21OEdWHBqtGqVqLvi7MLdcN5zErYAZLtTHpAkMDLoMHMDoYBq4nx/JMJpjp8pRdFIRhLhBjECZv7thYlH8Y/aGNhdp9xKVqVAPKeo+kLt9SD8F9HaT27K4MCJjOKzg7lS3eKeGf6Q3RUuIbB9f7n2Fgd2su8HBdZAFby0iVvce5+lm57J4rgcjTCH+Keguiu9K1NqSj+O/iT7w0PF/7r1z6U4XoMsjoWCDBpQmHx5aNHMu+cBqH81GTwa52D5DuB14UshcC4srd4pgIljrknM84gfiXW+iPd9Smbog1FSoZ2OhcBOW+A0CpxQ9Ea4ycdWMP3UIhFTXLeDpJz5OdLOiGGkT6dh0K3Vu9PiaWyJODXj0zhO4GL72OU03t96bMrY6pKkhTkyTRZC2gJJjEXqL24a160b2wxPi1G/wcGsvJZUUZqP7Jku/Pw2jGuhYD7Os/iRlSFy0Tz9LlxLSqKR8ib2CNR1dep/jLrF/WpQM6gKS/wKn0VtjKq2PsgUMjztJe7NR3alwPZ47WLeeXHhxG/IGY14VmHpYfifAVX1N/uEP5bgsIVcMCVepWNGPD+hfvMlvY8Bf6nHa9RDs3SnXtryQ7f/QWVMS9gdX9fPsmN/5oxONcbxgZMgwrVvuaDbgYOn0p8V68c+sil3LN8b78K5pIdX7IKyF8EYvmS7n7cf7wwPHQw25n/Z1DcmIfXyKo6PS57Hj+ziUgDJh80myIvfijk8K0QwK8CMWXfSMXEWKz6QQqE36revFaqkp5OYCUOI6FSFl2itn9dMmRpZ90bQq2G3NTf4LbcrhMQGlkpZ/zmReIBXGmtQWWBEYc17rleBuBupUaCX4clPsxWkg7hdhwmeEzCiSKlZCiLZsJKk/gWG2yINgSJ51NVW+yfPdlP6a3I4vPp">
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+    <input name="hid_MinValMobile" type="hidden" id="hid_MinValMobile" value="5">
+    <input name="hid_MaxValMobile" type="hidden" id="hid_MaxValMobile" value="2000">
+    <input name="hid_MinValDTH" type="hidden" id="hid_MinValDTH" value="10">
+    <input name="hid_MaxValDTH" type="hidden" id="hid_MaxValDTH" value="7000">
+    <input name="hid_MaxValBB" type="hidden" id="hid_MaxValBB" value="0">
+    <input name="hid_MinValBB" type="hidden" id="hid_MinValBB" value="0">
+    <input name="hidMobileSPLocation" type="hidden" id="hidMobileSPLocation">
+    <input name="hidCustIdVal" type="hidden" id="hidCustIdVal" value="0">
+    <input name="hidAmountMobileDthNo" type="hidden" id="hidAmountMobileDthNo" value="0">
+    <input name="hidAmountDthNo" type="hidden" id="hidAmountDthNo" value="0">
+    <input name="hidAmountDatacardNo" type="hidden" id="hidAmountDatacardNo" value="0">
+    <input name="hidDatacardSPLocation" type="hidden" id="hidDatacardSPLocation">
+    
+    <input name="hdnDTHData" type="hidden" id="hdnDTHData" value="[{&quot;serviceproviderid&quot;:&quot;21&quot;,&quot;ServiceProviderName&quot;:&quot;Airtel TV DTH&quot;,&quot;MinRechargeVal&quot;:&quot;10&quot;,&quot;MaxRechargeVal&quot;:&quot;7000&quot;,&quot;MaxDTHDigits&quot;:&quot;10&quot;,&quot;MinDTHDigits&quot;:&quot;10&quot;,&quot;HasPopularPlan&quot;:&quot;1&quot;},{&quot;serviceproviderid&quot;:&quot;34&quot;,&quot;ServiceProviderName&quot;:&quot;d2h&quot;,&quot;MinRechargeVal&quot;:&quot;10&quot;,&quot;MaxRechargeVal&quot;:&quot;7000&quot;,&quot;MaxDTHDigits&quot;:&quot;10&quot;,&quot;MinDTHDigits&quot;:&quot;5&quot;,&quot;HasPopularPlan&quot;:&quot;1&quot;},{&quot;serviceproviderid&quot;:&quot;23&quot;,&quot;ServiceProviderName&quot;:&quot;DISH TV DTH&quot;,&quot;MinRechargeVal&quot;:&quot;10&quot;,&quot;MaxRechargeVal&quot;:&quot;7000&quot;,&quot;MaxDTHDigits&quot;:&quot;11&quot;,&quot;MinDTHDigits&quot;:&quot;11&quot;,&quot;HasPopularPlan&quot;:&quot;1&quot;},{&quot;serviceproviderid&quot;:&quot;24&quot;,&quot;ServiceProviderName&quot;:&quot;SUN DIRECT&quot;,&quot;MinRechargeVal&quot;:&quot;10&quot;,&quot;MaxRechargeVal&quot;:&quot;7000&quot;,&quot;MaxDTHDigits&quot;:&quot;11&quot;,&quot;MinDTHDigits&quot;:&quot;11&quot;,&quot;HasPopularPlan&quot;:&quot;1&quot;},{&quot;serviceproviderid&quot;:&quot;25&quot;,&quot;ServiceProviderName&quot;:&quot;TATA SKY&quot;,&quot;MinRechargeVal&quot;:&quot;10&quot;,&quot;MaxRechargeVal&quot;:&quot;7000&quot;,&quot;MaxDTHDigits&quot;:&quot;10&quot;,&quot;MinDTHDigits&quot;:&quot;10&quot;,&quot;HasPopularPlan&quot;:&quot;1&quot;}]">
+    
+
+<table border="0" align="center" cellpadding="0" cellspacing="0" id="maincontainer">
+  <tbody><tr>
+    <td align="left" valign="top">
+	<div style="padding-left:18px">
+	
+
+<link href="./page1_files/modal.css" rel="stylesheet" type="text/css">
+
+
+<script type="text/javascript" src="./page1_files/global.js.download"></script>
+<style type="text/css">
+
+a.sample_attach, a.sample_attach:visited, div.sample_attach
+{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#373737;
+	font-size:13px;
+	text-align:left;
+    display: block;
+/*  width:   100px;*/
+/*  border:  1px solid black;*/
+    padding: 5px 5px;
+    text-decoration: none;
+
+}
+
+div.hyperLink {
+	color:red;
+}
+
+a.sample_attach, a.sample_attach:visited {
+	 border-bottom: none; font-family:Arial, Helvetica, sans-serif; color:#373737;}
+div#sample_attach_menu_child {
+	background-color:#ffffff;
+	width:130px;
+	position:absolute;
+	right:-80px;
+	visibility: hidden;
+	
+}
+	 
+</style>
+
+
+
+<table id="jriTop_tbPreLoginPanel" width="860" border="0" cellspacing="0" cellpadding="0" style="display:">
+	<tbody><tr>
+		<td width="152" height="65" align="right" valign="top" itemscope="" itemtype="http://schema.org/Organization"><link itemprop="logo" href="./page1_files/logo_jri.gif"><a itemprop="url" href="https://www.justrechargeit.com/"><img src="./page1_files/logo_jri.gif" alt="JustRechargeIt" title="JustRechargeIt" width="147" height="60" border="0"></a></td>
+		<td width="36" align="center" valign="bottom"><img src="./page1_files/logo_divider.gif" width="1" height="58"></td>
+		<td width="228" align="left" valign="bottom"><img src="./page1_files/anymobile-anydth_anydatacard.gif" width="206" height="16" alt="Any Mobile, Any DTH, Any Data Card"></td>
+		<td width="444" align="right" valign="middle">
+              <span id="jriTop_lblUserMsg999" class="defaulttext1" style="font-size:12px"></span><br>
+            
+              
+            
+            
+              <a href="https://www.justrechargeit.com/SignIn.aspx" id="jriTop_signin9" title="Sign in" class="hyperLink">Sign in</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+              <a href="file:///C:\Users\Francis Alappat\git\JRI_ProjectAddignment_7AM_IST\JRI_AUTOMATION_7AM_IST\src\test\resources\testdata\JRI_OFFLINE_PAGES\page2.html" id="signup-link9" title="Create New Account" class="hyperLink">Create New Account</a>&nbsp;&nbsp;&nbsp;
+            
+        </td>
+	</tr>
+</tbody></table>
+
+<table id="jriTop_tbPostLoginPanel" width="908" border="0" cellspacing="0" cellpadding="0" style="display:none">
+	<tbody><tr>
+		<td width="152" height="65" align="right" valign="top"><a href="https://www.justrechargeit.com/index_justrecharge.aspx"><img src="./page1_files/logo_jri.gif" alt="JustRechargeIt" title="JustRechargeIt" width="147" height="60" border="0"></a></td>
+		<td width="36" align="center" valign="bottom"><img src="./page1_files/logo_divider.gif" width="1" height="58"></td>
+		<td width="228" align="left" valign="bottom"><img src="./page1_files/anymobile-anydth_anydatacard.gif" width="206" height="16" alt="Any Mobile, Any DTH, Any Data Card"></td>
+		<td width="444" align="right" valign="middle"><br><span id="jriTop_lblUserMsg"></span><br>
+<table width="444" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td align="right" valign="middle" id="myaccountmenu"><div style="position:relative;"><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" onclick="toggle_visibility(&#39;myaccountdd&#39;);return false;" class="hyperLink">My Account</a>
+    
+<div id="myaccountdd" style="z-index:1000;display:none; position:absolute;">
+                            
+                              <div class="innerbox radius" align="left" style="height: 250px;">
+                                  
+                               <table width="138" border="0" cellspacing="0" cellpadding="0">
+                               <!--  <table width="120" border="0" cellspacing="0" cellpadding="0">-->
+                                <tbody><tr>
+   <td align="left" valign="top"><img src="./page1_files/tooltip_up_arrow2.png" width="23" height="12" class="tooltiparrow"></td>
+   </tr>
+  <tr>
+    <td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_myprofile.aspx" class="hyLink2">My Profile</a></td>
+  </tr>
+
+     <tr>
+    <td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_directory.aspx" class="hyLink2">Directory</a></td>
+  </tr>
+  <tr id="jriTop_trMenuJriCard">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_jricard.aspx" class="hyLink2">JRI Card</a></td>
+		</tr>
+		
+  <tr id="jriTop_trMenuCorpCard" style="display:none">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_corporatecard.aspx" class="hyLink2">Corporate Card</a></td>
+		</tr>
+		
+  <tr>
+      <td class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_transactionhistory.aspx" class="hyLink2">Transaction History</a></td>
+  </tr>
+    <tr id="jriTop_trCoupons">
+			<td class="defaulttext1"><a href="https://www.justrechargeit.com/coupons_landingpage.aspx" class="hyLink2">Coupons</a></td>
+		</tr>
+		
+     <tr id="jriTop_trAlerts">
+			<td id="jriTop_tdAlerts" class="defaulttext1"><a href="https://www.justrechargeit.com/myaccount_alerts.aspx" class="hyLink2">Alerts</a>
+          
+        </td>
+		</tr>
+		
+
+        <!-- added by sanghita for adding bus in my accounts dropdown  --> 
+           <tr id="jriTop_trbus">
+			<td class="defaulttext1" style="border-bottom-width: 0px;"><a href="https://www.justrechargeit.com/bus/" class="hyLink2">Bus</a></td>
+		</tr>
+		
+
+
+</tbody></table>
+
+ </div>
+                            
+                          </div></div></td>
+    <td align="right" valign="middle" width="84">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+          <a href="https://www.justrechargeit.com/logout_home.aspx" id="jriTop_signOut" title="Sign out" class="hyperLink">Sign out</a></td>
+  </tr>
+     
+    
+</tbody></table>
+
+        <div style="display:none">
+            <a href="https://www.justrechargeit.com/index_justrecharge.aspx#" class="hyLink3" id="sessiontimeout">Session Timeout</a>
+        </div>		
+              
+        <script type="text/javascript">
+            //at_attach("myaccountmenu", "sample_attach_menu_child", "hover", "y", "pointer");
+</script></td>
+		<td width="48" height="65" align="right" valign="top"></td>
+	</tr>
+</tbody></table>
+
+<!--include file topmenu-->
+
+
+
+<script type="text/javascript">
+    function CloseDiv() {
+        //alert(document.getElementById('pagetitle'));
+        document.getElementById('pagetitle').style.display = 'none';
+
+        createCookie('jriCloseAnnounce', "closed", 1);
+    }
+
+    function CloseDiv1() {
+        document.getElementById('pagetitle').style.display = 'none';
+    }
+
+    function OpenDiv() {
+        document.getElementById('pagetitle').style.display = 'table';
+    }
+
+    function createCookie(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+</script>
+
+
+
+<script type="text/javascript">
+    function CreateCustomerCookie(CustId) {
+        //alert("CustomerId");
+        createCookieCustId('jriCustomerId', CustId, 365);
+    }
+
+    function createCookieCustId(name, value, days) {
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            var expires = "; expires=" + date.toGMTString();
+        }
+        else var expires = "";
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+</script>
+<style type="text/css">
+    #menu_coupons_tab A.menu div { background-image:url('../images/menu_coupons_tab.png');}
+    #couponstab #menu_coupons_tab A.active div { background-image:url('../images/menu_coupons_active.png'); }
+    #couponstab #menu_coupons_tab A.active {
+	background-image:url('../images/menu_active_bg.gif');
+	background-position: left bottom;
+	background-repeat:repeat-x;
+	padding:17px 0px 15px 0px;	
+}
+
+    #menu_jri_offer A.menu div { background-image:url('../images/menu_jri_offer.png');}
+    #jri_offer #menu_jri_offer A.active div { background-image:url('../images/menu_jri_offer_active.png'); }
+    #jri_offer #menu_jri_offer A.active {
+	background-image:url('../images/menu_active_bg.gif');
+	background-position: left bottom;
+	background-repeat:repeat-x;
+	padding:17px 0px 15px 0px;	
+}
+</style>
+
+<table width="915" border="0" cellspacing="0" cellpadding="0">
+        <tbody><tr>
+          <td width="100" align="center" valign="bottom" id="menu_home"><a href="https://www.justrechargeit.com/index_justrecharge.aspx" title="Home" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page1_files/menu_divider.gif" width="1" height="48"></td>
+          
+          <td width="121" align="center" valign="bottom" id="menu_jri_offer"><a href="https://www.justrechargeit.com/offers_list.aspx" title="JRI OFFER" class="menu active"><div>&nbsp;</div></a></td>
+          
+          
+          <td width="1" align="center" valign="bottom"><img src="./page1_files/menu_divider.gif" width="1" height="48"></td>
+          <td width="121" align="center" valign="bottom" id="menu_coupons_tab"><a href="https://www.justrechargeit.com/coupons_list.aspx" title="Coupons" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page1_files/menu_divider.gif" width="1" height="48"></td>
+          <td width="114" align="center" valign="bottom" id="menu_jrinews"><a href="http://blog.justrechargeit.com/" target="_blank" title="Blog" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page1_files/menu_divider.gif" width="1" height="48"></td>
+          
+          
+            <td width="1" align="center" valign="bottom"><img src="./page1_files/menu_divider.gif" width="1" height="48"></td>
+          
+            <td width="134" align="center" valign="bottom" id="menu_mobile_app"><a href="https://www.justrechargeit.com/mobile_app.aspx" title="Mobile App" class="menu active"><div>&nbsp;</div></a></td>
+          <td width="1" align="center" valign="bottom"><img src="./page1_files/menu_divider.gif" width="1" height="48"></td>
+
+            <td width="142" align="center" valign="bottom" id="menu_contactus"><a href="https://www.justrechargeit.com/helpdesk_contactus.aspx" title="Contact Us" class="menu active"><div>&nbsp;</div></a></td>
+            <td width="270" align="left" valign="top"><a href="mailto:helpdesk@justrechargeit.com" title="helpdesk@justrechargeit.com"><img src="./page1_files/jri_email_id.gif" alt="helpdesk@justrechargeit.com" width="270" height="63" border="0"></a></td>
+        </tr>
+        <tr>
+          <td height="23" colspan="12" align="left" valign="top">&nbsp;</td>
+        </tr>
+    </tbody></table>
+
+    <table width="902" border="0" cellspacing="0" cellpadding="0" id="pagetitle" style="display:none">
+         
+              <tbody><tr>
+                <td height="0" align="left" valign="top" style="border:1px solid #c7c7c7;"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="notifaction_font" style="height:auto">
+                  <tbody><tr>
+                    <td width="82" align="center" valign="middle"><img src="./page1_files/speaker.gif" width="59" height="49"></td>
+                    <td width="23" align="left" valign="top" style="background-image:url(&#39;/images/notifaction_divder.gif&#39;); background-repeat:repeat-y">&nbsp;</td>
+                    <td id="jriTop_jriTopMenu_tdAnnouncement" align="left" valign="middle" class="defaulttext1" style="padding-bottom:8px;padding-top:8px;"></td>
+
+                    <td width="14" align="left" valign="top"><img src="./page1_files/small_close_icon.gif" width="10" height="10" style="padding-top:5px; cursor:pointer" onclick="CloseDiv();"></td>
+                  </tr>
+                </tbody></table>
+                </td>
+             </tr>
+        
+              <tr>
+                <td height="20" align="left" valign="middle"></td>
+            </tr>
+    </tbody></table>
+
+
+
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $('#jriTop_signOut').click(function (e) {
+            window.location.href = '/logout_home.aspx';
+        });
+
+        //$('input').bind("cut copy paste", function (e) {
+        //    e.preventDefault();
+        //});
+
+        $("body").attr("ondragstart", "return false;");
+        $("body").attr("ondrop", "return false;");
+
+        /*--- Enable/Disable dropdown menu height start ---*/
+        //TwitterLogout();
+        
+        ///////
+        if ($("#myaccountdd tr:eq(6)").css("display") == "none") {
+
+
+            //  $("#myaccountdd tr td:eq(6)").css("border-bottom-width", "0px");
+            //new change by sanghita
+            $("#myaccountdd tr td:eq(8)").css("border-bottom-width", "0px");
+
+            //  $('#myaccountdd .innerbox').css({ height: '210px' });
+            $('#myaccountdd .innerbox').css({ height: '220px' });
+
+
+
+        }
+        else {
+
+            //  $("#myaccountdd tr td:eq(7)").css("border-bottom-width", "0px");
+            //new change by sanghita
+            $("#myaccountdd tr td:eq(8)").css("border-bottom-width", "0px");
+            //$('#myaccountdd .innerbox').css({ height: '210px' });
+            $('#myaccountdd .innerbox').css({ height: '250px' });
+
+
+        }
+
+        //when if else statement remains in commented format
+        //  $("#myaccountdd tr td:eq(8)").css("border-bottom-width", "0px");
+        //   $('#myaccountdd .innerbox').css({ height: '250px' });
+
+        /////////
+
+
+        
+        /*--- Enable/Disable dropdown menu height end ---*/
+        
+        $('#jriTop_signOut').attr('href', 'logout_home.aspx');
+    });
+
+</script>
+      <table width="902" border="0" cellspacing="0" cellpadding="0" id="midcontainer">
+        <tbody><tr>
+          <td align="center" valign="top"><table width="872" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tbody><tr>
+              <td width="375" align="left" valign="top">              
+             
+                  <!-- NEW TAB Added END-->            
+                <table width="375" border="0" align="center" cellpadding="0" cellspacing="0" id="Table1">
+                <tbody><tr>
+                    <td>
+                         <!--Content Nav Panel START-->
+                        <ul class="sub_nav">
+                            <li><a class="current" href="javascript:void(0);" title="Recharges">Recharges<span></span></a></li>             
+                            
+                            <li><a href="https://www.justrechargeit.com/bus/" title="Bus" class="bus_tab">Bus<span></span></a></li>
+                        </ul>
+                         <!--Content Nav Panel END-->
+                    </td>
+                </tr>
+              </tbody></table>
+                    <!-- NEW TAB Added END-->
+              </td>
+             <td width="497" align="right" valign="middle" id="languagepanel"></td>
+            </tr>
+            <tr>
+              <td align="right" valign="top" id="contentpanel">
+                   <!-- Tab Shifted Inside ContentPanel Starts -->
+              <table width="375" border="0" align="center" cellpadding="0" cellspacing="0" id="rechargetabs" class="new_tab_placement">
+                <tbody><tr>
+                  <td width="116" height="61" align="left" valign="middle" id="mobile"><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" rel="recharge1" class="selected"><div>&nbsp;</div></a></td>
+                  <td width="121" height="61" align="left" valign="middle" id="dth"><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" rel="recharge2" class=""><div>&nbsp;</div></a></td>
+                  <td width="138" height="61" align="left" valign="middle" id="data_card"><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" rel="recharge3" class=""><div>&nbsp;</div></a></td>
+                </tr>
+              </tbody></table>
+                  <!-- Tab Shifted Inside ContentPanel Ends -->
+              <div id="recharge1" style="display: block;"><br><table width="348" border="0" cellspacing="0" cellpadding="0" id="mainpanelform">                
+                  <tbody><tr>
+                      
+                      <td align="left" valign="top" class="formtext">Mobile Number</td>
+                  </tr>
+                  <tr>
+                      <td height="52" align="left" valign="top">
+                          
+                          
+                          <input name="txtMobileNo" type="text" maxlength="10" id="txtMobileNo" class="textfield-348x36 radius inputsbg mobiNumber" onkeyup="processkey(this,event); SetContextKey(); " onchange="SetVal(this.value);processkeyForMobileServiceProvider(this,event); " onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}}" onfocus="SetContextKey()" onpaste="return false" autocomplete="off">
+
+                            
+
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">
+                          
+                          <span id="errorMsgMobile" class=""></span></td>
+                  </tr>
+                  <tr>
+                  <td align="left" valign="top" class="formtext">Service Provider</td>
+                </tr>
+                <tr>
+                    <td height="52" align="left" valign="top">
+                        
+                        <select name="ddlMobileServiceProvider" id="ddlMobileServiceProvider" class="select-348x36 radius inputsbg" onchange="getData(this.value,&#39;M&#39;);DisplayPopularRechargeLink(1);">
+	<option selected="selected" value="0">Select</option>
+	<option value="2">AIRTEL</option>
+	<option value="1">BSNL</option>
+	<option value="57">Jio</option>
+	<option value="30">MTNL</option>
+	<option value="4">Vi</option>
+
+</select>
+
+                    </td>
+                </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">
+                          <span id="errorMsgMobileServiceProvider"></span>
+                      </td>
+                  </tr>
+                <tr>
+                  <td align="left" valign="top" class="formtext">Amount</td>
+                </tr>
+                  <tr id="trMobilePopular">
+                      <td height="52" align="left" valign="top">
+                          <div id="amount">
+                              <img src="./page1_files/rupee_sign.png" width="10" height="14">
+                              
+                              <input name="amount_textfield" type="text" maxlength="10" id="amount_textfield" class="textfield-348x36 radius inputsbg" autocomplete="off" onblur="extractNumber(this,2,false);" onkeyup="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);">
+
+                              
+                          </div>
+                      </td>
+                  </tr>
+                  <tr id="trMobileDenomination">
+                      <td align="left" valign="top">
+                          <div id="amount">
+                              <select name="drpMobDenomination" id="drpMobDenomination" class="select-348x36 radius inputsbg" style="display:none">
+</select>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">
+                          <span id="errorMsgMobileAmount"></span>
+                      </td>
+                  </tr>
+                  <tr id="divMobPopularRecharge" style="display:none">
+	<td align="left" valign="top" class="formtext">
+                                <a id="lnkMobPopularRecharge" href="javascript:void(0);" onclick="openpopup(1);" style="color:#c60965;text-decoration:none;">View Popular Recharges</a>
+                        </td>
+</tr>
+
+                  <tr>
+                  <td align="left" valign="top">
+                    <div style="position:relative; width:100%;">
+                        <div id="boxcontainer">
+                        <div class="mainbox">
+                         <div class="overlay" id="overlay" style="display:none;"></div>
+                            <div class="innerbox" id="innerbox">
+	                        	<div id="amount_list" class="defaulttext1">
+                                    
+                                </div>
+                            </div>
+                          </div>
+                          </div>
+                       </div>
+                    </td>
+                </tr>                
+                <tr>
+                    <td align="right" valign="top">
+                        
+                        <input type="image" name="imgbtnMobileRecharge" id="imgbtnMobileRecharge" src="./page1_files/btn_justrechargeit.gif" onclick="return ValidateMobileRecharge();" style="border-width:0px;">
+                    </td>
+                </tr>
+              </tbody></table></div>
+              <div id="recharge2" style="display:none;"><br><table width="348" border="0" cellspacing="0" cellpadding="0" id="mainpanelform">                  
+                  <tbody><tr>
+                      
+                      <td align="left" valign="top" class="formtext">Service Provider</td>
+                  </tr>
+                  <tr>
+                      <td height="52" align="left" valign="top">
+                          
+                          <select name="ddlDTHServiceProvider" id="ddlDTHServiceProvider" class="select-348x36 radius inputsbg" onchange="javascript:changeDTHInstruction(this.value,2);getData(this.value,&#39;D&#39;); DisplayPopularRechargeLink(2);">
+	<option selected="selected" value="0">Select</option>
+	<option value="21">Airtel TV DTH</option>
+	<option value="34">d2h</option>
+	<option value="23">DISH TV DTH</option>
+	<option value="24">SUN DIRECT</option>
+	<option value="25">TATA SKY</option>
+
+</select>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">                          
+                          <span id="errorMsgDTH" class=""></span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext" id="tdDTHCardNoCaption">Subscriber ID</td>
+                  </tr>
+                  <tr>
+                      <td height="39" align="left" valign="top">
+                          
+                          
+                          <input name="txtCardNo" type="text" maxlength="12" id="txtCardNo" class="textfield-348x36 radius inputsbg" autocomplete="off" onblur="extractNumber(this,0,false);" onkeyup="extractNumber(this,0,false); SetContextKey();" onchange="SetValDth(this.value);processkeyForDthServiceProvider(this,event);" onkeypress="return blockNonNumbers(this, event, true, false);" onfocus="SetContextKey()" onpaste="return false">
+
+                            
+
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" id="tdDTH"></td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">
+                          <span id="errorMsgDTHSubscriber"></span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">Amount</td>
+                  </tr>
+                  <tr>
+                      <td height="52" align="left" valign="top">
+                          <div id="amount">
+                              <img src="./page1_files/rupee_sign.png" width="10" height="14">
+                              <input name="txtDTHAmount" type="text" maxlength="10" id="txtDTHAmount" class="textfield-348x36 radius inputsbg" autocomplete="off" onblur="extractNumber(this,2,false);" onkeyup="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);">
+                              <select name="drpDTHDenomination" id="drpDTHDenomination" class="select-348x36 radius inputsbg" style="display: none">
+</select>
+                              
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">                          
+                          <span id="errorMsgDTHAmount"></span>
+                      </td>
+                  </tr>
+                  <tr id="divDTHPopularRecharge" style="display:none">
+	<td align="left" valign="top" class="formtext">
+                                <a id="lnkDTHMobPopularRecharge" href="javascript:void(0);" onclick="openpopup(2);" style="color:#c60965;text-decoration:none;">View Popular Recharges</a>
+                        </td>
+</tr>
+
+                  <tr>
+                      <td align="right" valign="top">
+                          <input type="image" name="imgbtnDTHRecharge" id="imgbtnDTHRecharge" src="./page1_files/btn_justrechargeit.gif" onclick="return ValidateDTHRecharge();" style="border-width:0px;">
+                          
+                      </td>
+                  </tr>
+              </tbody></table></div>
+              <div id="recharge3" style="display:none;"><br><table width="348" border="0" cellspacing="0" cellpadding="0" id="mainpanelform">
+                
+                <tbody><tr>
+                    
+                  <td align="left" valign="top" class="formtext">Data Card Number</td>
+                </tr>
+                <tr>
+                  <td height="52" align="left" valign="top">
+                      
+                      
+                      <input name="txtDataCardNo" type="text" maxlength="10" id="txtDataCardNo" class="textfield-348x36 radius inputsbg mobiNumber" autocomplete="off" onkeyup="processDatacardkey(this,event); SetContextKey();" onchange="SetValDatacard(this.value);processDatacardkey(this,event);processkeyForDatacardServiceProvider(this,event);" onkeypress="javascript:if(navigator.appName.toLowerCase().indexOf(&#39;microsoft&#39;)&gt;=0){if(window.event.keyCode==13){return false;}}else{if(event.which==13){return false;}}" onfocus="SetContextKey()" onpaste="return false">
+
+                      
+
+                  </td>
+                </tr>
+                  <tr>
+                    <td align="left" valign="top" class="formtext">
+                        
+                        <span id="errorMsgDataCard" class=""></span>
+                    </td>
+                </tr>
+
+                <tr>
+                  <td align="left" valign="top" class="formtext">Service Provider</td>
+                </tr>
+                <tr>
+                    <td height="52" align="left" valign="top">
+                        
+                        <select name="ddlDataCardServiceProvider" id="ddlDataCardServiceProvider" class="select-348x36 radius inputsbg" onchange="getData(this.value,&#39;R&#39;); DisplayPopularRechargeLink(3);">
+	<option selected="selected" value="0">Select</option>
+
+</select>
+                    </td>
+                </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">
+                          <span id="errorMsgDataCardServiceProvider" class="errormsg" style="display:none;">Cannot find table 0.
+
+</span>
+                      </td>
+                  </tr>
+
+                <tr>
+                  <td align="left" valign="top" class="formtext">Amount</td>
+                </tr>
+                  <tr>
+                      <td height="52" align="left" valign="top">
+                          <div id="amount">
+                              <img id="imgrupee" src="./page1_files/rupee_sign.png" width="10" height="14">
+                              
+                              <input name="txtDataCardAmount" type="text" maxlength="10" id="txtDataCardAmount" class="textfield-348x36 radius inputsbg" autocomplete="off" onblur="extractNumber(this,2,false);" onkeyup="extractNumber(this,2,false);" onkeypress="return blockNonNumbers(this, event, true, false);">
+                              <select name="drpBBDenomination" id="drpBBDenomination" class="select-348x36 radius inputsbg" style="display:none">
+</select>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td align="left" valign="top" class="formtext">
+                          <span id="errorMsgDataCardAmount"></span>
+                      </td>
+                  </tr>
+                  <tr id="divDatacardPopularRecharge" style="display:none">
+	<td align="left" valign="top" class="formtext">
+                                <a id="lnkDatacardPopularRecharge" href="javascript:void(0);" onclick="openpopup(3);" style="color:#c60965;text-decoration:none;">View Popular Recharges</a>
+                        </td>
+</tr>
+
+                  <tr>
+                      <td align="right" valign="top">
+                          
+                          <input type="image" name="imgbtnDataCardRecharge" id="imgbtnDataCardRecharge" src="./page1_files/btn_justrechargeit.gif" onclick="return ValidateDataCardRecharge();" style="border-width:0px;">
+                      </td>
+                  </tr>
+              </tbody></table></div>
+                  <br><br>
+              </td>
+              <td align="right" valign="top" id="contentpanel">
+<div class="anythingSlider">
+    <div class="wrapper" style="overflow: hidden;">
+       <!-- <a href="https://www.justrechargeit.com/recharge_offer.aspx" title="Click to view offer details">
+        <img src="../images/recharge-offer-banner.jpg" border="0" width="477" height="343" usemap="#Map2" alt="Get Rs.10 Off on recharge of your Mobile, DTH or DataCard of 100 and above. GET10 Code can be used one time." title="Get Rs.10 OFF " />
+       </a>-->
+         <ul>
+
+       
+           <li class="cloned"><img src="./page1_files/banner_slide_1.jpg" alt="DOWNLOAD JRI APP The power of INSTANT RECHARGE brought to your MOBILE" usemap="#Map5" width="475" height="328" border="0"> 
+            <map name="Map5" id="Map5">
+                <area shape="rect" coords="475,0,0,260" href="https://www.justrechargeit.com/mobile_app.aspx" title="Know More">
+                <area shape="rect" coords="40,265,145,300" href="https://itunes.apple.com/in/app/justrechargeit-mobile-dth/id675631534?mt=8" target="_blank" title="Available on the App Store">
+                <area shape="rect" coords="160,265,280,300" href="https://play.google.com/store/apps/details?id=com.justrechargeitapp.homescreen" target="_blank" title="Get It on Google play">
+            </map>           
+            </li><li><img src="./page1_files/jri-homepage-republic.jpg" alt="Happy Republic Day" usemap="#Map1" width="477" height="343" border="0">
+            <map name="Map1" id="Map1">
+              <area shape="rect" coords="475,30,10,380" target="_blank" title="Happy Republic Day">
+           </map>
+           </li>
+           
+          <!-- <li><img src="../images/coupon_offer/nnnow_offer_homepage.jpg" alt="60% OFF" title="60% OFF" usemap="#Map7" width="477" height="343" border="0" />
+          <map name="Map7" id="Map7">
+ <area shape="rect" coords="11,30,476,380" target="_blank" href="https://clk.omgt5.com/?AID=551243&PID=29945&r=https%3A%2F%2Fwww.nnnow.com%2F%3Futm_source%3DAffiliate%26utm_medium%3DAdmitad%26utm_campaign%3Dcps_301233_20200130clgkak91nxdx%26admitad_uid%3D0fbebbd4c106b9ac256cd079ad73b247" alt="60% OFF" title="60% OFF">
+           </map>
+           </li>-->
+           
+ 			
+          <!-- <li><img src="../images/coupon_offer/happy_valentines_day.jpg" alt="Happy Valentines Day" usemap="#Map3" width="477" height="343" border="0"/>
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="475,30,10,380" target="_blank" title="Happy Valentines Day" />
+           </map>
+           </li> -->
+           <li><img src="./page1_files/ajio_offer_homepage.jpg" alt="Get a Discount of Up To 70% on AJIO..!!" title="Get a Discount of Up To 70% on AJIO..!!" usemap="#Map7" width="477" height="343" border="0">
+          		<map name="Map7" id="Map7">
+ 					<area shape="rect" coords="11,30,476,380" target="_blank" href="https://clk.omgt5.com/?AID=551243&amp;PID=17414&amp;r=https%3A%2F%2Fwww.ajio.com%2Fs%2Fsuperdeal-8873003666%3Futm_source%3Dcuelinks%26utm_medium%3Daffiliate%26utm_campaign%3Dajio_20220110clquv2yvucdj" alt="Get a Discount of Up To 70% on AJIO..!!" title="Get a Discount of Up To 70% on AJIO..!!">
+           		</map>
+           </li>
+           
+          <!--<li><img src="../images/coupon_offer/mcdonalds_offer_homepage.jpg" alt="Get Free American Cheese Supreme Burger on Order above Rs.299â€¦!!!" usemap="#Map6" width="477" height="343" border="0" />
+            <map name="Map6" id="Map6">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://clk.omgt5.com/?AID=551243&PID=29993&r=https%3A%2F%2Fwww.mcdelivery.co.in%2Fhome%2Ftrending" title="Get Free American Cheese Supreme Burger on Order above Rs.299â€¦!!!" />
+            </map>
+           </li>-->
+          
+          
+      	<!--<li><img src="../images/coupon_offer/biba_offer_homepage.jpg" alt="Get Upto 50% OFF on Mix & Match Collectionâ€¦!!!" usemap="#Map2" width="477" height="343" border="0" />
+            <map name="Map2" id="Map2">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://ad.admitad.com/g/4gxko08abwa3ed8e74d1f2e59b1932/" title="Get Upto 50% OFF on Mix & Match Collectionâ€¦!!!" />
+            </map>
+      	</li>-->
+        
+           
+           
+            <!-- ----------------------------------------------End Banner--------------------------------------------------> 
+           
+  		<!--<li><img src="../images/coupon_offer/pharmeasy_offer_homepage.jpg" alt="Get Medicines at Biggest Discount with Flat 18% Off...!!" usemap="#Map9" width="477" height="343" border="0"/>
+            <map name="Map9" id="Map9">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://ad.admitad.com/g/4qqhq2b1oka3ed8e74d1ecb13589b0/?i=3" title="Get Medicines at Biggest Discount with Flat 18% Off...!!" />
+           </map>
+           </li>-->
+           
+           <!--<li><img src="../images/coupon_offer/metro_offer_homepage.jpg" alt="Hurry Up !!! This Summer.!! Get Trendy Shoes and Look Coolâ€¦!!!" usemap="#Map8" width="477" height="343" border="0" />
+            <map name="Map8" id="Map8">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://ad.admitad.com/g/edimhxejoka3ed8e74d175f5e8634e/" title="Hurry Up !!! This Summer.!! Get Trendy Shoes and Look Coolâ€¦!!!" />
+            </map>
+           </li>-->
+           
+            <!--<li><img src="../images/coupon_offer/pharmeasy_offer_homepage.jpg" alt="Get Flat 18% Off on your first medicine on orders above Rs. 999 from PharmEasy..!!" usemap="#Map3" width="477" height="343" border="0"/>
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://ad.admitad.com/g/soaujomxwpa3ed8e74d1ecb13589b0/" title="Get Flat 18% Off on your first medicine on orders above Rs. 999 from PharmEasy..!!" />
+           </map>
+           </li>-->
+           
+          <li><img src="./page1_files/times_prime_offer_homepage.jpg" alt="Grab the Best Discount for Times Prime Membership..!!" usemap="#Map1" width="477" height="343" border="0"> 
+            <map name="Map1" id="Map1">
+                <area shape="rect" coords="475,0,0,260" target="_blank" href="https://ad.admitad.com/g/u23zlnd2nda3ed8e74d1d712228549/" alt="Grab the Best Discount for Times Prime Membership..!!" title="Grab the Best Discount for Times Prime Membership..!!">
+           </map>           
+           </li>
+           
+          <!-- <li><img src="../images/coupon_offer/bata_offer_homepage.jpg" alt="Flat 20% Off" usemap="#Map1" width="477" height="343" border="0"/>
+            <map name="Map1" id="Map1">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://clk.omgt5.com/?AID=551243&PID=13153&r=https%3A%2F%2Fbata.in%2F%3Futm_source%3DMG%26utm_medium%3DCPS%26utm_campaign%3DBIGSALEJuly" title="Flat 20% Off" />
+            </map>
+           </li>-->
+           <!-- ----------------------------------------------End Banner------------------------------------------------ -->    
+           
+         <!--<li><img src="../images/coupon_offer/pepperfry_offer_homepage.jpg" alt="DÃ©cor your Interiors and also feel light on your pockets with Pepperfry..!!" usemap="#Map1" width="477" height="343" border="0" /> 
+            <map name="Map1" id="Map1">
+                <area shape="rect" coords="475,0,0,260" target="_blank" href="https://ad.admitad.com/g/c2zbxmoo4xa3ed8e74d16816d5588c/?i=3" alt="DÃ©cor your Interiors and also feel light on your pockets with Pepperfry..!!"
+                 title="DÃ©cor your Interiors and also feel light on your pockets with Pepperfry..!!"/>
+           </map>           
+           </li>-->
+           
+        <!-- <li><img src="../images/coupon_offer/hiremecar_onlinebooking_homepage.jpg" alt="Book cab online Flat Rs.100 off." usemap="#Map4" width="477" height="343" border="0"/>
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://hiremecar.com?utm_source=justrechargeit&utm_medium=cps" title="Book cab online Flat Rs.100 off." />
+           </map>
+           </li>-->
+           
+    <!--<li><img src="../images/coupon_offer/treebo_offer_homepage.jpg" alt="Flat 25% off on hotel bookings" usemap="#Map5" width="477" height="343" border="0"/>
+            <map name="Map5" id="Map5">
+              <area shape="rect" coords="475,0,0,260" onmouseover="none" target="_blank" href="http://bit.ly/trbjri" title="Flat 25% off on hotel bookings." />
+           </map>
+          </li>-->
+			 
+                       
+   <!--<li><img src="../images/coupon_offer/pepperfry_offer_homepage.jpg" alt="Flat Rs.500 Off" usemap="#Map4" width="477" height="343" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://clk.omgt5.com/?AID=551243&PID=11289&r=https%3A%2F%2Fwww.pepperfry.com%2F%3Futm_source%3Daff%26utm_medium%3Dcuelinks_cps%26utm_campaign%3Dcuelinks_cps_20180629cl6pme0vxaog" title="Flat Rs.500 Off" />
+            </map>
+           </li>-->
+   
+  
+    <!-- ----------------------------------------------End Banner------------------------------------------------ -->   
+    
+   <!--<li><img src="../images/coupon_offer/beeline_offer_homepage.jpg" alt="Open a Demat Account @just 345/- and earn free recharge" usemap="#Map3" width="477" height="343" border="0"/>
+            <map name="Map3" id="Map3">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="http://www.beelinebroking.com/contest-registration.html" title="Open a Demat Account @just 345/- and earn free recharge" />
+            </map>
+           </li>-->
+           <!--------------------------------------------------End Banner-------------------------------------------------->         
+           
+         
+     
+           <!--<li><img src="../images/coupon_offer/fnp_offer_homepage.jpg" alt="Send Plants as Gift to Your Love Ones with Flat 15% off from Ferns & Petals...!!!" usemap="#Map4" width="477" height="343" border="0" />
+            <map name="Map4" id="Map4">
+              <area shape="rect" coords="475,30,10,380" target="_blank" href="https://ad.admitad.com/g/ttefnvo3nua3ed8e74d19889a1a15e/" title="Send Plants as Gift to Your Love Ones with Flat 15% off from Ferns & Petals...!!!" />
+            </map>
+           </li>-->
+ <!-------------------------------------------------End Banner-------------------------------------------------->                
+   
+               <li><img src="./page1_files/banner_slide_1.jpg" alt="DOWNLOAD JRI APP The power of INSTANT RECHARGE brought to your MOBILE" usemap="#Map5" width="475" height="328" border="0"> 
+            <map name="Map5" id="Map5">
+                <area shape="rect" coords="475,0,0,260" href="https://www.justrechargeit.com/mobile_app.aspx" title="Know More">
+                <area shape="rect" coords="40,265,145,300" href="https://itunes.apple.com/in/app/justrechargeit-mobile-dth/id675631534?mt=8" target="_blank" title="Available on the App Store">
+                <area shape="rect" coords="160,265,280,300" href="https://play.google.com/store/apps/details?id=com.justrechargeitapp.homescreen" target="_blank" title="Get It on Google play">
+            </map>           
+            </li><li class="cloned"><img src="./page1_files/jri-homepage-republic.jpg" alt="Happy Republic Day" usemap="#Map1" width="477" height="343" border="0">
+            <map name="Map1" id="Map1">
+              <area shape="rect" coords="475,30,10,380" target="_blank" title="Happy Republic Day">
+           </map>
+           </li>          
+                  
+          
+        </ul>
+    </div><a class="arrow forward">&gt;</a><a class="arrow back">&lt;</a>
+<div id="thumbNav"><div id="NavWrapper"><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" class="">1</a><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" class="cur">2</a><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" class="">3</a><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" class="">4</a></div></div><a href="https://www.justrechargeit.com/index_justrecharge.aspx#" id="start-stop" class="playing">Stop</a></div>
+<script src="./page1_files/jquery.easing.1.2.js.download" type="text/javascript"></script>
+<script src="./page1_files/jquery.anythingslider.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('img#detailsPage').click(function () {
+            window.location.href = 'https://www.justrechargeit.com/bus_launches_winners.aspx';
+        });
+    });
+
+    function formatText(index, panel) {
+        return index + "";
+    }
+
+    $(function () {
+
+        $('.anythingSlider').anythingSlider({
+            easing: "easeInOutExpo",        // Anything other than "linear" or "swing" requires the easing plugin
+            autoPlay: true,                 // This turns off the entire FUNCTIONALY, not just if it starts running or not.
+            delay: 3000,                    // How long between slide transitions in AutoPlay mode [for slove 6000]
+            startStopped: false,            // If autoPlay is on, this can force it to start stopped
+            animationTime: 1100,             // How long the slide transition takes
+            hashTags: true,                 // Should links change the hashtag in the URL?
+            buildNavigation: true,          // If true, builds and list of anchor links to link to each slide
+            pauseOnHover: true,             // If true, and autoPlay is enabled, the show will pause on hover
+            startText: "Go",             // Start text
+            stopText: "Stop",               // Stop text
+            navigationFormatter: formatText       // Details at the top of the file on this use (advanced use)
+        });
+
+        $("#slide-jump").click(function () {
+            $('.anythingSlider').anythingSlider(4);
+        });
+    });
+</script>
+<style type="text/css">
+#contentpanel .anythingSlider { height:360px !important}
+#contentpanel .anythingSlider .wrapper{ height:360px !important}
+#contentpanel .anythingSlider ul li {height:360px !important}
+#thumbNav {width: 70px !important}
+</style>
+
+<!--<img src="../images/homepage_banner_eid.jpg" alt="Eid-ul-Fitr Mubarak!!" width="477" height="315" border="0" title="Eid-ul-Fitr Mubarak!!" />-->
+<!--<img src="../images/independence_day.jpg" alt="Happy Independence Day!!" width="477" height="315" border="0" title="Happy Independence Day!!" usemap="#Map1" />
+    <map name="Map1" id="Map1">
+        <area shape="rect" coords="331,277,420,297" href=" https://www.justrechargeit.com/independenceday_mailer_winners.aspx" target="_blank" title="Know More"/>
+    </map>-->
+<!--<img src="../images/rakshabandhan_banner.jpg" alt="Happy Raksha Bandhan!!" width="477" height="315" border="0" title="Happy Raksha Bandhan!!" usemap="#Map1" />
+    <map name="Map1" id="Map1">
+        <area shape="rect" coords="317,277,406,297" href="https://www.justrechargeit.com/rakshabandhan_mailer_winners.aspx" target="_blank" title="Know More"/>
+    </map>-->
+<!--<img src="../images/coupons_banner.jpg" alt="Jri Coupons!!" width="477" height="315" border="0" title="Jri Coupons!!" />-->
+<!--<img src="../images/jri_diwali_home_banner.jpg" alt="Happy Diwali!!" width="477" height="315" border="0" title="Happy Diwali!!" />-->
+<!--Fadein Fadeout Gallery START -->
+ <!--<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+	
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
+
+$(document).ready(function () {
+    $('img#detailsPage').click(function () {
+        window.location.href = 'https://www.justrechargeit.com/bus_launches_winners.aspx';
+    });
+});
+</script>
+<style type="text/css">
+    #slideshow { margin-top:10px !important;width:445px !important}
+</style>
+<div id="slideshow">
+    <img src="../images/banner_slide_1.jpg" alt="DOWNLOAD JRI APP The power of INSTANT RECHARGE brought to your MOBILE" class="active" />
+    <img src="../images/banner_slide_2.jpg" alt="Buy & Save on Shopping!! Get FREE Coupons on every Recharge!!"/>
+    <img src="../images/banner_slide_3.jpg" alt="Get 5% cashback on every bus ticket. Book Now!" id="detailsPage" style="cursor:pointer" title="Click to view *T&C"/>
+</div>-->
+<!--Fadein Fadeout Gallery END -->
+<!--<a href="https://www.justrechargeit.com/bus_launches_winners.aspx" title="Click to view *T&C"><img src="../images/jri_recharge_bus_offer_banner.jpg" alt="Get 5% cashback on every bus ticket. Book Now!" width="477" height="352" border="0" /></a>-->
+
+<!--<a href="https://www.justrechargeit.com/holi2014_winners.aspx" title="Click to view Lucky Winners List"><img src="../images/jri_holi__banner_2014_winner.jpg" alt="Congratulations To 500 Lucky Winners of Holi Special Recharge Offer" width="477" height="315" border="0" /></a>--></td>
+            </tr>
+            </tbody></table></td>
+        </tr>
+    </tbody></table>
+    </div>
+      <script type="text/javascript" src="./page1_files/jquery.innerfade.js.download"></script>
+<script type="text/javascript">
+$(document).ready(
+function(){
+	$(".fade img").show();
+	$('.fade').innerfade({
+		speed: 1000,
+		timeout: 6000,
+		type: 'random_start',
+		containerheight: '82px'
+	});
+
+});
+</script>
+<table width="902" border="0" cellspacing="0" cellpadding="0" id="testimonialspanel">
+	<tbody><tr>
+		<td align="right" valign="bottom">
+			<table width="562" border="0" cellspacing="0" cellpadding="0">
+				<tbody><tr>
+					<td height="82" align="left" valign="top" class="fade innerfade" style="position: relative; height: 82px;">				
+						<div style="z-index: 6; position: absolute; display: block;"><img src="./page1_files/cusotmer_speak_img1.gif" width="468" height="60" style=""></div>
+                        <div style="z-index: 5; position: absolute; display: block;"><img src="./page1_files/cusotmer_speak_img2.gif" width="508" height="60" style=""></div>
+						<div style="z-index: 4; position: absolute; display: block;"><img src="./page1_files/cusotmer_speak_img3.gif" width="508" height="57" style=""></div>
+						<div style="z-index: 3; position: absolute; display: block; opacity: 0.397069;"><img src="./page1_files/cusotmer_speak_img4.gif" width="517" height="57" style=""></div>
+                        <div style="z-index: 2; position: absolute; display: block;"><img src="./page1_files/cusotmer_speak_img5.gif" width="497" height="57" style=""></div>
+                        <div style="z-index: 1; position: absolute; display: block;"><img src="./page1_files/cusotmer_speak_img6.gif" width="497" height="57" style=""></div>
+				
+					</td>
+				</tr>	
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+       
+        <div class="homeAniPanel">
+            <div class="ani3stepTxt">
+                <img src="./page1_files/ani-3step-txt.gif" alt="RECHARGE IN 3 SIMPLE STEPS">
+            </div>
+            <div class="aniBox">
+                <div class="boxwidth">
+	                <div id="aniRound"></div>
+                    <div class="iconDetails"></div>
+                    <div class="roundBox">
+                    </div>
+                </div> 
+                <div class="txtBox">
+                    ENTER<br>
+                    <span>RECHARGE DETAILS</span>
+                </div>
+            </div>
+            <div class="aniBox">
+                <div class="boxwidth">
+	                <div id="aniRound2"></div>
+                    <div class="iconPayment"></div>
+                    <div class="roundBox">
+                    </div>
+                </div> 
+                <div class="txtBox">
+                    MAKE<br>
+                    <span>PAYMENT</span>
+                </div>
+            </div>
+            <div class="aniBox noBor">
+                <div class="boxwidth">
+	                <div id="aniRound3"></div>
+                    <div class="iconRechargeCoupon"></div>
+                    <div class="roundBox">
+                    </div>
+                </div> 
+                <div class="txtBox">
+                    GET<br>
+                    <span>RECHARGE + FREE COUPONS</span>
+                </div>
+            </div>
+        </div>
+ 
+
+<div class="footerBg">
+    
+
+<style type="text/css">
+    #operatorpanel {font-family:Arial !important;font-size:11px;color:#919191;width:100%;margin-top:20px}
+    #operatorpanel h1 {font-size:13px;font-weight:bold;color:#929292;border-bottom:1px solid #c5c5c5;line-height:27px;margin-bottom:13px}
+    .mobileRechargeDv {width:349px;float:left;}
+    .dthRechargeDv {width:160px;float:left;margin-left:30px}
+    .dataCardRechargeDv {width: 164px;float:left;margin-left:30px}
+    .paymentOptionDv{width: 137px;float:left;margin-left:30px}
+    .operatorPanelStyle ul { margin:0;padding:0;list-style:none;}
+    .operatorPanelStyle ul li { margin:0 0 7px 0;padding:0;list-style:none;display:list-item}
+    .operatorPanelStyle ul li .hyLink2 {color:#919191;}
+    .operatorPanelStyle ul li .hyLink2:hover {color:#c50763}
+    .w196{width:196px;float:left}
+    .optionList li:hover{ color:#000;cursor:default}
+</style>
+
+<div id="operatorpanel" class="operatorPanelStyle">
+              <div class="dthRechargeDv">
+              <h1>Mobile Recharges</h1> 
+              <ul>
+                  <!--<li><a href="/aircel-online-prepaid-recharge-services.aspx" class="hyLink2" title="Aircel Recharges">Aircel Recharge</a></li>-->
+                 <li><a href="https://www.justrechargeit.com/airtel-online-prepaid-recharge-services.aspx" class="hyLink2" title="Airtel Recharges">Airtel Recharge</a> </li>
+                 <li><a href="https://www.justrechargeit.com/bsnl-online-prepaid-recharge-services.aspx" class="hyLink2" title="BSNL Recharges">BSNL Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/idea-online-prepaid-recharge-services.aspx" class="hyLink2" title="Idea Recharges">Idea Recharge</a></li>
+		 <li><a href="https://www.justrechargeit.com/jio-online-prepaid-recharge-services.aspx" class="hyLink2" title="Jio Recharges">Jio Recharges</a></li>
+                 <!--<li><a href="/loop-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Loop Mobile Recharges">Loop Mobile Recharges</a></li>-->
+                 <li><a href="https://www.justrechargeit.com/mtnl-online-prepaid-recharge-services.aspx" class="hyLink2" title="MTNL Recharges">MTNL Recharge</a></li>
+		 <li><a href="https://www.justrechargeit.com/vodafone-online-prepaid-recharge-services.aspx" class="hyLink2" title="Vodafone Recharges">Vodafone Recharge</a></li>
+                <!-- <li><a href="/mts-online-prepaid-recharge-services.aspx" class="hyLink2" title="MTS Recharges">MTS Recharge</a></li>-->
+                 <!--<li><a href="/reliance-cdma-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Reliance CDMA Mobile Recharges">Reliance CDMA Mobile Recharge</a></li>-->
+                 <!--<li><a href="/reliance-gsm-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Reliance GSM Mobile Recharges">Reliance GSM Mobile Recharge</a></li>-->
+             </ul> 
+             <!--<ul>
+                 <li><a href="/tata-docomo-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Docomo Recharges">Tata Docomo Recharge</a></li>
+                 <li><a href="/tata-indicom-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Indicom Recharges">Tata Indicom Recharge</a></li>
+                 <li><a href="/tata-walky-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Walky Recharges">Tata Walky Recharge</a></li>
+                 <li><a href="/uninor-online-prepaid-recharge-services.aspx" class="hyLink2" title="Telenor Recharges">Telenor Recharge</a></li>
+                 <li><a href="/videocon-online-prepaid-recharge-services.aspx" class="hyLink2" title="Videocon Recharges">Videocon Recharge</a></li>
+                <li><a href="/virgin-cdma-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Virgin CDMA Mobile Recharges">Virgin CDMA Mobile Recharges</a></li>
+                 <li><a href="/virgin-gsm-mobile-online-prepaid-recharge-services.aspx" class="hyLink2" title="Virgin GSM Mobile Recharges">Virgin GSM Mobile Recharges</a></li>
+                 <li><a href="/vodafone-online-prepaid-recharge-services.aspx" class="hyLink2" title="Vodafone Recharges">Vodafone Recharge</a></li>
+             </ul>--> 
+            </div>
+         <div class="dthRechargeDv">
+              <h1>DTH Recharges</h1>
+             <ul>
+                 <li><a href="https://www.justrechargeit.com/airtel-digital-tv-online-prepaid-recharge-services.aspx" class="hyLink2" title="Airtel Digital TV Recharges">Airtel Digital TV Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/dish-tv-online-prepaid-recharge-services.aspx" class="hyLink2" title="Dish TV Recharges">Dish TV Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/tata-sky-online-prepaid-recharge-services.aspx" class="hyLink2" title="Tata Sky Recharges">Tata Sky Recharge</a></li>
+                 <!--<li><a href="/reliance-digital-tv-online-prepaid-recharge-services.aspx" class="hyLink2" title="Reliance Digital TV Recharges">Reliance Digital TV Recharge</a></li>--> 
+                 <li><a href="https://www.justrechargeit.com/sun-direct-online-prepaid-recharge-services.aspx" class="hyLink2" title="Sun Direct Recharges">Sun Direct Recharge</a></li>
+                 <li><a href="https://www.justrechargeit.com/videocon-d2h-online-prepaid-recharge-services.aspx" class="hyLink2" title="Videocon D2H Recharges">Videocon D2H Recharge</a></li>
+             </ul>  
+        </div>
+       <div class="dataCardRechargeDv">
+           <!--<h1>Data Card Recharges</h1> 
+            <ul>
+                 <li><a href="/aircel-data-card-online-recharge-services.aspx" class="hyLink2" title="Aircel Recharge">Aircel Data Card Recharge</a></li>
+                 <li><a href="/airtel-data-card-online-recharge-services.aspx" class="hyLink2" title="Airtel Recharge">Airtel Data Card Recharge</a></li>
+                <li><a href="/bsnl-data-card-online-recharge-services.aspx" class="hyLink2" title="BSNL Recharge">BSNL Data Card Recharge</a></li>
+                <li><a href="/idea-data-card-online-recharge-services.aspx" class="hyLink2" title="Idea Recharge">Idea Data Card Recharge</a></li>
+                <li><a href="/mtnl-data-card-online-recharge-services.aspx" class="hyLink2" title="MTNL Recharge">MTNL Data Card Recharge</a></li>
+                 <li><a href="/mts-mblaze-data-card-online-recharge-services.aspx" class="hyLink2" title="MTS MBlaze Recharges">MTS MBlaze Recharge</a></li>
+                 <li><a href="/mts-mbrowse-data-card-online-recharge-services.aspx" class="hyLink2" title="MTS MBrowse Recharges">MTS MBrowse Recharge</a></li>
+                <li><a href="/reliance-netconnect-data-card-online-recharge-services.aspx" class="hyLink2" title="Reliance NetConnect Recharges">Reliance NetConnect Recharge</a></li>
+                 <li><a href="/tata-photon-plus-data-card-online-recharge-services.aspx" class="hyLink2" title="Tata Photon Plus Recharges">Tata Photon Plus Recharge</a></li>
+                 <li><a href="/tata-photon-whiz-data-card-online-recharge-services.aspx" class="hyLink2" title="Tata Photon Whiz Recharges">Tata Photon Whiz Recharge</a></li>
+                <li><a href="/vodafone-data-card-online-recharge-services.aspx" class="hyLink2" title="Vodafone Recharge">Vodafone Data Card Recharge</a></li>
+             </ul>-->
+        </div> 
+        <div class="paymentOptionDv">
+            <h1>Payment Options</h1>
+            <ul class="optionList">
+                 <li>Credit Cards</li>
+                 <li>Debit Cards</li>
+                 <li>Any Visa Debit Card (VBV)</li>
+                 <li>Direct Bank Debits</li>
+                 <li>Cash Cards</li>
+                 <li>UPI</li>
+             </ul>     
+            </div>
+    </div>
+
+
+<script type="text/javascript">
+    var _sf_async_config = { uid: 2995, domain: "justrechargeit.com" };
+    (function () {
+        function loadChartbeat() {
+            window._sf_endpt = (new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+               (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+               "static.chartbeat.com/js/chartbeat.js");
+            document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+            loadChartbeat : function () { oldonload(); loadChartbeat(); };
+    })();
+
+</script>
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21391758-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<!-- Google Code for Remarketing 90 Days (all visitors on home page) Remarketing List -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 985023183;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "666666";
+    var google_conversion_label = "Y3j9CPHX6gIQz4XZ1QM";
+    var google_conversion_value = 0;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="./page1_files/f(2).txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/985023183/?label=Y3j9CPHX6gIQz4XZ1QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+<!-- Google Code for All 30 Days visitors Remarketing List -->
+<script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1017939962;
+    var google_conversion_language = "en";
+    var google_conversion_format = "3";
+    var google_conversion_color = "ffffff";
+    var google_conversion_label = "233sCJ6gyAIQ-o-y5QM";
+    var google_conversion_value = 0;
+    /* ]]> */
+</script>
+<script type="text/javascript" src="./page1_files/f(2).txt">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="https://www.googleadservices.com/pagead/conversion/1017939962/?label=233sCJ6gyAIQ-o-y5QM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+    <table width="902" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+          <td align="left" valign="middle" class="defaulttext1">&nbsp;</td>
+        </tr>
+		<tr>
+          <td align="left" valign="middle" class="horizontaldivider"><img src="./page1_files/blank_spacer.gif" width="1" height="1"></td>
+        </tr>
+        <tr>
+          <td align="right" valign="bottom" height="38">
+              
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<table width="902" border="0" cellspacing="0" cellpadding="0">
+    <tbody><tr>
+	    
+        <td width="80" align="left" valign="middle">                                
+            <!--<g:plusone size="medium"></g:plusone>-->
+            <!-- Place this render call where appropriate -->
+            <!--<script type="text/javascript">
+                $(document).ready(function () {
+                    (function () {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                });
+            </script>-->
+            <a href="https://plus.google.com/104337947390884833804" rel="publisher" target="_blank"><img src="./page1_files/googleplusicon.gif" border="0"></a>
+        </td>
+        <td width="1"><img src="./page1_files/social-icon-divider-g.png"></td>     
+	    <td width="43" align="center" valign="middle"><a href="https://twitter.com/jritwit" target="_blank"><img src="./page1_files/twittericon.gif" alt="Follow us on Twitter" title="Follow us on Twitter" border="0"></a></td>	    
+        <td width="1"><img src="./page1_files/social-icon-divider.png"></td>        
+	    <td width="42" align="center" valign="middle"><a href="https://www.facebook.com/JustRechargeIt" target="_blank"><img src="./page1_files/facebooktext.gif" title="Facebook" alt="Facebook" border="0"></a></td>
+	    <td width="397" align="center" valign="middle">
+            
+            <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/JustRechargeIt" data-layout="standard" data-action="like" data-show-faces="false" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=507&amp;href=https%3A%2F%2Fwww.facebook.com%2FJustRechargeIt&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=false"><span style="vertical-align: bottom; width: 450px; height: 28px;"><iframe name="f3aa9f335ba2c" width="1000px" height="1000px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./page1_files/like.html" style="border: none; visibility: visible; width: 450px; height: 28px;" class=""></iframe></span></div>
+	    </td>
+    </tr>
+</tbody></table>
+
+          </td>
+        </tr>
+	  </tbody></table>
+    </div>
+    
+    </td>
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+<style type="text/css">
+    .footerLink{color:#3d3d3d;font-family:Arial;font-size:12px;}
+    .footerLink a{color:#3d3d3d;text-decoration:none;margin:0 6px;}
+    .footerLink a:hover{text-decoration:underline}
+    .footerLink a.first{ margin-left:0px}
+    .defaulttext3{color:#3d3d3d !important;}
+</style>
+<table width="902" border="0" align="center" cellpadding="0" cellspacing="0" id="bottompanel">
+  <tbody><tr>
+    <td height="35" align="left" valign="bottom" class="footerLink">
+<a id="jriBottomPanel_hypAboutus" title="About Us" class="first" href="https://www.justrechargeit.com/aboutus.aspx">About Us </a> | <a id="jriBottomPanel_hyppartnerwithUs" title="Partner With Us" href="https://www.justrechargeit.com/mobile-recharge-API-and-coupons-API.aspx"> Partner With Us </a> | <a id="jriBottomPanel_hypHelpdesk" title="Helpdesk" href="https://www.justrechargeit.com/faq_general.aspx"> Helpdesk</a> | <a id="jriBottomPanel_hypTerms" title="Terms, Conditions &amp; Policies" href="https://www.justrechargeit.com/jri_terms_conditions_policies.aspx"> Terms, Conditions &amp; Policies</a>
+    </td>
+    <td height="35" align="right" valign="bottom" class="defaulttext3">© Copyright <script language="javascript">
+                                                                                           var yy = (new Date()).getYear(); var year = (yy < 1000) ? yy + 1900 : yy; document.write("" + year);</script>2022 - JRI Technologies Pvt. Ltd. All rights reserved.</td>
+  </tr>
+</tbody></table>
+
+
+
+
+<script type="text/javascript">
+    var countries = new ddtabcontent("rechargetabs")
+    countries.setpersist(true)
+    countries.setselectedClassTarget("link") //"link" or "linkparent"
+    countries.init()
+</script>
+
+        <script language="javascript" type="text/javascript">
+            $(document).ready(function () {               
+                $('a[rel="recharge1"]').click(function (e) {
+                    ResetAll();                   
+                    return false;
+                });
+                $('a[rel="recharge2"]').click(function (e) {
+                    ResetAll();                   
+                    return false;
+                });
+                $('a[rel="recharge3"]').click(function (e) {
+                    ResetAll();                   
+                    return false;
+                });
+
+                /*
+                $('#').focusin(function () {
+                    $('#email_info').fadeIn('fast');
+                });
+                $('#').focusout(function () {
+                    $('#email_info').fadeOut('fast');
+                });
+                */
+                $("#ddlMobileServiceProvider option[value='0']").attr("selected", "selected");
+                $("#ddlDTHServiceProvider option[value='0']").attr("selected", "selected");
+                $("#ddlDataCardServiceProvider option[value='0']").attr("selected", "selected");                          
+            });
+
+
+            // 3Steps Related script START
+            var scrollonce = 0;
+            $.fn.scrollStopped = function (callback) {
+                $(this).scroll(function () {
+                    var self = this, $this = $(self);
+                    if ($this.data('scrollTimeout')) {
+                        clearTimeout($this.data('scrollTimeout'));
+                    }
+                    $this.data('scrollTimeout', setTimeout(callback, 250, self));
+                });
+            };
+            var globv = 0;
+            $(document).ready(function () {
+
+                var screenH = $(window).height();
+                var h = $('.homeAniPanel').offset().top + $('.homeAniPanel').outerHeight();
+                var diff = h - screenH;
+                if ($(this).scrollTop() > diff && $(this).scrollTop() < screenH) {
+                    if (globv == 0 && scrollonce == 0) {
+                        ani();
+                        globv = 1; scrollonce = 1;
+                    } else {
+
+                    }
+                } else {
+                    globv = 0;
+                    //static();
+                }
+
+                $(window).scrollStopped(function () {
+                    var screenH = $(window).height();
+                    var h = $('.homeAniPanel').offset().top + $('.homeAniPanel').outerHeight();
+                    var diff = h - screenH;
+                    if ($(this).scrollTop() > diff && $(this).scrollTop() < screenH) {
+                        if (globv == 0 && scrollonce == 0) {
+                            ani();
+                            globv = 1; scrollonce = 1;
+                        } else {
+
+                        }
+                    } else {
+                        globv = 0;
+                        //static();
+                    }
+                });
+
+            });
+
+
+            function ani() {
+                $("#aniRound").animate({
+                    width: "100%",
+                    height: "101px",
+                    opacity: 1,
+                    top: "-2px",
+                    left: "-2px"
+                    //marginLeft: "0.6in",
+                }, 1000, function () {
+                    $("#aniRound").animate({
+                        width: "0",
+                        height: "0",
+                        opacity: 0,
+                        top: "46px",
+                        left: "46px"
+                        //marginLeft: "0.6in",
+                    }, 1000, function () {
+                        $("#aniRound2").animate({
+                            width: "100%",
+                            height: "101px",
+                            opacity: 1,
+                            top: "-2px",
+                            left: "-2px"
+                        }, 1000, function () {
+                            $("#aniRound2").animate({
+                                width: "0",
+                                height: "0",
+                                opacity: 0,
+                                top: "46px",
+                                left: "46px"
+                            }, 1000, function () {
+                                $("#aniRound3").animate({
+                                    width: "100%",
+                                    height: "101px",
+                                    opacity: 1,
+                                    top: "-2px",
+                                    left: "-2px"
+                                }, 1000, function () {
+                                    $("#aniRound3").animate({
+                                        width: "0",
+                                        height: "0",
+                                        opacity: 0,
+                                        top: "46px",
+                                        left: "46px"
+                                    }, 1000, function () {
+                                        setTimeout(function () {
+                                            aniMore();
+                                        }, 50);
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            }
+
+            function aniMore() {
+                $("#aniRound").animate({
+                    width: "100%",
+                    height: "101px",
+                    opacity: 1,
+                    top: "-2px",
+                    left: "-2px"
+                    //marginLeft: "0.6in",
+                }, 1000, function () {
+                    $("#aniRound").animate({
+                        width: "0",
+                        height: "0",
+                        opacity: 0,
+                        top: "46px",
+                        left: "46px"
+                        //marginLeft: "0.6in",
+                    }, 1000, function () {
+                        $("#aniRound2").animate({
+                            width: "100%",
+                            height: "101px",
+                            opacity: 1,
+                            top: "-2px",
+                            left: "-2px"
+                        }, 1000, function () {
+                            $("#aniRound2").animate({
+                                width: "0",
+                                height: "0",
+                                opacity: 0,
+                                top: "46px",
+                                left: "46px"
+                            }, 1000, function () {
+                                $("#aniRound3").animate({
+                                    width: "100%",
+                                    height: "101px",
+                                    opacity: 1,
+                                    top: "-2px",
+                                    left: "-2px"
+                                }, 1000, function () {
+                                    $("#aniRound3").animate({
+                                        width: "0",
+                                        height: "0",
+                                        opacity: 0,
+                                        top: "46px",
+                                        left: "46px"
+                                    }, 1000, function () {
+                                        setTimeout(function () {
+                                            ani();
+                                        }, 50);
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            }
+            // 3Steps Related script END
+        </script>
+
+         
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.AutoCompleteBehavior, {"completionInterval":100,"completionListCssClass":"autocomplete_completionListElement","completionListItemCssClass":"autocomplete_listItemStyle","delimiterCharacters":"","enableCaching":false,"highlightedItemCssClass":"autocomplete_highlightedListItemStyle","id":"AutoCompleteExtender1","minimumPrefixLength":0,"serviceMethod":"GetCompletionListForSeviceProvider","servicePath":"index_justrecharge.aspx","useContextKey":true}, null, null, $get("txtMobileNo"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.AutoCompleteBehavior, {"completionInterval":100,"completionListCssClass":"autocomplete_completionListElement","completionListItemCssClass":"autocomplete_listItemStyleDth","delimiterCharacters":"","enableCaching":false,"highlightedItemCssClass":"autocomplete_highlightedListItemStyleDth","id":"AutoCompleteExtender2","minimumPrefixLength":0,"serviceMethod":"GetCompletionListForSeviceProvider","servicePath":"index_justrecharge.aspx"}, null, null, $get("txtCardNo"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.AutoCompleteBehavior, {"completionInterval":100,"completionListCssClass":"autocomplete_completionListElement","completionListItemCssClass":"autocomplete_listItemStyle","delimiterCharacters":"","enableCaching":false,"highlightedItemCssClass":"autocomplete_highlightedListItemStyle","id":"AutoCompleteExtender3","minimumPrefixLength":0,"serviceMethod":"GetCompletionListForSeviceProvider","servicePath":"index_justrecharge.aspx"}, null, null, $get("txtDataCardNo"));
+});
+//]]>
+</script>
+<input type="hidden" value="1" id="hiddenInputToUpdateATBuffer_CommonToolkitScripts" name="hiddenInputToUpdateATBuffer_CommonToolkitScripts"></form>
+
+<ul id="AutoCompleteExtender1_completionListElem" class="autocomplete_completionListElement" style="display: none; visibility: hidden; position: absolute;"></ul><ul id="AutoCompleteExtender2_completionListElem" class="autocomplete_completionListElement" style="display: none; visibility: hidden; position: absolute;"></ul><ul id="AutoCompleteExtender3_completionListElem" class="autocomplete_completionListElement" style="display: none; visibility: hidden; position: absolute;"></ul><script language="javascript" type="text/javascript" src="./page1_files/chartbeat.js.download"></script></body></html>

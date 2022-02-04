@@ -1,0 +1,28 @@
+/*
+  Homepage slider
+*/
+.anythingSlider                         { width: 477px; height:315px; position: relative; margin: 0; padding:0; }
+.anythingSlider .wrapper                { width: 477px; overflow: hidden; height:315px; margin:0; position: absolute; top: 0; left: 0; }
+
+                                        /* Width below is max for Opera */
+.anythingSlider .wrapper ul             { width: 20000px; list-style: none; padding:0; margin:0; position: absolute; top: 0; left: 0; }
+.anythingSlider ul li                   { display: block; float: left; padding: 0; height:315px; width:477px; margin: 0; }
+.anythingSlider .arrow                  { visibility:hidden; }
+.anythingSlider .forward                { visibility:hidden; }
+.anythingSlider .back                   { visibility:hidden; }
+
+
+#thumbNav                               { height:7px; margin:0; padding:0; position:absolute; top:12px; right:10px; width:40px; }
+
+#thumbNav a                             { width:7px; height:7px; display: inline-block; padding:0; margin: 0 2px 0 2px; background:url("../images/buttons.png") left no-repeat; text-align:center; text-indent:-9999px; outline:none; }
+
+#thumbNav a:hover                       { background:url("../images/buttons.png") center no-repeat; }
+#thumbNav a:active                      { background:url("../images/buttons.png") left no-repeat; }
+#thumbNav a.cur                         { background:url("../images/buttons.png") right no-repeat; }
+
+#start-stop                             { visibility:hidden; }
+#start-stop.playing                     { visibility:hidden; }
+#start-stop:hover                       { visibility:hidden; }
+
+.anythingSlider .wrapper ul ul          { position: static; margin: 0; background: none; overflow: visible; width: auto; border: 0; }
+.anythingSlider .wrapper ul ul li       { float: none; height: auto; width: auto; background: none; }

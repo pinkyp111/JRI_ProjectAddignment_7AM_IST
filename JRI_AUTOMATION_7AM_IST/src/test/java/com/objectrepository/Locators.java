@@ -2,7 +2,9 @@ package com.objectrepository;
 
 import org.openqa.selenium.By;
 
-public class Locators {
+import com.utilities.BaseClass;
+
+public class Locators extends BaseClass {
 
 	public final By JRI_HomePage_Sigin_Link = By.id("jriTop_signin9");
 	public final By JRI_HomePage_CreateAnAccount_Link = By.id("signup-link9");

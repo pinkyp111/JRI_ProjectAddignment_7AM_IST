@@ -1,0 +1,275 @@
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+
+#rechargetabs td A:Link, #rechargetabs td A:Visited, #rechargetabs td A:Hover {
+	display:block;
+	height:61px;
+	border-right:solid 1px #fff;
+	text-decoration:none;
+	position:relative;
+	outline:none;
+}
+
+
+#rechargetabs td a.selected div {
+	background-image:url('../images/home_tab_arrow.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	height:74px;
+	position:absolute;
+	top:0;
+}
+
+#rechargetabs #mobile A:Link, #rechargetabs #mobile A:Visited {
+	width:115px;
+	background-image:url('../images/icon_mobile.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #mobile A:hover {
+	background-image:url('../images/icon_mobile_hover.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #mobile a.selected{ 
+	background-image:url('../images/icon_mobile_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #mobile a.selected div {
+	width:116px;
+}
+
+#rechargetabs #dth A:Link, #rechargetabs #dth A:Visited {
+	width:120px;
+	background-image:url('../images/icon_dth.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #dth A:hover {
+	background-image:url('../images/icon_dth_hover.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #dth a.selected{ 
+	background-image:url('../images/icon_dth_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #dth a.selected div {
+	width:120px;
+}
+
+#rechargetabs #data_card A:Link, #rechargetabs #data_card A:Visited {
+	width:137px;
+	background-image:url('../images/icon_data_card.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #data_card A:hover {
+	background-image:url('../images/icon_data_card_hover.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #data_card a.selected{ 
+	background-image:url('../images/icon_data_card_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #data_card a.selected div {
+	width:138px;
+}
+
+/*************************************************************************************/
+
+#paymentoptiontabs td A:Link, #paymentoptiontabs td A:Visited, #paymentoptiontabs td A:Hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:normal;
+	/*display:block;*/
+	color:#0e0e0e;
+/*	height:61px;*/
+/*	border-right:solid 1px #fff;*/
+	text-decoration:none;
+/*	position:relative;*/
+	outline:none;
+	padding:5px 12px;
+	line-height:27px;
+}
+
+
+#paymentoptiontabs td a.selected {
+
+/*	border:1px solid red;*/
+/*	padding-top:6px;*/
+	color:#ffffff;
+	background-color:#343432;
+	border-radius:15px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+}
+
+#paymentoptiontabs #jricard_option A:Link, #paymentoptiontabs #jricard_option A:Visited, #paymentoptiontabs #jricard_option A:Hover {
+	margin-left:11px;
+}
+
+/**********************************************************************************************/
+
+.tabcontent{
+display:none;
+}
+
+@media print {
+.tabcontent {
+display:block !important;
+}
+}
+
+
+
+
+
+#tbRechargeNote td a.selected {
+	color:#cb0965;
+    background-color:transparent;
+    text-decoration:none;
+    font-size:15px;
+    float:left;
+}
+/*
+#tbRechargeNote td a#idNote.selected {
+	color:#0e0e0e;
+    background-color:transparent;
+    text-decoration:none;
+    font-size:15px;
+    float:left;
+}
+*/
+#tbRechargeNote td a {
+	color:black;
+    background-color:transparent;
+    text-decoration:none;
+    font-size:15px;
+}
+
+/************************JRI NEW TAB CSS***************************/
+
+#contentpanel2 { 
+	background-image:url('../images/midcontainer_bg.png');
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-color:#f0efe8;
+}
+
+.content_pad{ padding:0 15px}
+
+#rechargetabs_new td A:Link, #rechargetabs_new td A:Visited, #rechargetabs_new td A:Hover {
+	display:block;
+	height:61px;
+	border-right:solid 1px #fff;
+	text-decoration:none;
+	position:relative;
+	outline:none;
+}
+
+
+#rechargetabs_new td a.selected div {
+	background-image:url('../images/home_tab_arrow.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	height:74px;
+	position:absolute;
+	top:0;
+}
+
+#rechargetabs_new #mobile A:Link, #rechargetabs_new #mobile A:Visited {
+	width:115px;
+	background-image:url('../images/icon_mobile.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #mobile A:hover {
+	background-image:url('../images/icon_mobile_hover.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #mobile a.selected{ 
+	background-image:url('../images/icon_mobile_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #mobile a.selected div {
+	width:116px;
+}
+
+#rechargetabs_new #dth A:Link, #rechargetabs_new #dth A:Visited {
+	width:120px;
+	background-image:url('../images/icon_dth.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #dth A:hover {
+	background-image:url('../images/icon_dth_hover.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #dth a.selected{ 
+	background-image:url('../images/icon_dth_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #dth a.selected div {
+	width:120px;
+}
+
+#rechargetabs_new #data_card A:Link, #rechargetabs #data_card A:Visited {
+	width:137px;
+	background-image:url('../images/icon_data_card.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #data_card A:hover {
+	background-image:url('../images/icon_data_card_hover.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs #data_card a.selected{ 
+	background-image:url('../images/icon_data_card_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+
+#rechargetabs_new #data_card a.selected{ 
+	background-image:url('../images/icon_data_card_active.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#rechargetabs_new #data_card a.selected div {
+	width:138px;
+}
+
+.bg_white{background:#fff}
+
+
+
+/************************JRI NEW TAB END***************************/
+
+
