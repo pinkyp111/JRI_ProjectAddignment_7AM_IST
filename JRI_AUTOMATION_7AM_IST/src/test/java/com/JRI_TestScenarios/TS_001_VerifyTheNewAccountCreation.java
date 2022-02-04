@@ -12,16 +12,39 @@ import com.utilities.WrapperClass;
 
 public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 	Locators loc = new Locators();
+	String userDirectory = System.getProperty("user.dir");
+	String JRI_Homepage = null;
+
+	boolean enableOfflineMode = true;
+	String jriOfflinePage1Path = null;
+	String jriOfflinePage2Path = null;
 
 	@BeforeClass
 	public void beforeClass() {
+		loaddata("./src/test/resources/testdata/inputdata.properties");
+		if (enableOfflineMode) {
+			System.out.println("userDirectory=" + userDirectory);
+			// load offline url
+			jriOfflinePage1Path = getdata("JRI_HomePage_Offline_URL");
+			jriOfflinePage1Path = jriOfflinePage1Path.replace("$", userDirectory);
+			jriOfflinePage1Path = jriOfflinePage1Path.replace("\\", "/");
+			System.out.println("jriOfflinePath=" + jriOfflinePage1Path);
+
+			jriOfflinePage2Path = jriOfflinePage1Path.replace("page1", "page2");
+			readFileAndReplaceData(jriOfflinePage1Path.replace("file:///", ""),
+					"https://www.justrechargeit.com/SignUp.aspx", jriOfflinePage2Path);
+			JRI_Homepage = jriOfflinePage1Path;
+
+		} else {
+			// load actual url
+			JRI_Homepage = getdata("JRI_HomePage_URL");
+		}
 		chromeBrowserLaunch();
 	}
 
 	@Test
 	public void tc_001_Invoke_the_JRI_Home_page() throws Exception {
-		loaddata("./src/test/resources/testdata/inputdata.properties");
-		driver.get(getdata("JRI_HomePage_URL"));
+		driver.get(JRI_Homepage);
 		// Develop the code from here
 
 	}
@@ -89,7 +112,6 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		System.out.println("***Error message is***" + password_error);
 	}
 
-
 	@Test
 	public void tc_007_Verify_Terms_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC7");
@@ -99,6 +121,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		String email = getdata("Email");
 		String password = getdata("Password");
 
+		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
 		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Mobile_EditBox, mobileno);
@@ -119,6 +142,10 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 
 	@AfterClass
 	public void afterClass() {
+		if (enableOfflineMode) {
+			readFileAndReplaceData(jriOfflinePage1Path.replace("file:///", ""), jriOfflinePage2Path,
+					"https://www.justrechargeit.com/SignUp.aspx");
+		}
 		driver.quit();
 	}
 

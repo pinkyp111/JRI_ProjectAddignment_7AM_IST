@@ -6,41 +6,21 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
-import java.util.List;
-
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.opera.OperaDriver;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.ITestResult;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.Random;
-import java.util.*;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Alert;
@@ -50,7 +30,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -64,10 +43,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -290,15 +265,17 @@ public class WrapperClass extends BaseClass {
 		// STATUS_PackageName.ClassName_MethodName_Timestamp.PNG
 		if (res.getStatus() == ITestResult.SUCCESS) {
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			File successPath = new File(screenshotPath + "PASS_" + className + "_" + methodName + "_" + timestamp() + ".PNG");
+			File successPath = new File(
+					screenshotPath + "PASS_" + className + "_" + methodName + "_" + timestamp() + ".PNG");
 			FileHandler.copy(scrFile, successPath);
-			System.out.println("SUCCESS :: Screenshot saved at : "+successPath.getAbsolutePath());
+			System.out.println("SUCCESS :: Screenshot saved at : " + successPath.getAbsolutePath());
 		}
 		if (res.getStatus() == ITestResult.FAILURE) {
 			File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			File failPath = new File(screenshotPath + "FAIL_" + className + "_" + methodName + "_" + timestamp() + ".PNG");
+			File failPath = new File(
+					screenshotPath + "FAIL_" + className + "_" + methodName + "_" + timestamp() + ".PNG");
 			FileHandler.copy(scrFile, failPath);
-			System.out.println("FAILURE :: Screenshot saved at : "+failPath.getAbsolutePath());
+			System.out.println("FAILURE :: Screenshot saved at : " + failPath.getAbsolutePath());
 		}
 
 	}
@@ -562,7 +539,7 @@ public class WrapperClass extends BaseClass {
 
 	public void implicitWait(int time) {
 		driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
-		System.out.println("Implicit wait method used for "+time+ " seconds***");
+		System.out.println("Implicit wait method used for " + time + " seconds***");
 
 	}
 
@@ -851,6 +828,48 @@ public class WrapperClass extends BaseClass {
 		try {
 			prop.load(fileInput);
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	public void readFileAndReplaceData(String filePath, String toReplace, String replacementString) {
+
+//		File file = new File(path);
+//		FileInputStream fileInput = null;
+//		try {
+//			fileInput = new FileInputStream(file);
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//
+//		// load properties file
+//		try {
+//			prop.load(fileInput);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		
+//		try {
+//		     String content = FileUtils.readFileToString(new File(path), "UTF-8");
+//		     content = content.replaceAll(toReplace, replacementString);
+//		     File tempFile = new File("OutputFile");
+//		     FileUtils.writeStringToFile(tempFile, content, "UTF-8");
+//		  } catch (IOException e) {
+//		     //Simple exception handling, replace with what's necessary for your use case!
+//		     throw new RuntimeException("Generating file failed", e);
+//		  }
+
+		Path path = Paths.get(filePath);
+		Charset charset = StandardCharsets.UTF_8;
+
+		String content;
+		try {
+			content = new String(Files.readAllBytes(path), charset);
+			content = content.replaceAll(toReplace, replacementString);
+			Files.write(path, content.getBytes(charset));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
