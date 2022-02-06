@@ -1,6 +1,5 @@
 package com.JRI_TestScenarios;
 
-import org.openqa.selenium.By;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -53,38 +52,33 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 	@Test(dependsOnMethods = "tc_001_Invoke_the_JRI_Home_page")
 	public void tc_002_Verify_the_Create_Newaccount_page_will_display() throws Exception {
 		System.out.println("%%% Executing TC2");
-		// TODO:
-//		waitForElementToBeClickable(loc.JRI_HomePage_CreateAnAccount_Link, time_in_seconds);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAnAccount_Link);
 		System.out.println("The current URL" + driver.getCurrentUrl());
-		// TODO
-//		waitForElementVisible(loc.JRI_HomePage_CreateAccount_Button, time_in_seconds);
 
 	}
 
-//	@Test
+//	@Test(dependsOnMethods = "tc_002_Verify_the_Create_Newaccount_page_will_display")
 	public void tc_003_Verify_the_Username_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC3");
-		// TODO
-//		waitForElementToBeClickable(loc.JRI_HomePage_CreateAccount_Button, time_in_seconds);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
-		String username_error = driver.findElement(By.id("nameTD")).getText();
-		System.out.println("***Error message is***" + username_error);
+		String expectedErrorMessage = "Enter your name";
+		validateTheErrorMessage(expectedErrorMessage, loc.JRI_nameTD);
 
 	}
 
-//	@Test
+	// @Test(dependsOnMethods =
+	// "tc_002_Verify_the_Create_Newaccount_page_will_display")
 	public void tc_004_Verify_Mobile_No_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC4");
 		String name = getdata("Name");
 		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
-		String mobileno_error = driver.findElement(By.id("mobilenoTD")).getText();
-		System.out.println("***Error message is***" + mobileno_error);
+		String expectedErrorMessage = "Enter mobile no.";
+		validateTheErrorMessage(expectedErrorMessage, loc.JRI_mobileTD);
 
 	}
 
-//	@Test
+//	@Test(dependsOnMethods = "tc_002_Verify_the_Create_Newaccount_page_will_display")
 	public void tc_005_Verify_Email_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC5");
 		String name = getdata("Name");
@@ -93,12 +87,13 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Mobile_EditBox, mobileno);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
-		String email_error = driver.findElement(By.id("emailTD")).getText();
-		System.out.println("***Error message is***" + email_error);
+		String expectedErrorMessage = "Enter your email id";
+		validateTheErrorMessage(expectedErrorMessage, loc.JRI_emailTd);
 
 	}
 
-//	@Test
+	// @Test(dependsOnMethods =
+	// "tc_002_Verify_the_Create_Newaccount_page_will_display")
 	public void tc_006_Verify_Password_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC6");
 		String name = getdata("Name");
@@ -110,18 +105,18 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Email_EditBox, email);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
-		String password_error = driver.findElement(By.id("passwordTD")).getText();
-		System.out.println("***Error message is***" + password_error);
+		String expectedErrorMessage = "Enter your password";
+		validateTheErrorMessage(expectedErrorMessage, loc.JRI_passwordTD);
+
 	}
 
-	// @Test
+	@Test(dependsOnMethods = "tc_002_Verify_the_Create_Newaccount_page_will_display")
 	public void tc_007_Verify_Terms_error_message_display() throws Exception {
 		System.out.println("%%% Executing TC7");
 		String name = getdata("Name");
 		String mobileno = getdata("Mobile");
 		String email = getdata("Email");
 		String password = getdata("Password");
-
 		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Name_EditBox, name);
 		Thread.sleep(1000);
@@ -131,8 +126,8 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Password_EditBox, password);
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
-		String terms_error = driver.findElement(By.id("tdcondition")).getText();
-		System.out.println("***Error message is***" + terms_error);
+		String terms_error = "Please agree to the terms & conditions";
+		validateTheErrorMessage(terms_error, loc.JRI_error);
 
 	}
 
@@ -172,7 +167,7 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
 	}
 
-	@Test(dependsOnMethods = "tc_002_Verify_the_Create_Newaccount_page_will_display")
+//	@Test(dependsOnMethods = "tc_002_Verify_the_Create_Newaccount_page_will_display")
 	public void tc_0010_Check_user_willbe_able_to_createaccount_with_valid_data() throws Exception {
 		System.out.println("%%% Executing TC10");
 		String name = getdata("Name");
@@ -188,7 +183,6 @@ public class TS_001_VerifyTheNewAccountCreation extends WrapperClass {
 		Thread.sleep(1000);
 		sendkeysByAnyLocator(loc.JRI_HomePage_Password_EditBox, password);
 		clickByAnyLocator(loc.JRI_HomePage_Terms_CheckBox);
-
 		clickByAnyLocator(loc.JRI_HomePage_CreateAccount_Button);
 	}
 

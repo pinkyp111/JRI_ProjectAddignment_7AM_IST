@@ -88,6 +88,8 @@ public class WrapperClass extends BaseClass {
 			System.out.println("Test Case is passed");
 		} else {
 			System.out.println("Test Case is failed");
+			System.out.println("***Expected Error message is***" + expectedErrorMessage);
+			System.out.println("***Actual Error message is***" + actualErrorMessage);
 		}
 	}
 
